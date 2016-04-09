@@ -1,8 +1,6 @@
 ---
-id: 160
 title: WOW Server Status WordPress Widget 1.0.7
-date: 2011-06-08T12:00:21+00:00
-author: Freeman Man
+date: 2011-06-08
 layout: post
 categories:
   - wordpress-plugin

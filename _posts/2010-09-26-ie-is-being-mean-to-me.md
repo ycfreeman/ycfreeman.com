@@ -1,8 +1,6 @@
 ---
-id: 32
 title: IE is Being Mean to Me
-date: 2010-09-26T09:01:00+00:00
-author: Freeman Man
+date: 2010-09-26
 layout: post
 categories:
   - web-development

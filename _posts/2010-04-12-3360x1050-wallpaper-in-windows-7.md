@@ -1,8 +1,6 @@
 ---
-id: 23
 title: Random 3360x1050 Wallpaper in Windows 7
-date: 2010-04-12T12:42:00+00:00
-author: Freeman Man
+date: 2010-04-12
 layout: post
 categories:
   - windows

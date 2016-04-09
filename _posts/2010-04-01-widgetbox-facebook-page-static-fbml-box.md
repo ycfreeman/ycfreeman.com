@@ -1,8 +1,6 @@
 ---
-id: 22
 title: Widgetbox + Facebook Page + static FBML box
-date: 2010-04-01T01:09:00+00:00
-author: Freeman Man
+date: 2010-04-01
 layout: post
 categories:
   - web development

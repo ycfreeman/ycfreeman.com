@@ -1,8 +1,6 @@
 ---
-id: 362
 title: '&#8220;Git&#8221;ing my plugins'
-date: 2012-08-04T03:57:46+00:00
-author: Freeman Man
+date: 2012-08-04
 layout: post
 categories:
   - wordpress-plugin

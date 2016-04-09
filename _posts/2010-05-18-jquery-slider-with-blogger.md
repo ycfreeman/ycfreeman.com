@@ -1,8 +1,6 @@
 ---
-id: 26
 title: JQuery slider with blogger
-date: 2010-05-18T05:53:00+00:00
-author: Freeman Man
+date: 2010-05-18
 layout: post
 categories:
   - web development

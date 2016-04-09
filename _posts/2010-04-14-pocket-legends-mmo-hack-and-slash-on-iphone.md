@@ -1,8 +1,6 @@
 ---
-id: 24
 title: 'Pocket Legends &#8211; MMO hack and slash on iPhone!'
-date: 2010-04-14T09:08:00+00:00
-author: Freeman Man
+date: 2010-04-14
 layout: post
 categories:
   - game

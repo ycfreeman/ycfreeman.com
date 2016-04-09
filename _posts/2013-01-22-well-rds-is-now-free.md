@@ -1,7 +1,6 @@
 ---
-id: 470
 title: well RDS is now free
-date: 2013-01-22T07:46:05+00:00
+date: 2013-01-22
 author: Freeman Man
 layout: post
 categories:

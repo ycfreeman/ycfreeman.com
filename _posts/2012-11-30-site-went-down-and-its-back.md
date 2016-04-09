@@ -1,8 +1,6 @@
 ---
-id: 436
 title: 'Site went down, but it&#8217;s back'
-date: 2012-11-30T01:43:19+00:00
-author: Freeman Man
+date: 2012-11-30
 layout: post
 categories:
   - web-development

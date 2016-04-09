@@ -1,8 +1,6 @@
 ---
-id: 20
 title: Torchlight yet another arpg before diablo 3
-date: 2010-01-06T09:34:00+00:00
-author: Freeman Man
+date: 2010-01-06
 layout: post
 categories:
   - game

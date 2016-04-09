@@ -1,8 +1,6 @@
 ---
-id: 223
 title: Support forum offline
-date: 2011-12-01T05:53:44+00:00
-author: Freeman Man
+date: 2011-12-01
 layout: post
 categories:
   - web-development

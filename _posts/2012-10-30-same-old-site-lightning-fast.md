@@ -1,8 +1,6 @@
 ---
-id: 423
 title: Same old site, Lightning fast
-date: 2012-10-30T13:14:50+00:00
-author: Freeman Man
+date: 2012-10-30
 layout: post
 categories:
   - web-development

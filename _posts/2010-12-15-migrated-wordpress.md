@@ -1,8 +1,6 @@
 ---
-id: 87
 title: Migrated to WordPress :)
-date: 2010-12-15T01:42:26+00:00
-author: Freeman Man
+date: 2010-12-15
 layout: post
 categories:
   - web-development

@@ -1,8 +1,6 @@
 ---
-id: 230
 title: WOW Recruitment Widget is not dead
-date: 2012-02-29T12:18:04+00:00
-author: Freeman Man
+date: 2012-02-29
 layout: post
 categories:
   - wordpress-plugin

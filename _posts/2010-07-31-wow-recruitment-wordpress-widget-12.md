@@ -1,8 +1,6 @@
 ---
-id: 29
 title: WOW Recruitment Widget 1.2
-date: 2010-07-31T11:15:00+00:00
-author: Freeman Man
+date: 2010-07-31
 layout: post
 categories:
   - wordpress-plugin
