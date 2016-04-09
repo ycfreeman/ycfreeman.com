@@ -1,6 +1,7 @@
 ---
 title: well RDS is now free
 layout: post
+permalink: /blog/2013/01/well-rds-is-now-free/
 categories:
   - web-development
 ---

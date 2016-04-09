@@ -1,6 +1,7 @@
 ---
 title: JQuery slider with blogger
 layout: post
+permalink: /blog/2010/05/jquery-slider-with-blogger/
 categories:
   - web-development
 tags:

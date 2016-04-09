@@ -1,6 +1,7 @@
 ---
 title: WOW Recruitment Widget is not dead
 layout: post
+permalink: /blog/2012/02/wow-recruitment-widget-not-dead/
 categories:
   - wordpress-plugin
 tags:

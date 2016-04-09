@@ -1,6 +1,7 @@
 ---
 title: Migrated to WordPress :)
 layout: post
+permalink: /blog/2010/12/migrated-wordpress/
 categories:
   - web-development
 ---

@@ -1,6 +1,7 @@
 ---
 title: Website is back! (again)
 layout: post
+permalink: /blog/2013/10/website-back/
 categories:
   - web-development
 ---

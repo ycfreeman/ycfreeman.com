@@ -1,6 +1,7 @@
 ---
 title: '&#8220;Git&#8221;ing my plugins'
 layout: post
+permalink: /blog/2012/08/giting-my-plugins/
 categories:
   - wordpress-plugin
 tags:

@@ -1,6 +1,7 @@
 ---
 title: 'Pocket Legends &#8211; MMO hack and slash on iPhone!'
 layout: post
+permalink: /blog/2010/04/pocket-legends-mmo-hack-and-slash-on-iphone/
 categories:
   - game
 tags:

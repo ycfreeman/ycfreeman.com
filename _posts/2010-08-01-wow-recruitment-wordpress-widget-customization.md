@@ -1,6 +1,7 @@
 ---
 title: WOW Recruitment Widget Customization
 layout: post
+permalink: /blog/2010/08/wow-recruitment-wordpress-widget-customization/
 categories:
   - wordpress-plugin
 tags:

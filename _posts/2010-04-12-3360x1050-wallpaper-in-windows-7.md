@@ -1,6 +1,7 @@
 ---
 title: Random 3360x1050 Wallpaper in Windows 7
 layout: post
+permalink: /blog/2010/04/3360x1050-wallpaper-in-windows-7/
 categories:
   - windows
 tags:

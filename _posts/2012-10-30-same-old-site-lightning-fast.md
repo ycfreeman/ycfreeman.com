@@ -1,6 +1,7 @@
 ---
 title: Same old site, Lightning fast
 layout: post
+permalink: /blog/2012/10/same-old-site-lightning-fast/
 categories:
   - web-development
 ---

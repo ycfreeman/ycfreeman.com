@@ -1,6 +1,7 @@
 ---
 title: Widgetbox + Facebook Page + static FBML box
 layout: post
+permalink: /blog/2010/04/widgetbox-facebook-page-static-fbml-box/
 categories:
   - web-development
 tags:

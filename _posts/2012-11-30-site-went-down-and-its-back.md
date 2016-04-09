@@ -1,6 +1,7 @@
 ---
 title: 'Site went down, but it&#8217;s back'
 layout: post
+permalink: /blog/2012/11/site-went-down-and-its-back/
 categories:
   - web-development
 ---

@@ -1,6 +1,7 @@
 ---
 title: WOW Recruitment Widget 1.2
 layout: post
+permalink: /blog/2010/07/wow-recruitment-wordpress-widget-12/
 categories:
   - wordpress-plugin
 tags:

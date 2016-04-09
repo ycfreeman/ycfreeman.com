@@ -1,6 +1,7 @@
 ---
 title: Migrating to WordPress :)
 layout: post
+permalink: /blog/2010/12/migrating-to-hosted-wordpress/
 categories:
   - web-development
 ---

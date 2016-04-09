@@ -1,6 +1,7 @@
 ---
 title: WOW Server Status WordPress Widget 1.0
 layout: post
+permalink: /blog/2010/06/wow-server-status-wordpress-widget-10/
 categories:
   - wordpress-plugin
 tags:

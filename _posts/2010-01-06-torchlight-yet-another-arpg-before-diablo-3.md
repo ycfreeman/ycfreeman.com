@@ -1,6 +1,7 @@
 ---
 title: Torchlight yet another arpg before diablo 3
 layout: post
+permalink: /blog/2010/01/torchlight-yet-another-arpg-before-diablo-3/
 categories:
   - game
 ---
