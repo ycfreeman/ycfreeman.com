@@ -1,0 +1,12 @@
+---
+id: 87
+title: Migrated to WordPress :)
+date: 2010-12-15T01:42:26+00:00
+author: Freeman Man
+layout: post
+categories:
+  - web-development
+---
+only like an hour or so I&#8217;ve already finished all importing and even replicated blogger url structure, so nearly no links need to be fixed upon migration!
+
+Nice job WordPress! and the community!

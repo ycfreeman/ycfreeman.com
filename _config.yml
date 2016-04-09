@@ -5,27 +5,25 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: pygments
 markdown: kramdown
-disqus: dbyll
-google_analytics: dbyll
-title: dbyll
+title: ycfreeman's
+google_analytics: UA-8760554-2
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
-
-description: Stylish Jekyll Theme
+      title: ycfreeman's
+url: http://ycfreeman.com
+name: 'ycfreeman&#039;s'
+description: I play games, and I do code for food
 author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: dbtek
-  twitter: dbtek
-  pinterest: asd123
-  linkedin: asd123
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  name: ycfreeman
+  email: freeman@ycfreeman.com
+  github: ycfreeman
+  linkedin: ycfreeman
+  bio: I play games, and I do code for food
+  email_md5: be91bc3f804140479ad043b33d25a8c5
 
 rss_path: feed.xml
 categories_path: categories.html
