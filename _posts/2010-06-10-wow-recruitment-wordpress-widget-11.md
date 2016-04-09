@@ -1,26 +1,16 @@
 ---
 title: WOW Recruitment Widget 1.1
-date: 2010-06-10
 layout: post
 categories:
-  - wordpress plugin
+  - wordpress-plugin
 tags:
   - wow-recruit-widget
 ---
 <div style="margin: 0px">
   <span style="color: #ff0000"><strong></p>
 
-  <div>
-    <div>
-      for more information about this plugin please go to:
-    </div>
-  </div>
+  for more information about this plugin please go to [plugin description]({% post_url 2010-12-15-wow-recruitment-widget %})
 
-  <div>
-    <div>
-      <a href="http://www.ycfreeman.com/p/wow-recruitment-wordpress-widget.html">http://www.ycfreeman.com/wow-recruitment-wordpress-widget</a>
-    </div>
-  </div>
 
   <p>
     </strong></span></div>

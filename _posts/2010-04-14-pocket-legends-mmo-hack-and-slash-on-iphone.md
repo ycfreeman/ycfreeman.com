@@ -1,6 +1,5 @@
 ---
 title: 'Pocket Legends &#8211; MMO hack and slash on iPhone!'
-date: 2010-04-14
 layout: post
 categories:
   - game

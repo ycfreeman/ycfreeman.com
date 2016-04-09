@@ -1,15 +1,13 @@
 ---
 title: JQuery slider with blogger
-date: 2010-05-18
 layout: post
 categories:
-  - web development
+  - web-development
 tags:
   - blogger
   - css
   - javascript
   - jquery
-  - web design
 ---
    <img alt="Capture" src="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/05/Capture%5B6%5D.jpg?resize=400%2C290" style="float: none;margin-left: auto;margin-right: auto" data-recalc-dims="1" />  
 gonna love jquery  

@@ -1,6 +1,5 @@
 ---
 title: Same old site, Lightning fast
-date: 2012-10-30
 layout: post
 categories:
   - web-development

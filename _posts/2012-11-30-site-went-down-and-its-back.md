@@ -1,6 +1,5 @@
 ---
 title: 'Site went down, but it&#8217;s back'
-date: 2012-11-30
 layout: post
 categories:
   - web-development

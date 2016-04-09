@@ -2,6 +2,9 @@
 
 body{
 	color: #2c3e50;
+	min-height:100%;
+	padding-top: 70px;
+	box-sizing: border-box;
 }
 
 .sidebar {
@@ -10,6 +13,7 @@ body{
 	padding-top: 10%;
 	background-color: #2c3e50;
 	color: #fff;
+	min-height:100%;
 }
 
 .sidebar-header {
@@ -188,4 +192,3 @@ footer {
 ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
-

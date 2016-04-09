@@ -5,7 +5,7 @@ layout: post
 categories:
   - web-development
 tags:
-  - chrome rocks
-  - internet explorer sucks
+  - chrome-rocks
+  - internet-explorer-sucks
 ---
 nice song!

@@ -1,11 +1,10 @@
 ---
 title: Widgetbox + Facebook Page + static FBML box
-date: 2010-04-01
 layout: post
 categories:
-  - web development
+  - web-development
 tags:
-  - FBML
+  - fbml
   - facebook
   - flash
   - widgetbox
@@ -28,7 +27,8 @@ So the way to solve this problem is to convert that object tag and those variabl
 
 now here&#8217;s what you get from widgetbox &#8220;embed&#8221; button
 
-<pre>&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+```
+&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
  codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
  type="application/x-shockwave-flash"
  width="350px" height="523px"
@@ -47,7 +47,8 @@ now here&#8217;s what you get from widgetbox &#8220;embed&#8221; button
     pluginspage="http://www.macromedia.com/go/getflashplayer"
  type="application/x-shockwave-flash" wmode="transparent" align="middle"
  allowscriptaccess="sameDomain"
- flashvars="r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3" /&gt; &lt;/object&gt;</pre>
+ flashvars="r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3" /&gt; &lt;/object&gt;
+ ```
 
 pretty much clear on how to convert here now  <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />, just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the �lid of your hot pot�.
 

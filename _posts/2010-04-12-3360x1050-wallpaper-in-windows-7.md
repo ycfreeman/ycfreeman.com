@@ -1,13 +1,12 @@
 ---
 title: Random 3360x1050 Wallpaper in Windows 7
-date: 2010-04-12
 layout: post
 categories:
   - windows
 tags:
-  - dual screen
+  - dual-screen
   - wallpaper
-  - windows 7 tips
+  - windows-tips
 ---
 If you manage to have two 22 inch wide screen monitors like me, you probably have done the some search for dual wide screen wallpapers. Here is a quick Google link:   
 [http://images.google.com.au/images?hl=en&q=3360&#215;1050%20wallpapers&um=1&ie=UTF-8&sa=N&tab=wi#start=0&imgw=3360&imgh=1050&tbo=1](http://ycfreeman.com/wp-content/uploads/2010/04/images?hl=en&q=3360x1050%20wallpapers&um=1&ie=UTF-8&sa=N&tab=wi#start=0&imgw=3360&imgh=1050&tbo=1)

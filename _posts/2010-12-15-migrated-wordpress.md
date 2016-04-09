@@ -1,6 +1,5 @@
 ---
 title: Migrated to WordPress :)
-date: 2010-12-15
 layout: post
 categories:
   - web-development

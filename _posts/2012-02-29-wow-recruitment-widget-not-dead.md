@@ -1,6 +1,5 @@
 ---
 title: WOW Recruitment Widget is not dead
-date: 2012-02-29
 layout: post
 categories:
   - wordpress-plugin
@@ -11,7 +10,7 @@ tags:
 
 **3. Can you make it display on a page instead of only on the side bar?**
 
-If you are still looking for an easy solution, I�ve found out a trick recently that may help.
+If you are still looking for an easy solution, I've found out a trick recently that may help.
 
 &#8211; create a page template with a special widget area that sits in content area of your site template (instead of a post loop)
 

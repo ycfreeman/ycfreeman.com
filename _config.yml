@@ -24,7 +24,29 @@ author:
   linkedin: ycfreeman
   bio: I play games, and I do code for food
   email_md5: be91bc3f804140479ad043b33d25a8c5
-
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about.html
+  - title: Report bugs
+    items:
+      - title: JPlayer Podcast Widget
+        url: https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues
+        target: _blank
+      - title: Wow Recruitment Widget
+        url: https://github.com/ycfreeman/wow-recruit-widget/issues
+        target: _blank
+      - title: Wow Server Status Widget
+        url: https://github.com/ycfreeman/wow-server-status-widget/issues
+        target: _blank
+  - title: Browse
+    url: #
+    items:
+      - title: Categories
+        url: /categories.html
+      - title: Tags
+        url: /tags.html
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
@@ -36,3 +58,4 @@ BASE_PATH:
 
 gems:
   - jekyll-paginate
+  - jemoji

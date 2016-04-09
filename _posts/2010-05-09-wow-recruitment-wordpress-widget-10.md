@@ -1,27 +1,14 @@
 ---
 title: WOW Recruitment Widget 1.0
-date: 2010-05-09
 layout: post
 categories:
-  - wordpress plugin
+  - wordpress-plugin
 tags:
   - wow-recruit-widget
 ---
 &nbsp;
 
-<div>
-  <div>
-    for more information about this plugin please go to:
-  </div>
-</div>
-
-<div>
-  <div>
-    <a href="http://www.ycfreeman.com/p/wow-recruitment-wordpress-widget.html">http://www.ycfreeman.com/wow-recruitment-wordpress-widget</a>
-  </div>
-</div>
-
-&nbsp;
+for more information about this plugin please go to [plugin description]({% post_url 2010-12-15-wow-recruitment-widget %})
 
 This widget requires wordpress 2.8+, works perfectly for my guild site which runs 2.9.2.
 

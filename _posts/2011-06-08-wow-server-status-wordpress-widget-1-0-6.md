@@ -1,6 +1,5 @@
 ---
 title: WOW Server Status WordPress Widget 1.0.7
-date: 2011-06-08
 layout: post
 categories:
   - wordpress-plugin

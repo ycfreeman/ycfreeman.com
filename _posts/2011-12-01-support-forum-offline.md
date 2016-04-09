@@ -1,6 +1,5 @@
 ---
 title: Support forum offline
-date: 2011-12-01
 layout: post
 categories:
   - web-development

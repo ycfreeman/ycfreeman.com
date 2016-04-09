@@ -1,6 +1,5 @@
 ---
 title: '&#8220;Git&#8221;ing my plugins'
-date: 2012-08-04
 layout: post
 categories:
   - wordpress-plugin

@@ -1,6 +1,5 @@
 ---
 title: Website is back! (again)
-date: 2013-10-10
 layout: post
 categories:
   - web-development

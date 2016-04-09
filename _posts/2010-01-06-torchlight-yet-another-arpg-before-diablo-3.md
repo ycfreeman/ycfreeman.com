@@ -1,6 +1,5 @@
 ---
 title: Torchlight yet another arpg before diablo 3
-date: 2010-01-06
 layout: post
 categories:
   - game
@@ -48,8 +47,6 @@ ARPG just like Diablo, hack and slash style, but in 3D and comic style arts. kin
 <div class="separator" style="clear: both;text-align: center">
   <a href="http://ycfreeman.com/wp-content/uploads/2010/01/Torchlight+2010-01-06+19-27-27-09.jpg"><img border="0" src="http://i1.wp.com/ycfreeman.com/wp-content/uploads/2010/01/Torchlight+2010-01-06+19-27-27-091.jpg?resize=320%2C193" data-recalc-dims="1" /></a>
 </div>
-
-](http://ycfreeman.com/wp-content/uploads/2010/01/%20)
 
 $5.00 on Steam
 

@@ -1,6 +1,5 @@
 ---
 title: WOW Recruitment Widget Customization
-date: 2010-08-01
 layout: post
 categories:
   - wordpress-plugin

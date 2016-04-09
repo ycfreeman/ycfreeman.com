@@ -1,15 +1,16 @@
 ---
-id: 44
 title: WOW Recruitment Widget
-date: 2010-12-15T00:55:43+00:00
-author: Freeman Man
-layout: page
+layout: post
+categories:
+  - wordpress-plugin
+tags:
+  - wow-recruit-widget
 ---
 Welcome to the home page of**WOW Recruitment WordPress Widget (****wow-recruit-widget**)
 
 18 Dec 2012: plugin is back on wordpress plugin listing
 
-17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github�[<span style="font-size: 1rem;">https://github.com/ycfreeman/wow-recruit-widget</span>](https://github.com/ycfreeman/wow-recruit-widget), and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing
+17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github [<span style="font-size: 1rem;">https://github.com/ycfreeman/wow-recruit-widget</span>](https://github.com/ycfreeman/wow-recruit-widget), and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing
 
 17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i&#8217;m fixing it right now&#8230;.�github repo also pulled down due to these conflicts.
 

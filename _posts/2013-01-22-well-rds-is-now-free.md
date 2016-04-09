@@ -1,7 +1,5 @@
 ---
 title: well RDS is now free
-date: 2013-01-22
-author: Freeman Man
 layout: post
 categories:
   - web-development

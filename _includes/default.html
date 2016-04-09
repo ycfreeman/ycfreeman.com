@@ -34,48 +34,10 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-default visible-xs" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			{% if site.author.github %}
-			<a type="button" class="navbar-toggle nav-link" href="http://github.com/{{ site.author.github }}">
-				<i class="fa fa-github"></i>
-			</a>
-			{% endif %}
-			{% if site.author.twitter %}
-			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/{{ site.author.twitter }}">
-				<i class="fa fa-twitter"></i>
-			</a>
-			{% endif %}
-			{% if site.author.email %}
-			<a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
-				<i class="fa fa-envelope"></i>
-			</a>
-			{% endif %}
-			<a class="navbar-brand" href="{{ site.BASE_PATH }}/">
-				<img src="http://www.gravatar.com/avatar/{{site.author.email_md5}}?s=35" class="img-circle" />
-				{{ site.title }}
-			</a>
-		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="{{ site.BASE_PATH }}/">Home</a></li>
-				<li><a href="{{ site.BASE_PATH}}/{{ site.categories_path }}">Categories</a></li>
-				<li><a href="{{ site.BASE_PATH}}/{{ site.tags_path }}">Tags</a></li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
 
 	<!-- nav-menu-dropdown -->
-	<div class="btn-group hidden-xs" id="nav-menu">
+	<!-- <div class="btn-group hidden-xs" id="nav-menu">
 		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			<i class="fa fa-bars"></i>
 		</button>
@@ -86,19 +48,78 @@
 			<li class="divider"></li>
 			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
 		</ul>
-	</div>
+	</div> -->
+
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				{% if site.author.github %}
+				<a type="button" class="navbar-toggle nav-link" href="http://github.com/{{ site.author.github }}">
+					<i class="fa fa-github"></i>
+				</a>
+				{% endif %}
+				{% if site.author.twitter %}
+				<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/{{ site.author.twitter }}">
+					<i class="fa fa-twitter"></i>
+				</a>
+				{% endif %}
+				{% if site.author.email %}
+				<a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
+					<i class="fa fa-envelope"></i>
+				</a>
+				{% endif %}
+				<!-- <a class="navbar-brand" href="{{ site.BASE_PATH }}/">
+					<img src="http://www.gravatar.com/avatar/{{site.author.email_md5}}?s=35" class="img-circle" />
+					{{ site.title }}
+				</a> -->
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					{% for node in site.navigation %}
+						 {% if page.url == node.url %}
+							 <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+						 {% elsif node.items  %}
+						 	 <li class="dropdown">
+								  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{node.title}} <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+									 {% for subitem in node.items %}
+											{% if page.url == subitem.url %}
+												<li class="active"><a href="{{subitem.url}}" class="active">{{subitem.title}}</a>
+											{% else %}
+												<li><a href="{{subitem.url}}" {% if subitem.target %}target="{{subitem.target}}"{% endif %}>{{subitem.title}}</a></li>
+											{% endif %}
+									 {% endfor%}
+								 </ul>
+						 {% else %}
+							 <li><a href="{{node.url}}" {% if node.target %}target="{{node.target}}"{% endif %}>{{node.title}}</a></li>
+						 {% endif %}
+					 {% endfor %}
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
 
 	<div class="col-sm-3 sidebar hidden-xs" style="{% if site.sidebar_background_image %}background: url({{site.sidebar_background_image}}) no-repeat center center !important;{% endif %}">
 		{% include sidebar.html %}
 	</div>
 
 	<div class="col-sm-9 col-sm-offset-3">
+
 		{{ content }}
+
 
 		<footer>
 			<hr/>
 			<p>
-				&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
 			</p>
 		</footer>
 	</div>
