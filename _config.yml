@@ -29,6 +29,16 @@ navigation:
     url: /
   - title: About
     url: /about.html
+  - title: Wordpress Plugins
+    items:
+      - title: JPlayer Podcast Widget
+        url: https://github.com/ycfreeman/jplayer-podcast-wordpress-widget
+        target: _blank
+      - title: Wow Recruitment Widget
+        url: /tags.html#wow-recruit-widget-ref
+      - title: Wow Server Status Widget
+        url: /tags.html#wow-server-status-widget-ref
+        target: _blank
   - title: Report bugs
     items:
       - title: JPlayer Podcast Widget
