@@ -10,7 +10,7 @@ categories:
 
 ARPG just like Diablo, hack and slash style, but in 3D and comic style arts. kinda like [Fate](http://ycfreeman.com/wp-content/uploads/2010/01/fate1), but enemies with slightly darker demonic &#8220;diabloish&#8221; tone, levels randomly generated except important bosses. Single player only. Surprisingly addictive. Some screenshots after the break.
 
-<a name='more'></a>
+<!--more-->
 
 <div class="separator" style="clear: both;text-align: center">
 </div>

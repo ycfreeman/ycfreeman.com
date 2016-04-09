@@ -2,7 +2,9 @@
 title: About
 date: 2010-12-14
 author: Freeman Man
-layout: page
+layout: post
+categories:
+tags: 
 ---
 Hi there, this is Freeman. (文愉中 Man Yu Chung)
 
