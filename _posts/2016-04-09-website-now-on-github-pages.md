@@ -3,7 +3,6 @@ title: Website is now on Github pages
 layout: post
 categories:
   - web-development
-excerpt_separator: <!--more-->
 ---
 going full cheapo and migrate my personal website from vps hosted wordpress to [github pages](https://pages.github.com/)
 
@@ -28,4 +27,3 @@ What I don't need:
 github pages seems a good fit, and hey it seems to be much faster and reliable than cheapo VPS hosted wordpress!
 
 what do you think?
-<!--more-->
