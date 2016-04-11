@@ -7,6 +7,8 @@ categories:
 tags:
   - wow-server-status-widget
 ---
+[Demo Site](http://demo.ycfreeman.com)
+
 * 14/5/2011:
 
 seems this feed is much more stable now, I&#8217;m still looking at ways to improve the speed of this image generation.

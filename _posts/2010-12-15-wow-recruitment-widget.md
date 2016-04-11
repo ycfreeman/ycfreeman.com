@@ -9,13 +9,15 @@ tags:
 ---
 Welcome to the home page of**WOW Recruitment WordPress Widget (****wow-recruit-widget**)
 
+[Demo Site](http://demo.ycfreeman.com)
+
 18 Dec 2012: plugin is back on wordpress plugin listing
 
 17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github [<span style="font-size: 1rem;">https://github.com/ycfreeman/wow-recruit-widget</span>](https://github.com/ycfreeman/wow-recruit-widget), and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing
 
 17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i&#8217;m fixing it right now&#8230;.�github repo also pulled down due to these conflicts.
 
-11 Dec 2012: <a href="http://ycfreeman.com/wrdemo" target="_blank">updated code samples on demo site</a>
+11 Dec 2012: <a href="http://demo.ycfreeman.com" target="_blank">updated code samples on demo site</a>
 
 27 Aug 2012:�[updated FAQ](http://ycfreeman.com/wow-recruitment-widget-not-dead/ "WOW Recruitment Widget is not dead")
 
