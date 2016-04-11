@@ -12,7 +12,7 @@ Let's face it, why pay for hosting if you don't make money from it? it's sad but
 What I need:
 
 - a website
-- or just a page to serve as the main page for my domain name
+- a page to serve as the main page for my domain name
 - a hub to link to all my wordpress plugin projects
 - and a few website projects
 - something a little easier than handcrafting htmls by hand
@@ -22,7 +22,7 @@ What I don't need:
 
 - WYSIWYG editor - i've done enough [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and html
 - ever changing pages contents - why do you need it for a blog or personal website?
-- commenting platform - i'm sick of managing a build-in solution, if i need one i'd use managed services.
+- commenting platform - i'm sick of managing spams, if i need one i'd use managed services like disqus.
 
 
 github pages seems a good fit, and hey it seems to be much faster and reliable than cheapo VPS hosted wordpress!
