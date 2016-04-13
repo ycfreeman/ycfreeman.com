@@ -5,4 +5,5 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "rouge"
   gem "jemoji"
+  gem "jekyll-redirect-from"
 end
