@@ -2,5 +2,5 @@
 title: wrdemo
 sitemap: false
 redirect_to:
-  - http://demo.ycfreeman.com/wow-recruit-widget/
+  - http://demo.ycfreeman.com/wow-recruitment-widget/
 ---
