@@ -24,6 +24,6 @@ What I don't need:
 - commenting platform - i'm sick of managing spams, if i need one i'd use managed services like disqus.
 
 
-github pages seems a good fit, and hey it seems to be much faster and reliable than cheapo VPS hosted wordpress!
+github pages seems a good fit, and hey it seems to be much faster and reliable than a cheap VPS hosted wordpress!
 
 what do you think?
