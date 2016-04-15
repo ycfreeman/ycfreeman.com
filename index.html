@@ -1,77 +1,361 @@
----
-layout: page
-tagline:
----
+<!DOCTYPE html>
+<html>
 
-{% for post in paginator.posts %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="ycfreeman's">
 
-<div class="home panel panel-default">
+    <title>ycfreeman's</title>
+    <meta name="description" content="">
 
-  <div class="panel-heading">
-    <span class="post-date">
-      {% assign d = post.date | date: "%d" | plus:'0' %}
-      {{ post.date | date: "%B" }}
-      {% case d %}
-      {% when 1 or 21 or 31 %}{{ d }}st,
-      {% when 2 or 22 %}{{ d }}nd,
-      {% when 3 or 23 %}{{ d }}rd,
-      {% else %}{{ d }}th,
-      {% endcase %}
-      {{ post.date | date: "%Y" }}
-    </span>
+    <link rel="canonical" href="http://ycfreeman.com/">
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href="http://ycfreeman.com/feed.xml">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <h3>
-      <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-    </h3>
-  </div>
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#607D8B">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ycfreeman's">
+    <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ycfreeman's">
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <link rel="stylesheet" href="/styles/code-highlight.css">
+    <!-- endbuild-->
+
+    <link rel="stylesheet" href="/scripts/lightbox/css/lightbox.css">
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="/elements/elements.html">
+    <!-- endreplace-->
+
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <!-- Drawer Scroll Header Panel -->
+    <paper-scroll-header-panel drawer fixed>
+      <div class="wrapper"> <!-- necessary to push copyright to bottom -->
+        <!-- Drawer Toolbar -->
+        <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected on-iron-select="onMenuSelect">
+          <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
+          <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+        </paper-menu>
+
+        
+        
+        <my-nav-subheader>Wordpress Plugins</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="/tag/wow-recruit-widget/"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+        
+        <my-nav-subheader>Report bugs</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-recruit-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-server-status-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+
+        <my-nav-subheader>Contact Me</my-nav-subheader>
+        <paper-menu>
+          
+          <a href="https://paypal.me/ycfreeman" target="_blank"><iron-icon icon="fa:paypal"></iron-icon><span>Donation</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:linkedin"></iron-icon><span>My LinkedIn</span></a>
+          
+          
+          <a data-route="contact" href="mailto:freeman@ycfreeman.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
+        </paper-menu>
+        <div class="push"></div>
+      </div>
+      <div id="copyright-info">© 2016, Freeman Man</div>
+    </paper-scroll-header-panel>
+
+    <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+        <span class="space"></span>
+
+        <!-- Toolbar icons -->\
+        <div class="top top-container">
+          <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
+        </div>
+
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">ycfreeman's</div>
+        </div>
+
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <!--<div class="bottom-title">I play games, and I do code for food</div>-->
+          <div class="bottom-title">I play games, and I do code for food</div>
+        </div>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content">
+<div class="card-wrapper">
+<!-- This loops through the paginated posts -->
 
 
-  <div class="panel-body">
-    {% if post.fullview %}
-    {{ post.content }}
-    {% else %}
-    {% if post.shortinfo %}
-    {{ post.shortinfo }}
-    {% elsif post.description %}
-    {{ post.description }}
-    {% else %}
-    {{ post.excerpt }}
-    {% endif %}
-    {% endif %}
-  </div>
+  <paper-card class="custom">
+    <div class="card-content">
+      <div class="title">Website is now on Github pages</div>
+      <div class="subtitle">2016 April 9</div>
+      <p>going full cheapo and migrate my personal website from vps hosted wordpress to <a href="https://pages.github.com/">github pages</a></p>
+
+<p>Let’s face it, why pay for hosting if you don’t make money from it? it’s sad but true <img class="emoji" title=":stuck_out_tongue_winking_eye:" alt=":stuck_out_tongue_winking_eye:" src="https://assets.github.com/images/icons/emoji/unicode/1f61c.png" height="20" width="20" align="absmiddle"></p>
+
+<p>What I need:</p>
+
+<ul>
+  <li>a website</li>
+  <li>a page to serve as the main page for my domain name</li>
+  <li>a hub to link to all my wordpress plugin projects</li>
+  <li>and a few website projects</li>
+  <li>something a little easier than handcrafting htmls by hand</li>
+  <li>reliable website that is not hackable</li>
+</ul>
+
+<p>What I don’t need:</p>
+
+<ul>
+  <li>WYSIWYG editor - i’ve done enough <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown</a> and html</li>
+  <li>ever changing pages contents - why do you need it for a blog or personal website?</li>
+  <li>commenting platform - i’m sick of managing spams, if i need one i’d use managed services like disqus.</li>
+</ul>
+
+<p>github pages seems a good fit, and hey it seems to be much faster and reliable than a cheap VPS hosted wordpress!</p>
+
+<p>what do you think?</p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/web-development/2016/04/09/website-now-on-github-pages/"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="custom">
+    <div class="card-content">
+      <div class="title">Website is back! (again)</div>
+      <div class="subtitle">2013 October 10</div>
+      <p>my AWS free tier is over, $60+ per month for EC2+RDS is a bit too much for my own personal website…</p>
+
+<p>the site was down for a few weeks, now everything is migrated to a <a href="http://core.weloveservers.net/aff.php?aff=218">cheap vps hosting</a>,it should be fine for another while <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1"></p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/blog/2013/10/website-back/"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="custom">
+    <div class="card-content">
+      <div class="title">well RDS is now free</div>
+      <div class="subtitle">2013 January 22</div>
+      <p>Amazon RDS is now in <a href="http://aws.typepad.com/aws/2012/10/amazon-rds-now-available-in-the-aws-free-usage-tier.html">free usage tier</a>, actually it was already available on my last post haha</p>
+
+<p>so of course I’m already using it, now the website should be fast and reliable,�no more memory headache  <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1">happy time</p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/blog/2013/01/well-rds-is-now-free/"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="custom">
+    <div class="card-content">
+      <div class="title">Site went down, but it’s back</div>
+      <div class="subtitle">2012 November 30</div>
+      <p>This site went down for a few days due to a common AWS micro instance issue — out of memory and mysqld got killed.</p>
+
+<p>So I went in and <a href="http://imperialwicket.com/tuning-apache-for-a-low-memory-server-like-aws-micro-ec2-instances">tweaked some apache settings</a>�…�<span style="line-height: 1.6em;">also upgraded to apache 2.4+php 5.4… for maybe slightly lower memory usage…</span></p>
+
+<p>hope it won’t go down again that soon</p>
+
+<p> </p>
+
+<p>— just tried nginx,  <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1">got it running and doing phpinfo() correctly but takes too long to manually setup all these rewriting stuff for wordpress…… maybe I’ll try that again some time</p>
+
+<p> </p>
+
+<p>…. down again, added <a href="http://randomind.com/tips/how-to-create-swap-partition-on-amazon-aws-micro-instance-linux-2012-08-29">swap partition</a>…..</p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/blog/2012/11/site-went-down-and-its-back/"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="custom">
+    <div class="card-content">
+      <div class="title">Same old site, Lightning fast</div>
+      <div class="subtitle">2012 October 30</div>
+      <p>Finally got the time to migrate my site from crappy shared hosting to AWS,</p>
+
+<p>It’s now on Amazon Linux (CentOS) with basic AMP (mod_php) stack — php php-mysql mysql-server — I’m no nginx guru and�mod_fcgid gives me headache…</p>
+
+<p>so I just got APC caching — php-pecl-apc — which is already much faster than file based caching — and of course with W3 Total Cache <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1"></p>
+
+<p>and <a href="https://developers.google.com/speed/docs/mod_pagespeed/download">mod_pagespeed binary from google</a>�helps a little as well</p>
+
+<p>Site speed should be much faster now, and I haven’t even looked at this <a href="http://codex.wordpress.org/WordPress_Optimization">long list</a> yet</p>
+
+<p> </p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/blog/2012/10/same-old-site-lightning-fast/"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
 
 </div>
-{% endfor %}
-<hr/>
 
-<ul class="pager">
+<!-- Page navigation links -->
 
-  {% if paginator.previous_page %}
-  <li class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
-    {% else %}
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
-    {% endif %}
-  </li>
-  {% else %}
-  <li class="previous disabled">
-    <a>&larr; Newer</a>
-  </li>
-  {% endif %}
+<my-pagination>
+  <!-- Left Arrow -->
+  
+  <my-page-link disabled><iron-icon icon="chevron-left"></iron-icon></my-page-link>
+  
 
-  <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  </li>
+  <!-- Page Numbers -->
+  
+    
+    <my-page-link active>1</my-page-link>
+    
+  
+    
+    <my-page-link href="/page2">2</my-page-link>
+    
+  
+    
+    <my-page-link href="/page3">3</my-page-link>
+    
+  
+    
+    <my-page-link href="/page4">4</my-page-link>
+    
+  
+    
+    <my-page-link href="/page5">5</my-page-link>
+    
+  
 
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
-  </li>
-  {% else %}
-  <li class="next disabled">
-    <a>Older &rarr;</a>
-  </li>
-  {% endif %}
+  <!-- Right Arrow -->
+  
+  <my-page-link href="/page2"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  
+</my-pagination>
 
-</ul>
+</div>
+
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+
+  <paper-toast id="toast">
+    <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+  </paper-toast>
+
+</template>
+
+<!-- MathJax -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- build:js scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/scripts/g-analyt.js','ga');
+		
+		ga('create', 'UA-8760554-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/scripts/lightbox/js/lightbox.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,618 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="ycfreeman's" />
+
+    <title>WOW Recruitment Widget 1.3</title>
+    <meta name="description" content="for more information about this plugin please go to plugin description      Description        A widget that helps to display recruitment message of a World ...">
+
+    <link rel="canonical" href="http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/">
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href='http://ycfreeman.com/feed.xml' />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#607D8B">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ycfreeman's">
+    <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ycfreeman's">
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <link rel="stylesheet" href="/styles/code-highlight.css">
+    <!-- endbuild-->
+
+    <link rel="stylesheet" href="/scripts/lightbox/css/lightbox.css">
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="/elements/elements.html">
+    <!-- endreplace-->
+
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <!-- Drawer Scroll Header Panel -->
+    <paper-scroll-header-panel drawer fixed>
+      <div class="wrapper"> <!-- necessary to push copyright to bottom -->
+        <!-- Drawer Toolbar -->
+        <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected="/blog/2010/09/wow-recruitment-wordpress-widget-13/" on-iron-select="onMenuSelect">
+          <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
+          <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+        </paper-menu>
+
+        
+        
+        <my-nav-subheader>Wordpress Plugins</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="/tag/wow-recruit-widget/" ><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+        
+        <my-nav-subheader>Report bugs</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-recruit-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-server-status-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+
+        <my-nav-subheader>Contact Me</my-nav-subheader>
+        <paper-menu>
+          
+          <a href="https://paypal.me/ycfreeman" target="_blank"><iron-icon icon="fa:paypal"></iron-icon><span>Donation</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:linkedin"></iron-icon><span>My LinkedIn</span></a>
+          
+          
+          <a data-route="contact" href="mailto:freeman@ycfreeman.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
+        </paper-menu>
+        <div class="push"></div>
+      </div>
+      <div id="copyright-info">&copy; 2016, Freeman Man</div>
+    </paper-scroll-header-panel>
+
+    <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+        <span class="space"></span>
+
+        <!-- Toolbar icons -->\
+        <div class="top top-container">
+          <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
+        </div>
+
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">ycfreeman's</div>
+        </div>
+
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <!--<div class="bottom-title">I play games, and I do code for food</div>-->
+          <div class="bottom-title">I play games, and I do code for food</div>
+        </div>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content"><style>
+  body {
+    background-color: #f9f9f9 !important;
+  }
+</style>
+
+<div id="post">
+
+  
+
+  <h1 class="paper-font-display1">WOW Recruitment Widget 1.3</h1>
+  <h4 class="paper-font-subhead" id="date">Sep 11, 2010</h4>
+
+  <div id="post-content">
+    <p>for more information about this plugin please go to <a href="/wow-recruitment-widget">plugin description</a></p>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <span style="font-size: x-large;">Description</span>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    A widget that helps to display recruitment message of a World of Warcraft guild.
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    This version is updated and tested with 3.0.x <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <strong>New Features in 1.3:</strong>
+  </div>
+</div>
+
+<ul>
+  <li>Customizable�tooltip! opens up even more layout possibilities!</li>
+  <li>Bug report icon which links to the latest blog post of current version</li>
+  <li>Able to display “Closed” status! (not in a very smart way, so be careful while using it)</li>
+</ul>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <strong>Thank you for all your support, stay tuned for updates~</strong>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    If you would like to support this project, please consider<br />
+
+    <p>
+      , I will give you my Troll hug <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+    </p>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <div style="margin: 0px;">
+      <div style="margin: 0px;">
+        Download from wordpress plugin gallery:�<a href="http://wordpress.org/extend/plugins/wow-recruit-widget/">http://wordpress.org/extend/plugins/wow-recruit-widget/</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    Full change log, plugin description after the break.
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<p><a name="more"></a></p>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <span style="font-size: x-large;">What&#8217;s New in 1.3</span>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left;">
+    <strong>1. Customizable tooltip</strong>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left;">
+    Tooltip was added last version and in this version I&#8217;ve made it customizable with pattern.
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <a href="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture.jpg"><img src="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture1.jpg?resize=320%2C268" alt="" border="0" data-recalc-dims="1" /></a>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <span style="font-size: x-small;">Figure 1.1 v1.3 widget settings</span>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    Figure 1.1 shows a new option under widget settings, where you can customize tooltip with tokens, mind that these tokens are case sensitive.
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    [class] &#8211; will be replaced with customized class text
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    [status] &#8211; will be replaced with customized status text
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    [note] &#8211; will be replaced with customized note
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    say you have a pattern like [class] | [note] |�[status]
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Untitled-1.jpg"><img src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Untitled-11.jpg?resize=320%2C224" alt="" border="0" data-recalc-dims="1" /></a>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <span style="font-size: x-small;">Figure 1.2 v1.3 customizable tooltip</span>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <span style="font-size: small;"><br /> </span>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <a href="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture3.jpg"><img src="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture31.jpg?resize=320%2C188" alt="" border="0" data-recalc-dims="1" /></a>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
+    <span style="font-size: x-small;">Figure 1.3 one possible usage</span>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    so what&#8217;s so cool about it?
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    with the ability to put all those texts to tooltip, now it makes more sense to make a pure icon based recruitment message with my widget!�some possible usage will be like Figure 1.3
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left; margin: 0px;">
+    (note that I&#8217;ve also added note and status css class to item wrapper, so it is now very easy to use different icon/style for different spec, and setting different style for different status)
+  </div>
+
+  <div class="wp_syntax">
+    <table>
+      <tr>
+        <td class="code">
+          <pre class="css" style="font-family:monospace;"><span style="color: #6666ff;">.wr-status3</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    opacity<span style="color: #00AA00;">:</span><span style="color: #cc66cc;">1.0</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-status2</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    opacity<span style="color: #00AA00;">:</span><span style="color: #cc66cc;">0.6</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-status1</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    opacity<span style="color: #00AA00;">:</span><span style="color: #cc66cc;">0.3</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-status0</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    opacity<span style="color: #00AA00;">:</span><span style="color: #cc66cc;">0.0</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span><span style="color: #933;">3px</span> <span style="color: #993333;">solid</span> <span style="color: #cc00cc;">#ccc</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">border-radius</span><span style="color: #00AA00;">:</span><span style="color: #933;">10px</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">height</span><span style="color: #00AA00;">:</span><span style="color: #933;">40px</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">width</span><span style="color: #00AA00;">:</span><span style="color: #933;">40px</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-item</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">height</span><span style="color: #00AA00;">:</span><span style="color: #933;">40px</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">padding</span><span style="color: #00AA00;">:</span><span style="color: #933;">5px</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">width</span><span style="color: #00AA00;">:</span><span style="color: #933;">40px</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-note</span><span style="color: #00AA00;">,</span><span style="color: #6666ff;">.wr-status</span><span style="color: #00AA00;">,</span><span style="color: #6666ff;">.wr-class-text</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">display</span><span style="color: #00AA00;">:</span><span style="color: #993333;">none</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-deathknight</span> <span style="color: #6666ff;">.wr-blood</span>
+<span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">background</span><span style="color: #00AA00;">:</span><span style="color: #993333;">url</span><span style="color: #00AA00;">&#40;</span><span style="color: #ff0000; font-style: italic;">http://vnmedia.ign.com/wowvault.ign.com/icons/Spell_Deathknight_BloodPresence_sm.png</span><span style="color: #00AA00;">&#41;</span> <span style="color: #993333;">no-repeat</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span><span style="color: #933;">3px</span> <span style="color: #993333;">solid</span> <span style="color: #cc00cc;">#C41F3B</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-deathknight</span> <span style="color: #6666ff;">.wr-frost</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">background</span><span style="color: #00AA00;">:</span><span style="color: #993333;">url</span><span style="color: #00AA00;">&#40;</span><span style="color: #ff0000; font-style: italic;">http://vnmedia.ign.com/wowvault.ign.com/icons/Spell_Deathknight_UnholyPresence_sm.png</span><span style="color: #00AA00;">&#41;</span> <span style="color: #993333;">no-repeat</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span><span style="color: #933;">3px</span> <span style="color: #993333;">solid</span> <span style="color: #cc00cc;">#0C81CE</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-deathknight</span> <span style="color: #6666ff;">.wr-unholy</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">background</span><span style="color: #00AA00;">:</span><span style="color: #993333;">url</span><span style="color: #00AA00;">&#40;</span><span style="color: #ff0000; font-style: italic;">http://vnmedia.ign.com/wowvault.ign.com/icons/Spell_Deathknight_FrostPresence_sm.png</span><span style="color: #00AA00;">&#41;</span> <span style="color: #993333;">no-repeat</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span><span style="color: #933;">3px</span> <span style="color: #993333;">solid</span> <span style="color: #993333;">green</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-shaman</span><span style="color: #6666ff;">.wr-elemental</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">background</span><span style="color: #00AA00;">:</span><span style="color: #993333;">url</span><span style="color: #00AA00;">&#40;</span><span style="color: #ff0000; font-style: italic;">http://www.sicaine.net/wowprofiler/img/Interface/Icons/Spell_Nature_Lightning.png</span><span style="color: #00AA00;">&#41;</span> <span style="color: #993333;">no-repeat</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span><span style="color: #933;">3px</span> <span style="color: #993333;">solid</span> <span style="color: #cc00cc;">#2459FF</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span>
+&nbsp;
+<span style="color: #6666ff;">.wr-shaman</span> <span style="color: #6666ff;">.wr-resto</span> <span style="color: #6666ff;">.wr-icon</span>
+<span style="color: #00AA00;">&#123;</span>
+    <span style="color: #000000; font-weight: bold;">background</span><span style="color: #00AA00;">:</span><span style="color: #993333;">url</span><span style="color: #00AA00;">&#40;</span><span style="color: #ff0000; font-style: italic;">http://www.hotwow.com/icons/middle/Spell_Nature_HealingWaveGreater.jpg</span><span style="color: #00AA00;">&#41;</span> <span style="color: #993333;">no-repeat</span><span style="color: #00AA00;">;</span>
+    <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span><span style="color: #933;">3px</span> <span style="color: #993333;">solid</span> <span style="color: #993333;">green</span><span style="color: #00AA00;">;</span>
+<span style="color: #00AA00;">&#125;</span></pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left;">
+    well, you get the idea if you have read <a title="WOW Recruitment Widget � Customization" href="http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/">the customization post</a> <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left;">
+    <strong>2. Added an option to display &#8220;Closed&#8221; status</strong>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left;">
+    I&#8217;ve added this option in a super simple way, just a tick box in plugin settings that enables all &#8220;Closed&#8221; status to display in front. If this box is checked, it will make all &#8220;Closed&#8221; status to display.
+  </div>
+
+  <div class="separator" style="clear: both; text-align: left;">
+    Say you have 15 rows of �Death Knight in &#8220;Closed&#8221; status (which is default option of the widget), checking that box will make them all displaying, so you have to set &#8220;Rows&#8221; in widget settings to a proper row number if this option is turned on.
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center;">
+    <a href="http://i0.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TIsGUw_OmkI/AAAAAAAAHFQ/fV3LSC-314Q/s1600/Capture2.JPG"><img src="http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TIsGUw_OmkI/AAAAAAAAHFQ/fV3LSC-314Q/s320/Capture2.JPG?resize=320%2C217" alt="" border="0" data-recalc-dims="1" /></a>
+  </div>
+
+  <div class="separator" style="clear: both; text-align: center;">
+    <span style="font-size: x-small;">Figure 2.1 added option to display &#8220;Closed&#8221; status</span>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <div style="margin: 0px;">
+      <span style="font-size: x-large;">Changelog</span>
+    </div>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    <p>
+      = 1.3.1 =<br /> * changed help/bug icons to host at external source, updated license wordings
+    </p>
+  </div>
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    = 1.3.0 =
+  </div>
+
+  <div style="margin: 0px;">
+    * customizable tooltip!
+  </div>
+
+  <div style="margin: 0px;">
+    * ability to enable display of &#8220;closed&#8221; status!
+  </div>
+
+  <div style="margin: 0px;">
+    * bug report icon!
+  </div>
+</div>
+
+<div style="margin: 0px;">
+</div>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="margin: 0px;">
+  </div>
+
+  <div style="font-size: medium; margin: 0px;">
+    <div style="margin: 0px;">
+      <div style="margin: 0px;">
+        <span style="font-size: x-large;"><span style="font-size: x-large;">Future Improvements:</span></span>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li>
+      Custom order
+    </li>
+    <li>
+      More readable widget settings
+    </li>
+  </ul>
+
+  <p>
+    &nbsp;
+  </p>
+</div>
+
+  </div>
+
+  
+    
+    <x-chip href="/tag/wow-recruit-widget/">Wow-recruit-widget</x-chip>
+  
+
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/&title=WOW Recruitment Widget 1.3&summary=&source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/&title=WOW Recruitment Widget 1.3" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=WOW Recruitment Widget 1.3&url=http://ycfreeman.com/blog/2010/09/wow-recruitment-wordpress-widget-13/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    
+    <a href="/blog/2010/08/wow-recruitment-wordpress-widget-customization/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
+
+    
+      <a href="/blog/2010/09/ie-is-being-mean-to-me/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
+
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'ycfreeman';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+</div>
+
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+
+  <paper-toast id="toast">
+    <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+  </paper-toast>
+
+</template>
+
+<!-- MathJax -->
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- build:js scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/scripts/g-analyt.js','ga');
+		
+		ga('create', 'UA-8760554-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/scripts/lightbox/js/lightbox.js"></script>
+
+</body>
+
+</html>

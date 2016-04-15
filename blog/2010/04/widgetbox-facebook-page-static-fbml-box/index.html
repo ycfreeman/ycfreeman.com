@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="ycfreeman's" />
+
+    <title>Widgetbox + Facebook Page + static FBML box</title>
+    <meta name="description" content="So I finally got the time and mood to put a little bit work on this problem.While there’s seem to be very few clear tutorial or some sort in google specifica...">
+
+    <link rel="canonical" href="http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/">
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href='http://ycfreeman.com/feed.xml' />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#607D8B">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ycfreeman's">
+    <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ycfreeman's">
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <link rel="stylesheet" href="/styles/code-highlight.css">
+    <!-- endbuild-->
+
+    <link rel="stylesheet" href="/scripts/lightbox/css/lightbox.css">
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="/elements/elements.html">
+    <!-- endreplace-->
+
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <!-- Drawer Scroll Header Panel -->
+    <paper-scroll-header-panel drawer fixed>
+      <div class="wrapper"> <!-- necessary to push copyright to bottom -->
+        <!-- Drawer Toolbar -->
+        <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected="/blog/2010/04/widgetbox-facebook-page-static-fbml-box/" on-iron-select="onMenuSelect">
+          <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
+          <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+        </paper-menu>
+
+        
+        
+        <my-nav-subheader>Wordpress Plugins</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="/tag/wow-recruit-widget/" ><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+        
+        <my-nav-subheader>Report bugs</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-recruit-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-server-status-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+
+        <my-nav-subheader>Contact Me</my-nav-subheader>
+        <paper-menu>
+          
+          <a href="https://paypal.me/ycfreeman" target="_blank"><iron-icon icon="fa:paypal"></iron-icon><span>Donation</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:linkedin"></iron-icon><span>My LinkedIn</span></a>
+          
+          
+          <a data-route="contact" href="mailto:freeman@ycfreeman.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
+        </paper-menu>
+        <div class="push"></div>
+      </div>
+      <div id="copyright-info">&copy; 2016, Freeman Man</div>
+    </paper-scroll-header-panel>
+
+    <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+        <span class="space"></span>
+
+        <!-- Toolbar icons -->\
+        <div class="top top-container">
+          <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
+        </div>
+
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">ycfreeman's</div>
+        </div>
+
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <!--<div class="bottom-title">I play games, and I do code for food</div>-->
+          <div class="bottom-title">I play games, and I do code for food</div>
+        </div>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content"><style>
+  body {
+    background-color: #f9f9f9 !important;
+  }
+</style>
+
+<div id="post">
+
+  
+
+  <h1 class="paper-font-display1">Widgetbox + Facebook Page + static FBML box</h1>
+  <h4 class="paper-font-subhead" id="date">Apr 1, 2010</h4>
+
+  <div id="post-content">
+    <p>So I finally got the time and mood to put a little bit work on this problem.</p>
+
+<p>While there’s seem to be very few clear tutorial or some sort in google specifically for this matter, I thought it would be either too simple that no one bothers to give a tutorial, or simply too complicated that no one bothers to do it.</p>
+
+<p>Widgetbox is a useful site that allow you to create some dynamic content to your website in widget form, or simply use those widgets that created by someone else. Every time you want to insert a widget in widgetbox, simply copy the embed code generated and paste to the place you want to add. It works like charm for most contents like blog, website, etc.</p>
+
+<p>However, as its code contains external script and object tag, it simply violates Facebook’s terms of page contents… aka, it does not work with Facebook page, if you directly copy and paste those codes into that static FBML box (<a href="http://ycfreeman.com/wp-content/uploads/2010/04/fb-fanpages-fbml-box">here’s some info about it</a>). So this “new” Facebook page has banned most sort of external scripts and objects, so the generated embed code which consist of “object” and “script”</p>
+
+<p>tags just simply doesn’t work on static FBML boxes.</p>
+
+<p><a name="more"></a></p>
+
+<p>“but Facebook says they support swf!”, Yes they support swf, in a weird way. First, you have to use FB:SWF to include the flash object, Second, it does not play on page load.</p>
+
+<p>So the way to solve this problem is to convert that object tag and those variables�into the fb:swf tag. Ya simple as that.</p>
+
+<p>now here’s what you get from widgetbox “embed” button</p>
+
+<p><code class="highlighter-rouge">
+&amp;lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+ codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
+ type="application/x-shockwave-flash"
+ width="350px" height="523px"
+ id="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
+ align="middle"&amp;gt; &amp;lt;param name="movie"
+ value="http://widgetserver.com/syndication/flash/wrapper/InsertWidget.swf"&amp;gt;
+    &amp;lt;param name="quality"
+ value="high"&amp;gt;
+   &amp;lt;param name="wmode" value="transparent"&amp;gt;
+    &amp;lt;param name="menu" value="false"&amp;gt;
+    &amp;lt;param name="flashvars" value="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3"&amp;gt;
+    &amp;lt;param name="allowScriptAccess" value="sameDomain"&amp;gt;
+    &amp;lt;embed src="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
+ name="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
+ width="350px" height="523px" quality="high" menu="false"
+    pluginspage="http://www.macromedia.com/go/getflashplayer"
+ type="application/x-shockwave-flash" wmode="transparent" align="middle"
+ allowscriptaccess="sameDomain"
+ flashvars="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3" /&amp;gt; &amp;lt;/object&amp;gt;
+</code></p>
+
+<p>pretty much clear on how to convert here now  <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />, just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the �lid of your hot pot�.</p>
+
+<p>the converted code would be something like this:</p>
+
+<pre>&lt;fb:swf
+ imgsrc="http://ycfreeman.com/wp-content/uploads/2010/04/playbuttonm.jpg"
+ swfsrc="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
+ flashvars='r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3'
+ width='350' height='500'
+ align='middle'
+ wmode='transparent'
+ waitforclick='false'
+ scale='exactfit'
+/&gt;</pre>
+
+<p>update 19/02/2011: demo page no longer available, but there should be some fb pages with flash these days.</p>
+
+<p>one more thing, you can always test those FBML codes at <a href="http://ycfreeman.com/wp-content/uploads/2010/04/tools.php?fbml">FBML test console</a> before publish <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></p>
+
+<p>update: FBML test console is no longer working <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></p>
+
+<p>Have fun!</p>
+
+  </div>
+
+  
+    
+    <x-chip href="/tag/fbml/">Fbml</x-chip>
+  
+    
+    <x-chip href="/tag/facebook/">Facebook</x-chip>
+  
+    
+    <x-chip href="/tag/flash/">Flash</x-chip>
+  
+    
+    <x-chip href="/tag/widgetbox/">Widgetbox</x-chip>
+  
+
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&title=Widgetbox + Facebook Page + static FBML box&summary=&source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&title=Widgetbox + Facebook Page + static FBML box" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=Widgetbox + Facebook Page + static FBML box&url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    
+    <a href="/blog/2010/01/torchlight-yet-another-arpg-before-diablo-3/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
+
+    
+      <a href="/blog/2010/04/3360x1050-wallpaper-in-windows-7/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
+
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'ycfreeman';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+</div>
+
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+
+  <paper-toast id="toast">
+    <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+  </paper-toast>
+
+</template>
+
+<!-- MathJax -->
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- build:js scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/scripts/g-analyt.js','ga');
+		
+		ga('create', 'UA-8760554-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/scripts/lightbox/js/lightbox.js"></script>
+
+</body>
+
+</html>

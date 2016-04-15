@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="ycfreeman's" />
+
+    <title>WOW Server Status WordPress Widget 1.0</title>
+    <meta name="description" content="Demo Site  14/5/2011:seems this feed is much more stable now, I’m still looking at ways to improve the speed of this image generation.  26/2/2011:lol GG, uno...">
+
+    <link rel="canonical" href="http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/">
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href='http://ycfreeman.com/feed.xml' />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#607D8B">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ycfreeman's">
+    <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ycfreeman's">
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <link rel="stylesheet" href="/styles/code-highlight.css">
+    <!-- endbuild-->
+
+    <link rel="stylesheet" href="/scripts/lightbox/css/lightbox.css">
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="/elements/elements.html">
+    <!-- endreplace-->
+
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <!-- Drawer Scroll Header Panel -->
+    <paper-scroll-header-panel drawer fixed>
+      <div class="wrapper"> <!-- necessary to push copyright to bottom -->
+        <!-- Drawer Toolbar -->
+        <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected="/blog/2010/06/wow-server-status-wordpress-widget-10/" on-iron-select="onMenuSelect">
+          <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
+          <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+        </paper-menu>
+
+        
+        
+        <my-nav-subheader>Wordpress Plugins</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="/tag/wow-recruit-widget/" ><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+        
+        <my-nav-subheader>Report bugs</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-recruit-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-server-status-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+
+        <my-nav-subheader>Contact Me</my-nav-subheader>
+        <paper-menu>
+          
+          <a href="https://paypal.me/ycfreeman" target="_blank"><iron-icon icon="fa:paypal"></iron-icon><span>Donation</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:linkedin"></iron-icon><span>My LinkedIn</span></a>
+          
+          
+          <a data-route="contact" href="mailto:freeman@ycfreeman.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
+        </paper-menu>
+        <div class="push"></div>
+      </div>
+      <div id="copyright-info">&copy; 2016, Freeman Man</div>
+    </paper-scroll-header-panel>
+
+    <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+        <span class="space"></span>
+
+        <!-- Toolbar icons -->\
+        <div class="top top-container">
+          <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
+        </div>
+
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">ycfreeman's</div>
+        </div>
+
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <!--<div class="bottom-title">I play games, and I do code for food</div>-->
+          <div class="bottom-title">I play games, and I do code for food</div>
+        </div>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content"><style>
+  body {
+    background-color: #f9f9f9 !important;
+  }
+</style>
+
+<div id="post">
+
+  
+
+  <h1 class="paper-font-display1">WOW Server Status WordPress Widget 1.0</h1>
+  <h4 class="paper-font-subhead" id="date">Jun 19, 2010</h4>
+
+  <div id="post-content">
+    <p><a href="http://demo.ycfreeman.com">Demo Site</a></p>
+
+<ul>
+  <li>14/5/2011:</li>
+</ul>
+
+<p>seems this feed is much more stable now, I’m still looking at ways to improve the speed of this image generation.</p>
+
+<ul>
+  <li>26/2/2011:</li>
+</ul>
+
+<p>lol GG, unofficial realm status feed is down due to bandwidth limit exceeded. if it is not going back up, i’m gonna look for alternative solution.</p>
+
+<p>Maybe write an adapter to screen scrap official realm status page and convert it to xml or something.</p>
+
+<ul>
+  <li>20/12/2010:</li>
+</ul>
+
+<p>1.0.4: since official feed is moved to some mysterious place, this widget is changed to use�<a href="http://wowfeeds.wipeitau.com/">Axho’s WoW Feeds</a>… at least for now. for any kind of widget that is using similar method (old xml feed) to look for data, you can look for the same feed to do things, it provides JSON and XML feed, and rather getting all realms at once and filter on your widget, their feed can provide only one realm on request, which would be slightly faster for something like desktop widget. Data is formated slightly different there, but it should be pretty obvious what has to be changed.</p>
+
+<p>alternatively, you can always screen scrap official realm status page. good luck and have fun <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></p>
+
+<ul>
+  <li>
+    <p>18/12/2010: confirmed it is breaking everywhere, appears blizzard has completely turned off the old xml realm status, maybe they’ve moved somewhere else, if that is the case it should be a quick fix. will look at it tomorrow</p>
+  </li>
+  <li>
+    <p>10/12/2010: �ok ok, yea I know Blizzard has changed their data and the badge is not working any more, thanks Blizzard! I’m still looking for solution, should be fixed within next 2 weeks.</p>
+  </li>
+</ul>
+
+<p>Easily add WOW Server Status 4.1 badge to your site by just a few clicks.</p>
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/06/screenshot-1.jpg"><img src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/06/screenshot-11.jpg?w=660" border="0" alt="" data-recalc-dims="1" /></a>
+</div>
+
+<p><span style="font-size: x-large;">Description</span></p>
+
+<p>This is a simple widget that displays WOW Server Status 4.1 badge, without having to upload the script with ftp and write an img tag to run it.</p>
+
+<p>The original script can be found here, which is not my work:</p>
+
+<p><a href="http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10">http://53×11.com/blog/2005/04/21/WoW-Server-Status-41.10</a></p>
+
+<p>If you managed to find bugs or want to correct some of my codes, please don’t hesitate to leave a comment <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></p>
+
+<div style="margin: 0px;">
+  <div style="margin: 0px;">
+    Download from wordpress plugin gallery :): &#8211;�<a href="http://wordpress.org/extend/plugins/wow-server-status-widget/">http://wordpress.org/extend/plugins/wow-server-status-widget/</a>
+  </div>
+</div>
+
+<p>Full change log and descriptions after the break</p>
+
+<p><a name="more"></a></p>
+
+<p><span style="font-size: x-large;">Installation</span></p>
+
+<ol>
+  <li>
+    <p>Unpack and Upload all files to the `/wp-content/plugins/wow-server-status-widget` directory</p>
+  </li>
+  <li>
+    <p>Activate the plugin through the ‘Plugins’ menu in WordPress</p>
+  </li>
+  <li>
+    <p>Drag ‘WOW Server Status Widget’ to your sidebar</p>
+  </li>
+  <li>
+    <p>Enter details and done!</p>
+  </li>
+</ol>
+
+<p><span style="font-size: x-large;"><br /> </span></p>
+
+<p><span style="font-size: x-large;">Frequently Asked Questions</span></p>
+
+<p>The badge script is not my work, I just make it easy to drag and drop in wordpress.</p>
+
+<p>It should be able to run properly on most servers, but if there is a problem</p>
+
+<p>please visit <a href="http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10">http://53×11.com/blog/2005/04/21/WoW-Server-Status-41.10</a> and look for solutions there.</p>
+
+<p><strong>= It says “No Status Source”, what’s wrong? =</strong></p>
+
+<p>Make sure you check the realm name and region carefully, it won’t work if you’ve typed it wrong.</p>
+
+<p>If official realm status page: http://www.worldofwarcraft.com/realmstatus/compat.html is working fine, this badge should be working fine, in some rare cases like when they are upgrading server hardware or something, the realm page just breaks and so the badge will also break.</p>
+
+<p><strong>= It doesn’t reflect the actual realm status correctly, what’s wrong? =</strong></p>
+
+<p>See above. Also, update timer of this badge is set to 10 minutes, so it may not reflect immediately if the server status has just changed within 10 minutes.</p>
+
+<p><span style="font-size: x-large;">Changelog</span></p>
+
+<p>= 1.0.2 =</p>
+
+<ul>
+  <li>fixed the quotation realm not showing bug in original wow_ss.php, thanks Nullinger</li>
+</ul>
+
+<p>= 1.0.1 =</p>
+
+<ul>
+  <li>better plugin path handling, added bug report icon, updated license wordings</li>
+</ul>
+
+<p>= 1.0 =</p>
+
+<ul>
+  <li>First released version</li>
+</ul>
+
+  </div>
+
+  
+    
+    <x-chip href="/tag/wow-server-status-widget/">Wow-server-status-widget</x-chip>
+  
+
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/&title=WOW Server Status WordPress Widget 1.0&summary=&source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/&title=WOW Server Status WordPress Widget 1.0" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=WOW Server Status WordPress Widget 1.0&url=http://ycfreeman.com/blog/2010/06/wow-server-status-wordpress-widget-10/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    
+    <a href="/blog/2010/06/wow-recruitment-wordpress-widget-11/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
+
+    
+      <a href="/blog/2010/07/wow-recruitment-wordpress-widget-12/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
+
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'ycfreeman';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+</div>
+
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+
+  <paper-toast id="toast">
+    <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+  </paper-toast>
+
+</template>
+
+<!-- MathJax -->
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- build:js scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/scripts/g-analyt.js','ga');
+		
+		ga('create', 'UA-8760554-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/scripts/lightbox/js/lightbox.js"></script>
+
+</body>
+
+</html>

@@ -1,21 +1,801 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.title }}</title>
-		<description>{{ site.description }}</description>
-		<link>{{ site.BASE_PATH }}/</link>
-		<atom:link href="{{ site.BASE_PATH }}/{{ site.rss_path }}" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
-			<item>
-				<title>{{ post.title }}</title>
-				<description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.BASE_PATH }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.BASE_PATH }}{{ post.url }}</guid>
-			</item>
-		{% endfor %}
-	</channel>
+  <channel>
+    <title>ycfreeman&#39;s</title>
+    <description></description>
+    <link>http://ycfreeman.com/</link>
+    <atom:link href="http://ycfreeman.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 16 Apr 2016 01:53:23 +1000</pubDate>
+    <lastBuildDate>Sat, 16 Apr 2016 01:53:23 +1000</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Website is now on Github pages</title>
+        <description>&lt;p&gt;going full cheapo and migrate my personal website from vps hosted wordpress to &lt;a href=&quot;https://pages.github.com/&quot;&gt;github pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s face it, why pay for hosting if you don’t make money from it? it’s sad but true :stuck_out_tongue_winking_eye:&lt;/p&gt;
+
+&lt;p&gt;What I need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a website&lt;/li&gt;
+  &lt;li&gt;a page to serve as the main page for my domain name&lt;/li&gt;
+  &lt;li&gt;a hub to link to all my wordpress plugin projects&lt;/li&gt;
+  &lt;li&gt;and a few website projects&lt;/li&gt;
+  &lt;li&gt;something a little easier than handcrafting htmls by hand&lt;/li&gt;
+  &lt;li&gt;reliable website that is not hackable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What I don’t need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;WYSIWYG editor - i’ve done enough &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;markdown&lt;/a&gt; and html&lt;/li&gt;
+  &lt;li&gt;ever changing pages contents - why do you need it for a blog or personal website?&lt;/li&gt;
+  &lt;li&gt;commenting platform - i’m sick of managing spams, if i need one i’d use managed services like disqus.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;github pages seems a good fit, and hey it seems to be much faster and reliable than a cheap VPS hosted wordpress!&lt;/p&gt;
+
+&lt;p&gt;what do you think?&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/web-development/2016/04/09/website-now-on-github-pages/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/web-development/2016/04/09/website-now-on-github-pages/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
+    
+      <item>
+        <title>Website is back! (again)</title>
+        <description>&lt;p&gt;my AWS free tier is over, $60+ per month for EC2+RDS is a bit too much for my own personal website…&lt;/p&gt;
+
+&lt;p&gt;the site was down for a few weeks, now everything is migrated to a &lt;a href=&quot;http://core.weloveservers.net/aff.php?aff=218&quot;&gt;cheap vps hosting&lt;/a&gt;,it should be fine for another while &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Oct 2013 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2013/10/website-back/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2013/10/website-back/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
+    
+      <item>
+        <title>well RDS is now free</title>
+        <description>&lt;p&gt;Amazon RDS is now in &lt;a href=&quot;http://aws.typepad.com/aws/2012/10/amazon-rds-now-available-in-the-aws-free-usage-tier.html&quot;&gt;free usage tier&lt;/a&gt;, actually it was already available on my last post haha&lt;/p&gt;
+
+&lt;p&gt;so of course I’m already using it, now the website should be fast and reliable,�no more memory headache  &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;happy time&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Jan 2013 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2013/01/well-rds-is-now-free/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2013/01/well-rds-is-now-free/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
+    
+      <item>
+        <title>Site went down, but it&amp;#8217;s back</title>
+        <description>&lt;p&gt;This site went down for a few days due to a common AWS micro instance issue — out of memory and mysqld got killed.&lt;/p&gt;
+
+&lt;p&gt;So I went in and &lt;a href=&quot;http://imperialwicket.com/tuning-apache-for-a-low-memory-server-like-aws-micro-ec2-instances&quot;&gt;tweaked some apache settings&lt;/a&gt;�…�&lt;span style=&quot;line-height: 1.6em;&quot;&gt;also upgraded to apache 2.4+php 5.4… for maybe slightly lower memory usage…&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;hope it won’t go down again that soon&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;— just tried nginx,  &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660&quot; alt=&quot;:(&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;got it running and doing phpinfo() correctly but takes too long to manually setup all these rewriting stuff for wordpress…… maybe I’ll try that again some time&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;…. down again, added &lt;a href=&quot;http://randomind.com/tips/how-to-create-swap-partition-on-amazon-aws-micro-instance-linux-2012-08-29&quot;&gt;swap partition&lt;/a&gt;…..&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Nov 2012 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2012/11/site-went-down-and-its-back/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2012/11/site-went-down-and-its-back/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
+    
+      <item>
+        <title>Same old site, Lightning fast</title>
+        <description>&lt;p&gt;Finally got the time to migrate my site from crappy shared hosting to AWS,&lt;/p&gt;
+
+&lt;p&gt;It’s now on Amazon Linux (CentOS) with basic AMP (mod_php) stack — php php-mysql mysql-server — I’m no nginx guru and�mod_fcgid gives me headache…&lt;/p&gt;
+
+&lt;p&gt;so I just got APC caching — php-pecl-apc — which is already much faster than file based caching — and of course with W3 Total Cache &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and &lt;a href=&quot;https://developers.google.com/speed/docs/mod_pagespeed/download&quot;&gt;mod_pagespeed binary from google&lt;/a&gt;�helps a little as well&lt;/p&gt;
+
+&lt;p&gt;Site speed should be much faster now, and I haven’t even looked at this &lt;a href=&quot;http://codex.wordpress.org/WordPress_Optimization&quot;&gt;long list&lt;/a&gt; yet&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+        <pubDate>Tue, 30 Oct 2012 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2012/10/same-old-site-lightning-fast/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2012/10/same-old-site-lightning-fast/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
+    
+      <item>
+        <title>&amp;#8220;Git&amp;#8221;ing my plugins</title>
+        <description>&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;update 9/8/2012: done &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ycfreeman/wow-server-status-widget&quot;&gt;https://github.com/ycfreeman/wow-server-status-widget�&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WOW Recruitment Widget was updated to 1.4.1 around 3 months ago, which included the Monk update and bigger icons,&lt;/p&gt;
+
+&lt;p&gt;just update from your wordpress plugins panel if you haven’t &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Latest release note is updated on the Extension gallery page. Please give a 5 star and favorite if you like this plugin.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wordpress.org/extend/plugins/wow-recruit-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-recruit-widget/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m converting WOW Recruitment Widget and WOW Server Status Widget�to Git, then push to Github (although I love Google, Github seems easier for you fellas to fork)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;so I can track issues better and you guys can fork it for other games much easier :), also prepare for major code�changes, SVN just won’t cut it if you want to do branches properly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why now?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;just because.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why Git?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;because cool kids use Git (it rhymes!), although I uses Mercurial at work, really just want to try out Git, lol.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;When will it be there?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;it takes ages to grab both projects from over 500k checkins in wordpress plugin repo, it will take some time, blame wordpress for why still use SVN.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+        <pubDate>Sat, 04 Aug 2012 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2012/08/giting-my-plugins/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2012/08/giting-my-plugins/</guid>
+        
+        <category>wow-recruit-widget</category>
+        
+        <category>wow-server-status-widget</category>
+        
+        
+        <category>wordpress-plugin</category>
+        
+      </item>
+    
+      <item>
+        <title>WOW Recruitment Widget is not dead</title>
+        <description>&lt;p&gt;27/8/2012 update:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Can you make it display on a page instead of only on the side bar?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are still looking for an easy solution, I’ve found out a trick recently that may help.&lt;/p&gt;
+
+&lt;p&gt;– create a page template with a special widget area that sits in content area of your site template (instead of a post loop)&lt;/p&gt;
+
+&lt;p&gt;– use the widget in that special widget area&lt;/p&gt;
+
+&lt;p&gt;you may want to check wordpress codex about how to do this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://codex.wordpress.org/Widgetizing_Themes&quot; rel=&quot;nofollow&quot;&gt;http://codex.wordpress.org/Widgetizing_Themes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;if you want different recruitment widget to appear on different pages, you can create just one of these special widget area then use a per-page widget plugin like&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wordpress.org/extend/plugins/wp-page-widget/screenshots/&quot; rel=&quot;nofollow&quot;&gt;http://wordpress.org/extend/plugins/wp-page-widget/screenshots/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I�m closing comments on this site, so if there�s any more issue/questions, feel free to open an issue on project site on github&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The widget hasn’t been updated for over a year but it is not dead!&lt;/p&gt;
+
+&lt;p&gt;Thank you for all your support.&lt;/p&gt;
+
+&lt;p&gt;I’ve been getting quite a number of emails these days regarding to this plug-in. Here is a little FAQ.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Will you add Monk class in and when?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;– Yes I will add Monk class in and it will be done before MOP I promise.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. I’ve tried to modify your plug-in for [SWTOR / Rift / Insert your game here] classes, but I can’t get it to work by [Insert your modification here] ……&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;– Unfortunately I don’t play SWTOR, and I’m not sure how many classes there are in the game. This widget right now only “supports” 10 classes, and you will need to modify the php file (and the style sheet of course) in order to get more classes in. Try to find $wr_class and $options arrays and add more classes to it, $options is used to initialize class names, while $wr_class is used to build the markup for the stylesheet of the previous version(1.0) to work properly. The code base is very messy and I’ll definitely do a major re-code in the next version.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Can you make it display on a page instead of only on the side bar?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;– You mean short code support or even a plug-in page. Unfortunately it is not supported at the moment. I’ve thought about it but can’t quite figure out the best way to support short code while still storing data through widget instance and widget update function.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Can you make a version for [Joomla / Drupal / Insert your CMS here]?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;– This widget is strongly based on wordpress at the moment. It is not the highest priority to make one for different CMSes at the moment, but it is definitely in my to-do list.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Feb 2012 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/</guid>
+        
+        <category>wow-recruit-widget</category>
+        
+        
+        <category>wordpress-plugin</category>
+        
+      </item>
+    
+      <item>
+        <title>Support forum offline</title>
+        <description>&lt;p&gt;Support Forum is offline due to spam &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660&quot; alt=&quot;:(&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Dec 2011 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2011/12/support-forum-offline/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2011/12/support-forum-offline/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
+    
+      <item>
+        <title>WOW Server Status WordPress Widget 1.0.7</title>
+        <description>&lt;p&gt;Thanks Aoife for the info, I didn’t know Blizzard released their official API.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;This plugin is now�updated to use official JSON feed,�(finally :p), php 5.2+ &lt;strong&gt;required&lt;/strong&gt; (for native json_decode() support), although fallback JSON.php for earlier versions is included as well, no garrantee it works in 5.2-, too bad if it doesn’t work :(.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;For non-wordpress users,�feel free to download the package�and extract the wow_ss.php to use it like the &lt;a href=&quot;http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10&quot; target=&quot;_blank&quot;&gt;original one&lt;/a&gt;. (text display mode may contain bugs),&lt;/span&gt;�more information about &lt;a href=&quot;http://ycfreeman.com/wow-server-status-wordpress-widget-10/&quot; title=&quot;WOW Server Status WordPress Widget 1.0&quot;&gt;this plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;If you would like to support this project, please consider&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;
+      , I will give you my Shaman hug &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;div&gt;
+        Download from wordpress plugin gallery:�&lt;a href=&quot;http://wordpress.org/extend/plugins/wow-server-status-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-server-status-widget/&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;!--more--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: x-large;&quot;&gt;Changelog&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;= 1.0.7 =* just re-upload and make sure all files are newest&lt;/p&gt;
+
+&lt;p&gt;= 1.0.6 =* patched to use official JSON feed&lt;/p&gt;
+
+&lt;p&gt;= 1.0.5 =* fixed bug of space becomes %20 in the new wow_ss.php, thanks Mike&lt;/p&gt;
+
+&lt;p&gt;= 1.0.4 =* since official realm status xml is not there anymore, I’ve modified the original wow server status badge to use [Axho’s WoW Feeds](http://wowfeeds.wipeitau.com/)… at least for now, feel free to extract the modified badge php for your own use.&lt;/p&gt;
+
+&lt;p&gt;= 1.0.3 =* take 2, fixed the apostrophe realm not showing bug in original wow_ss.php, aparently the original script has 3 places doing the same thing, so I merged them to one, and encode it correctly to ANSIit should be fine now if your keyboard is US keyboard, that renders apostrophe as &#39;, sorry for having it not working for so long&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Jun 2011 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/blog/2011/06/wow-server-status-wordpress-widget-1-0-6/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/blog/2011/06/wow-server-status-wordpress-widget-1-0-6/</guid>
+        
+        <category>wow-server-status-widget</category>
+        
+        
+        <category>wordpress-plugin</category>
+        
+      </item>
+    
+      <item>
+        <title>WOW Recruitment Widget</title>
+        <description>&lt;p&gt;Welcome to the home page of&lt;strong&gt;WOW Recruitment WordPress Widget (&lt;/strong&gt;&lt;strong&gt;wow-recruit-widget&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://demo.ycfreeman.com&quot;&gt;Demo Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;18 Dec 2012: plugin is back on wordpress plugin listing&lt;/p&gt;
+
+&lt;p&gt;17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github &lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;&lt;span style=&quot;font-size: 1rem;&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/span&gt;&lt;/a&gt;, and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing&lt;/p&gt;
+
+&lt;p&gt;17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i’m fixing it right now….�github repo also pulled down due to these conflicts.&lt;/p&gt;
+
+&lt;p&gt;11 Dec 2012: &lt;a href=&quot;http://demo.ycfreeman.com&quot; target=&quot;_blank&quot;&gt;updated code samples on demo site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;27 Aug 2012:�&lt;a href=&quot;http://ycfreeman.com/wow-recruitment-widget-not-dead/&quot; title=&quot;WOW Recruitment Widget is not dead&quot;&gt;updated FAQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;9 Aug 2012: this project is now on github &lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/a&gt;�, feel free to “fork” it, cheers &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;29 Feb 2012: &lt;a href=&quot;http://ycfreeman.com/wow-recruitment-widget-not-dead/&quot; title=&quot;WOW Recruitment Widget is not dead&quot;&gt;little update and FAQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;p&gt;
+    14 Dec 2010: started 1.4 update these days, hopefully can be done during holidays (been actually playing wow these days :p)
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    24 Oct 2010: From now on I&amp;#8217;ll post in comments for teasers, or some workable ideas that come up in my mind about this plugin, (like when I have time to post a few lines but not enough to actually update the widget :p),�so check back once a while or subscribe if you have a google account/ if it works &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt; blogger doesn&amp;#8217;t seem to have a comment feed which you can subscribe yet, it seems to work on gmail only at the moment.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    new major updates will still be in the form of new blog posts, so you can check out major updates by subscribing to feed. I&amp;#8217;ll try to keep my blog updates relevant (lol about that IE post, cuz it&amp;#8217;s too awesome).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    WOW Recruitment Widget is a wordpress widget based plugin that helps to display recruitment message of a World of Warcraft guild.
+  &lt;/p&gt;
+
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;strong&gt;Thank you for all your support, stay tuned for updates~&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;p&gt;
+        &lt;strong&gt;If you would like to support this project, please consider&lt;/strong&gt;
+      &lt;/p&gt;
+
+      &lt;div style=&quot;text-align: center;&quot;&gt;
+      &lt;/div&gt;
+
+      &lt;p&gt;
+        &lt;strong&gt;, I will give you my Goblin hug &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/strong&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;
+    &lt;strong&gt;Demo site:&lt;/strong&gt; &lt;a href=&quot;http://ycfreeman.com/wrdemo&quot; target=&quot;_blank&quot;&gt;http://ycfreeman.com/wrdemo/&lt;/a&gt; &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Download latest version from your WordPress site plugin panel or from WordPress Plugin Directory:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wordpress.org/extend/plugins/wow-recruit-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-recruit-widget/&lt;/a&gt;&lt;/p&gt;
+
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;center&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;p style=&quot;text-align: center;&quot;&gt;
+        &lt;a href=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/Capture.JPG&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/Capture1.JPG?w=660&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      default look (excluding background colour)
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;center&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;p style=&quot;text-align: center;&quot;&gt;
+        &lt;a href=&quot;http://i1.wp.com/ycfreeman.com/wp-content/uploads/2010/12/widget2.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/widget3.jpg?resize=294%2C320&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      widget setting
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;center&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/12/settings2.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/settings3.jpg?resize=135%2C320&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      settings menu
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;center&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/options2.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/options3.jpg?resize=239%2C320&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      admin settings page for &amp;#8220;translations&amp;#8221; etc
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;customization&quot;&gt;Customization&lt;strong&gt;:&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Demo site with a few example style (best viewed on chrome4+ /safari4+, or latest FF3+/Opera10+/IE9+)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ycfreeman.com/wrdemo&quot; target=&quot;_blank&quot;&gt;http://ycfreeman.com/wrdemo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/&quot; title=&quot;WOW Recruitment Widget � Customization&quot;&gt;Customization (with pure CSS) tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;detailed-description&quot;&gt;Detailed Description&lt;/h3&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;em&gt;&lt;strong&gt;Widget Settings (Widget):&lt;/strong&gt;&lt;/em&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;Title: the title of the widget (optional)&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &amp;#8212; The title bar will be hidden if Title is empty.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;&lt;br /&gt; Recruitment URL: links to your recruitment page (optional).&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &amp;#8212; The whole box will become clickable and links to the URL if Title URL is specified.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;&lt;br /&gt; Recruitment Message: some message between title and the list (optional)&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Tooltip Pattern:�customize tooltip with tokens
+    &lt;/p&gt;
+
+    &lt;p id=&quot;_mcePaste&quot;&gt;
+      &amp;#8212; you can customize tooltip with tokens, mind that these tokens are case sensitive.
+    &lt;/p&gt;
+
+    &lt;p id=&quot;_mcePaste&quot;&gt;
+      [class] &amp;#8211; will be replaced with class text
+    &lt;/p&gt;
+
+    &lt;p id=&quot;_mcePaste&quot;&gt;
+      [status] &amp;#8211; will be replaced with status text
+    &lt;/p&gt;
+
+    &lt;p id=&quot;_mcePaste&quot;&gt;
+      [note] -will be replaced with note
+    &lt;/p&gt;
+
+    &lt;p id=&quot;_mcePaste&quot;&gt;
+      say you have a pattern like [class] | [note] | [status]
+    &lt;/p&gt;
+
+    &lt;p id=&quot;_mcePaste&quot;&gt;
+      then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      (it will get everything inside that particular text box, if you put some html tags in that text box, it will show up as well, it maybe improved if this feature is becoming popular)
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &amp;#8212; you can customize tooltip with tokens, mind that these tokens are case sensitive.[class] &amp;#8211; will be replaced with class text[status] &amp;#8211; will be replaced with status text[note] -will be replaced with notesay you have a pattern like [class] | [note] | [status]then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
+    &lt;/p&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+      &lt;div&gt;
+        &lt;p&gt;
+          &amp;nbsp;
+        &lt;/p&gt;
+
+        &lt;div&gt;
+          &lt;h4&gt;
+            &lt;strong&gt;Class: (default texts are 10 classes in WOW)&lt;/strong&gt;
+          &lt;/h4&gt;
+
+          &lt;p&gt;
+            &amp;#8212; so it is possible to make multiple entries for same class.
+          &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+        &lt;/div&gt;
+
+        &lt;p&gt;
+          &amp;nbsp;
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          &lt;strong&gt;Status: consist of 4 status (default text: High, Medium, Low, Closed).&lt;/strong&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+      &lt;div&gt;
+        &lt;p&gt;
+          &amp;#8212; The class will not be displayed if status is Closed (unless it is set to display in admin settings).
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+      &lt;div&gt;
+        &lt;p&gt;
+          Note: additional note for the recruitment message (usually for different spec of the class).
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;
+      &lt;strong&gt;&lt;br /&gt; &lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;strong&gt;&lt;em&gt;Plugin Settings (Settings &amp;gt; WOW Recruit Widget):&lt;/em&gt;&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+      &lt;h4&gt;
+        &lt;strong&gt;Use Custom Style Sheet:&lt;/strong&gt;
+      &lt;/h4&gt;
+
+      &lt;p&gt;
+        &amp;#8212; checking this will stop default style sheet from loading
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+      &lt;div&gt;
+        &lt;p&gt;
+          &lt;strong&gt;Status texts: consist of 4 status�&lt;/strong&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+      &lt;div&gt;
+        &amp;#8212; default text: High, Medium, Low, Closed.
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &amp;#8212; &amp;#8220;closed&amp;#8221; status will show if &amp;#8220;display?&amp;#8221; is checked
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 14px; line-height: 22px;&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;
+      &lt;strong&gt;Class texts: consist of 10 class slots�&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &amp;#8211;�default texts are 10 classes in WOW in English
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;p&gt;
+      &amp;nbsp;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;h4&gt;
+      If you managed to find bugs or typos, please feel free to leave a comment here.
+    &lt;/h4&gt;
+
+    &lt;p&gt;
+      &amp;nbsp;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;h3&gt;
+      Installation
+    &lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Unpack and Upload all files to the `/wp-content/plugins/wow-recruit-widget` directory&lt;/li&gt;
+  &lt;li&gt;Activate the plugin through the ‘Plugins’ menu in WordPress&lt;/li&gt;
+  &lt;li&gt;Drag ‘WOW Recruitment Widget’ to your sidebar&lt;/li&gt;
+  &lt;li&gt;Enter details and done!&lt;/li&gt;
+  &lt;li&gt;(optional) go to Settings &amp;gt; WOW Recruit Widget to set up all classes and status texts to your own language&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h3&gt;
+        Frequently Asked Questions
+      &lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;= These color/font/size does not match my template, can I change them? =&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      Yes, copy all contents in the widget style.css to your theme style.css, then choose &amp;#8220;Use Custom Style Sheet&amp;#8221; in admin panel, and remember to point .wr-icon sprite to a correct image, i.e. if you want to use the default image sprite, change .wr-icon &amp;gt; background-image to
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;wp_syntax&quot;&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;code&quot;&gt;
+          &lt;pre class=&quot;css&quot; style=&quot;font-family:monospace;&quot;&gt;&lt;span style=&quot;color: #993333;&quot;&gt;url&lt;/span&gt;&lt;span style=&quot;color: #00AA00;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #ff0000; font-style: italic;&quot;&gt;../../plugins/wow-recruit-widget/img/class-sprite.png&lt;/span&gt;&lt;span style=&quot;color: #00AA00;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      or using absolute link
+    &lt;/p&gt;
+
+    &lt;div class=&quot;wp_syntax&quot;&gt;
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;code&quot;&gt;
+            &lt;pre class=&quot;css&quot; style=&quot;font-family:monospace;&quot;&gt;&lt;span style=&quot;color: #993333;&quot;&gt;url&lt;/span&gt;&lt;span style=&quot;color: #00AA00;&quot;&gt;&amp;#40;&lt;/span&gt;http&lt;span style=&quot;color: #00AA00;&quot;&gt;:&lt;/span&gt;//&lt;span style=&quot;color: #00AA00;&quot;&gt;&amp;#123;&lt;/span&gt;your site&lt;span style=&quot;color: #ff0000;&quot;&gt;&#39;s url}/wp-content/plugins/wow-recruit-widget/img/class-sprite.png)&lt;/span&gt;&lt;/pre&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;
+      &lt;strong&gt;&lt;br /&gt; &lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;= I don&amp;#8217;t want the icon class note to layout like that, can I change it? =&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      Yes, all layouts are done with css, please refer to the latest plugin URL for some useful links and examples
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;&lt;br /&gt; &lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;strong&gt;= Can I sort recruitment messages in another way? =&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;
+      Unfortunately no, please leave me a comment if you want this feature :).
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &amp;nbsp;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;h3&gt;
+    Bed Time Readings&amp;#8230;
+  &lt;/h3&gt;
+
+  &lt;div&gt;
+    &lt;p&gt;
+      It first started with a really simple widget only for displaying some recruitment message, since there was nearly no plugins doing something I want in the wordpress plugin directory, which look nice on my guild site, and can be used easily by not-so-IT officers in my own guild.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;p&gt;
+      Since 1.1 -�seems there are quite a number of sites using this widget by that time, I thought it would be a bit boring if it is not customizable, after all I thought it would lost the point of having wonderful looking WordPress site if they all look like those Joomla WOW sites with the same set, same looking plugins out there, so it was then designed to be highly customizable with very little CSS techniques to meet most design needs for individual WordPress website/blog.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;p&gt;
+      Since 1.2 -�seems some sites using this widget are based on non-english contents, it would look weird to have English only on this widget, so it was then designed to be customizable for almost all texts so you can enter any information into those &amp;#8220;recruitment&amp;#8221; slots, and thus able to achieve multilingual support or even easily tailored for non-world of warcraft related uses.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Since 1.3 &amp;#8211; graphical layout seems to be a reasonable feature and it is used in a couple of similar plugin, but it does not make sense if there are no grouping (by class) and tooltip on rollover, so in this version I&amp;#8217;ve added tooltip first, grouping requires quite a lot of rework, so I&amp;#8217;ve put it to todo list for 1.4.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 15 Dec 2010 00:00:00 +1000</pubDate>
+        <link>http://ycfreeman.com/wow-recruitment-widget</link>
+        <guid isPermaLink="true">http://ycfreeman.com/wow-recruitment-widget</guid>
+        
+        <category>wow-recruit-widget</category>
+        
+        
+        <category>wordpress-plugin</category>
+        
+      </item>
+    
+  </channel>
 </rss>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="ycfreeman's" />
+
+    <title>WOW Recruitment Widget is not dead</title>
+    <meta name="description" content="27/8/2012 update:3. Can you make it display on a page instead of only on the side bar?If you are still looking for an easy solution, I’ve found out a trick r...">
+
+    <link rel="canonical" href="http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/">
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href='http://ycfreeman.com/feed.xml' />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#607D8B">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="msapplication-TileColor" content="#FF5722">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ycfreeman's">
+    <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ycfreeman's">
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <link rel="stylesheet" href="/styles/code-highlight.css">
+    <!-- endbuild-->
+
+    <link rel="stylesheet" href="/scripts/lightbox/css/lightbox.css">
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="/elements/elements.html">
+    <!-- endreplace-->
+
+    <!-- For shared styles, shared-styles.html import in elements.html -->
+    <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <!-- Drawer Scroll Header Panel -->
+    <paper-scroll-header-panel drawer fixed>
+      <div class="wrapper"> <!-- necessary to push copyright to bottom -->
+        <!-- Drawer Toolbar -->
+        <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected="/blog/2012/02/wow-recruitment-widget-not-dead/" on-iron-select="onMenuSelect">
+          <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
+          <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+        </paper-menu>
+
+        
+        
+        <my-nav-subheader>Wordpress Plugins</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="/tag/wow-recruit-widget/" ><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+        
+        <my-nav-subheader>Report bugs</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        
+        <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-recruit-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        
+        <a href="https://github.com/ycfreeman/wow-server-status-widget/issues" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
+        
+        </paper-menu>
+        
+        
+
+        <my-nav-subheader>Contact Me</my-nav-subheader>
+        <paper-menu>
+          
+          <a href="https://paypal.me/ycfreeman" target="_blank"><iron-icon icon="fa:paypal"></iron-icon><span>Donation</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+          
+          <a href="https://github.com/ycfreeman" target="_blank"><iron-icon icon="fa:linkedin"></iron-icon><span>My LinkedIn</span></a>
+          
+          
+          <a data-route="contact" href="mailto:freeman@ycfreeman.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
+        </paper-menu>
+        <div class="push"></div>
+      </div>
+      <div id="copyright-info">&copy; 2016, Freeman Man</div>
+    </paper-scroll-header-panel>
+
+    <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+        <span class="space"></span>
+
+        <!-- Toolbar icons -->\
+        <div class="top top-container">
+          <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
+        </div>
+
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">ycfreeman's</div>
+        </div>
+
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <!--<div class="bottom-title">I play games, and I do code for food</div>-->
+          <div class="bottom-title">I play games, and I do code for food</div>
+        </div>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content"><style>
+  body {
+    background-color: #f9f9f9 !important;
+  }
+</style>
+
+<div id="post">
+
+  
+
+  <h1 class="paper-font-display1">WOW Recruitment Widget is not dead</h1>
+  <h4 class="paper-font-subhead" id="date">Feb 29, 2012</h4>
+
+  <div id="post-content">
+    <p>27/8/2012 update:</p>
+
+<p><strong>3. Can you make it display on a page instead of only on the side bar?</strong></p>
+
+<p>If you are still looking for an easy solution, I’ve found out a trick recently that may help.</p>
+
+<p>– create a page template with a special widget area that sits in content area of your site template (instead of a post loop)</p>
+
+<p>– use the widget in that special widget area</p>
+
+<p>you may want to check wordpress codex about how to do this:</p>
+
+<p><a href="http://codex.wordpress.org/Widgetizing_Themes" rel="nofollow">http://codex.wordpress.org/Widgetizing_Themes</a></p>
+
+<p>if you want different recruitment widget to appear on different pages, you can create just one of these special widget area then use a per-page widget plugin like</p>
+
+<p><a href="http://wordpress.org/extend/plugins/wp-page-widget/screenshots/" rel="nofollow">http://wordpress.org/extend/plugins/wp-page-widget/screenshots/</a></p>
+
+<p>I�m closing comments on this site, so if there�s any more issue/questions, feel free to open an issue on project site on github</p>
+
+<p> </p>
+
+<p>The widget hasn’t been updated for over a year but it is not dead!</p>
+
+<p>Thank you for all your support.</p>
+
+<p>I’ve been getting quite a number of emails these days regarding to this plug-in. Here is a little FAQ.</p>
+
+<p><strong>1. Will you add Monk class in and when?</strong></p>
+
+<p>– Yes I will add Monk class in and it will be done before MOP I promise.</p>
+
+<p><strong>2. I’ve tried to modify your plug-in for [SWTOR / Rift / Insert your game here] classes, but I can’t get it to work by [Insert your modification here] ……</strong></p>
+
+<p>– Unfortunately I don’t play SWTOR, and I’m not sure how many classes there are in the game. This widget right now only “supports” 10 classes, and you will need to modify the php file (and the style sheet of course) in order to get more classes in. Try to find $wr_class and $options arrays and add more classes to it, $options is used to initialize class names, while $wr_class is used to build the markup for the stylesheet of the previous version(1.0) to work properly. The code base is very messy and I’ll definitely do a major re-code in the next version.</p>
+
+<p><strong>3. Can you make it display on a page instead of only on the side bar?</strong></p>
+
+<p>– You mean short code support or even a plug-in page. Unfortunately it is not supported at the moment. I’ve thought about it but can’t quite figure out the best way to support short code while still storing data through widget instance and widget update function.</p>
+
+<p><strong>4. Can you make a version for [Joomla / Drupal / Insert your CMS here]?</strong></p>
+
+<p>– This widget is strongly based on wordpress at the moment. It is not the highest priority to make one for different CMSes at the moment, but it is definitely in my to-do list.</p>
+
+  </div>
+
+  
+    
+    <x-chip href="/tag/wow-recruit-widget/">Wow-recruit-widget</x-chip>
+  
+
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/&title=WOW Recruitment Widget is not dead&summary=&source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/&title=WOW Recruitment Widget is not dead" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=WOW Recruitment Widget is not dead&url=http://ycfreeman.com/blog/2012/02/wow-recruitment-widget-not-dead/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    
+    <a href="/blog/2011/12/support-forum-offline/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
+
+    
+      <a href="/blog/2012/08/giting-my-plugins/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
+
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'ycfreeman';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+</div>
+
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+
+  <paper-toast id="toast">
+    <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+  </paper-toast>
+
+</template>
+
+<!-- MathJax -->
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- build:js scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/scripts/g-analyt.js','ga');
+		
+		ga('create', 'UA-8760554-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/scripts/lightbox/js/lightbox.js"></script>
+
+</body>
+
+</html>
