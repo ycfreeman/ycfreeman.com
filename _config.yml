@@ -1,72 +1,45 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+source: app
+destination: app/_site
 
-paginate: 10 # pagination based on number of posts
+# Site settings
+title: ycfreeman's
+subtitle: I play games, and I do code for food
+description:
+
+
+author: Freeman Man
+author_website: http://ycfreeman.com
+email: freeman@ycfreeman.com
+
+baseurl: "" # the subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
+url: "http://ycfreeman.com" # the base hostname & protocol for your site
+
+twitter_username: ''
+github_username:  ycfreeman
+disqus_shortname: ''
+linkedin: ycfreeman
+google_analytics: UA-8760554-2
+
+# Pagination
+paginate: 5
 paginate_path: "page:num"
+excerpt_separator: <!--more-->
+
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-title: ycfreeman's
-google_analytics: UA-8760554-2
 
-defaults:
-  -
-    scope:
-      path: "" # empty string for all files
-    values:
-      title: ycfreeman's
-url: http://ycfreeman.com
-name: 'ycfreeman&#039;s'
-description: I play games, and I do code for food
-author:
-  name: ycfreeman
-  email: freeman@ycfreeman.com
-  github: ycfreeman
-  linkedin: ycfreeman
-  bio: I play games, and I do code for food
-  email_md5: be91bc3f804140479ad043b33d25a8c5
-navigation:
-  - title: Home
-    url: /
-  - title: About
-    url: /about.html
-  - title: Wordpress Plugins
-    items:
-      - title: JPlayer Podcast Widget
-        url: https://github.com/ycfreeman/jplayer-podcast-wordpress-widget
-        target: _blank
-      - title: Wow Recruitment Widget
-        url: /tags.html#wow-recruit-widget-ref
-      - title: Wow Server Status Widget
-        url: /tags.html#wow-server-status-widget-ref
-        target: _blank
-  - title: Report bugs
-    items:
-      - title: JPlayer Podcast Widget
-        url: https://github.com/ycfreeman/jplayer-podcast-wordpress-widget/issues
-        target: _blank
-      - title: Wow Recruitment Widget
-        url: https://github.com/ycfreeman/wow-recruit-widget/issues
-        target: _blank
-      - title: Wow Server Status Widget
-        url: https://github.com/ycfreeman/wow-server-status-widget/issues
-        target: _blank
-  - title: Browse
-    url: #
-    items:
-      - title: Categories
-        url: /categories.html
-      - title: Tags
-        url: /tags.html
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
-
-# set it as url of an image
-# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
-
-BASE_PATH:
-
+# Gems
 gems:
+  - jekyll-archives
   - jekyll-paginate
   - jemoji
   - jekyll-redirect-from
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+# Archive settings
+jekyll-archives:
+  enabled: ['tags']

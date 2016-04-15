@@ -1,4 +1,13 @@
-_site/*
-*Thumbs.db
-Gemfile.lock
-.jekyll-metadata
+_site
+dist
+bower_components
+node_modules
+.idea
+app/_posts/personal/*
+app/images/posts/personal/*
+app/_drafts
+/.publish
+CNAME
+/.tmp
+npm-debug.log
+/excluded-posts
