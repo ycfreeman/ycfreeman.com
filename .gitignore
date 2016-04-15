@@ -7,7 +7,6 @@ app/_posts/personal/*
 app/images/posts/personal/*
 app/_drafts
 /.publish
-CNAME
 /.tmp
 npm-debug.log
 /excluded-posts

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?> <rss
+version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+><channel><title>ycfreeman&#039;s &#187; FBML</title> <atom:link href="http://ycfreeman.com/tag/fbml/feed/" rel="self" type="application/rss+xml" /><link>http://ycfreeman.com</link> <description>I play games, and I code for food</description> <lastBuildDate>Sun, 07 Apr 2013 12:53:30 +0000</lastBuildDate> <language>en-US</language> <sy:updatePeriod>hourly</sy:updatePeriod> <sy:updateFrequency>1</sy:updateFrequency> <generator>http://wordpress.org/?v=3.6-RC1-24704</generator> <item><title>Widgetbox + Facebook Page + static FBML box</title><link>http://ycfreeman.com/2010/04/01/widgetbox-facebook-page-static-fbml-box/</link> <comments>http://ycfreeman.com/2010/04/01/widgetbox-facebook-page-static-fbml-box/#comments</comments> <pubDate>Thu, 01 Apr 2010 01:09:00 +0000</pubDate> <dc:creator>freeman</dc:creator> <category><![CDATA[web design]]></category> <category><![CDATA[facebook]]></category> <category><![CDATA[FBML]]></category> <category><![CDATA[flash]]></category> <category><![CDATA[widgetbox]]></category><guid
+isPermaLink="false">http://www.ycfreeman.com/?p=22</guid> <description><![CDATA[<p>So I finally got the time and mood to put a little bit work on this problem. While there&#8217;s seem to be very few clear tutorial or some sort in google specifically for this matter, I thought it would be either too simple that no one bothers to give a tutorial, or simply too complicated [&#8230;]</p><p>The post <a
+href="http://ycfreeman.com/2010/04/01/widgetbox-facebook-page-static-fbml-box/">Widgetbox + Facebook Page + static FBML box</a> appeared first on <a
+href="http://ycfreeman.com">ycfreeman&#039;s</a>.</p>]]></description> <content:encoded><![CDATA[<p>So I finally got the time and mood to put a little bit work on this problem.</p><p>While there&#8217;s seem to be very few clear tutorial or some sort in google specifically for this matter, I thought it would be either too simple that no one bothers to give a tutorial, or simply too complicated that no one bothers to do it.</p><p>Widgetbox is a useful site that allow you to create some dynamic content to your website in widget form, or simply use those widgets that created by someone else. Every time you want to insert a widget in widgetbox, simply copy the embed code generated and paste to the place you want to add. It works like charm for most contents like blog, website, etc.</p><p>However, as its code contains external script and object tag, it simply violates Facebook&#8217;s terms of page contents&#8230; aka, it does not work with Facebook page, if you directly copy and paste those codes into that static FBML box (<a
+href="http://d3ug71ncn5ybxy.cloudfront.net/wp-content/uploads/2010/04/fb-fanpages-fbml-box">here&#8217;s some info about it</a>). So this &#8220;new&#8221; Facebook page has banned most sort of external scripts and objects, so the generated embed code which consist of &#8220;object&#8221; and &#8220;script&#8221;<br
+/> tags just simply doesn&#8217;t work on static FBML boxes.</p><p><a
+name="more"></a></p><p>&#8220;but Facebook says they support swf!&#8221;, Yes they support swf, in a weird way. First, you have to use FB:SWF to include the flash object, Second, it does not play on page load.</p><p>So the way to solve this problem is to convert that object tag and those variables into the fb:swf tag. Ya simple as that.</p><p>now here&#8217;s what you get from widgetbox &#8220;embed&#8221; button</p><pre>&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+ codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
+ type="application/x-shockwave-flash"
+ width="350px" height="523px"
+ id="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
+ align="middle"&gt; &lt;param name="movie"
+ value="http://widgetserver.com/syndication/flash/wrapper/InsertWidget.swf"&gt;
+    &lt;param name="quality"
+ value="high"&gt;
+   &lt;param name="wmode" value="transparent"&gt;
+    &lt;param name="menu" value="false"&gt;
+    &lt;param name="flashvars" value="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3"&gt;
+    &lt;param name="allowScriptAccess" value="sameDomain"&gt;
+    &lt;embed src="http://d3ug71ncn5ybxy.cloudfront.net/wp-content/uploads/2010/04/InsertWidget.swf"
+ name="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
+ width="350px" height="523px" quality="high" menu="false"
+    pluginspage="http://www.macromedia.com/go/getflashplayer"
+ type="application/x-shockwave-flash" wmode="transparent" align="middle"
+ allowscriptaccess="sameDomain"
+ flashvars="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3" /&gt; &lt;/object&gt;</pre><p>pretty much clear on how to convert here now <img
+src='http://d3ug71ncn5ybxy.cloudfront.net/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> , just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the “lid of your hot pot”.</p><p>the converted code would be something like this:</p><pre>&lt;fb:swf
+ imgsrc="http://d3ug71ncn5ybxy.cloudfront.net/wp-content/uploads/2010/04/playbuttonm.jpg"
+ swfsrc="http://d3ug71ncn5ybxy.cloudfront.net/wp-content/uploads/2010/04/InsertWidget.swf"
+ flashvars='r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3'
+ width='350' height='500'
+ align='middle'
+ wmode='transparent'
+ waitforclick='false'
+ scale='exactfit'
+/&gt;</pre><p>update 19/02/2011: demo page no longer available, but there should be some fb pages with flash these days.</p><p>one more thing, you can always test those FBML codes at <a
+href="http://d3ug71ncn5ybxy.cloudfront.net/wp-content/uploads/2010/04/tools.php?fbml">FBML test console</a> before publish <img
+src='http://d3ug71ncn5ybxy.cloudfront.net/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /></p><p>update: FBML test console is no longer working <img
+src='http://d3ug71ncn5ybxy.cloudfront.net/wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' /></p><p>Have fun!</p><p>The post <a
+href="http://ycfreeman.com/2010/04/01/widgetbox-facebook-page-static-fbml-box/">Widgetbox + Facebook Page + static FBML box</a> appeared first on <a
+href="http://ycfreeman.com">ycfreeman&#039;s</a>.</p>]]></content:encoded> <wfw:commentRss>http://ycfreeman.com/2010/04/01/widgetbox-facebook-page-static-fbml-box/feed/</wfw:commentRss> <slash:comments>3</slash:comments> </item> </channel> </rss>

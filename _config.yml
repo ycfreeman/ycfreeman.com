@@ -16,8 +16,9 @@ url: "http://ycfreeman.com" # the base hostname & protocol for your site
 
 twitter_username: ''
 github_username:  ycfreeman
-disqus_shortname: ''
+disqus_shortname: ycfreeman
 linkedin: ycfreeman
+paypal: ycfreeman
 google_analytics: UA-8760554-2
 
 # Pagination

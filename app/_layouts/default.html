@@ -12,23 +12,37 @@
     <paper-scroll-header-panel drawer fixed>
       <div class="wrapper"> <!-- necessary to push copyright to bottom -->
         <!-- Drawer Toolbar -->
-        <nav-image src="{{ site.baseurl }}/images/material-bg-10.png" id="menu-img"></nav-image>
+        <nav-image src="{{ site.baseurl }}/images/material-bg-5.png" id="menu-img"></nav-image>
 
         <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
+        <paper-menu class="list" attr-for-selected="data-route" selected="{{page.url}}" on-iron-select="onMenuSelect">
           <a href="{{ site.baseurl }}/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="{{ site.baseurl }}/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
           <a href="{{ site.baseurl }}/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="{{ site.baseurl }}/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
-        <my-nav-subheader>Elsewhere</my-nav-subheader>
-        <paper-menu class="list" on-iron-select="onMenuSelect">
-          {% if site.author_website %}
-          <a href="{{ site.author_website }}"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+        {% for node in site.data.menu %}
+        {% if node.items  %}
+        <my-nav-subheader>{{ node.title }}</my-nav-subheader>
+        <paper-menu class="list" attr-for-selected="data-route">
+        {% for subitem in node.items %}
+        <a href="{{subitem.url}}" {% if subitem.target %}target="{{subitem.target}}"{% endif %}><iron-icon icon="{{subitem.icon}}"></iron-icon><span>{{subitem.title}}</span></a>
+        {% endfor%}
+        </paper-menu>
+        {% endif %}
+        {% endfor %}
+
+        <my-nav-subheader>Contact Me</my-nav-subheader>
+        <paper-menu>
+          {% if site.paypal %}
+          <a href="https://paypal.me/{{ site.paypal }}" target="_blank"><iron-icon icon="fa:paypal"></iron-icon><span>Donation</span></a>
           {% endif %}
           {% if site.github_username %}
-          <a href="https://github.com/{{ site.github_username }}"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          {% endif %}
+          {% if site.linkedin %}
+          <a href="https://github.com/{{ site.linkedin }}" target="_blank"><iron-icon icon="fa:linkedin"></iron-icon><span>My LinkedIn</span></a>
           {% endif %}
           {% if site.email %}
           <a data-route="contact" href="mailto:{{ site.email }}"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>

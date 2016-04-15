@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="IE=7.5" http-equiv="X-UA-Compatible"/>
+<meta name="verify-v1" content="U9A0n82jfueKty1BDH2+xTdM3R4a77uL2BHJJ1cE85E=" />
+<META name="y_key" content="5bfcdf62d9366996" />
+<meta name="msvalidate.01" content="083B0D1C09BBD7EB2D4746DA330C97FC" />
+<title>Torchlight - Runic Games</title>
+
+<link rel="stylesheet" href="http://www.torchlightgame.com/wp-content/themes/torchlight/style.css?v=201005251434" type="text/css" media="screen" />
+<!--[if lt IE 7]>
+  <link rel="stylesheet" href="http://www.torchlightgame.com/wp-content/themes/torchlight/ie6.css?v=201005251434" type="text/css" media="screen" />
+<![endif]-->
+<!--[if gt IE 6]>
+  <link rel="stylesheet" href="http://www.torchlightgame.com/wp-content/themes/torchlight/ie.css?v=201005251434" type="text/css" media="screen" />
+<![endif]-->
+<link rel="pingback" href="http://www.torchlightgame.com/xmlrpc.php" />
+<script type='text/javascript' src='http://www.torchlightgame.com/wp-includes/js/jquery/jquery.js?ver=1.3.2'></script>
+<script type='text/javascript' src='http://www.torchlightgame.com/wp-includes/js/jquery/jquery.form.js?ver=2.02m'></script>
+<script type='text/javascript' src='http://www.torchlightgame.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=2.8.6'></script>
+<script type='text/javascript' src='http://www.torchlightgame.com/wp-includes/js/swfobject.js?ver=2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.torchlightgame.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.torchlightgame.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Torchlight - Runic Games' href='http://www.torchlightgame.com' />
+
+<!-- All in One SEO Pack 1.6.8.2 by Michael Torbert of Semper Fi Web Design[545,583] -->
+<meta name="description" content="Official site for Torchlight by Runic Games. Game information, news, screenshots, videos and more. Buy now from Torchlightgame.com" />
+<meta name="keywords" content="torchlight, torchlight game, torchlightgame, runic, runic games, torchlight runic, torch light, torchlight official, torchlight official site, destroyer, alchemist, vanquisher, ember, preditor, runicgames, buy torchlight, purchase torchlight, download torchlight, torchlight buy, torchlight purchase, torchlight download" />
+<link rel="canonical" href="http://www.torchlightgame.com/" />
+<!-- /all in one seo pack -->
+<script type="text/javascript">
+var mc_ajax_url = "http://www.torchlightgame.com/wp-content/plugins/mailchimp/mailchimp_ajax.php";
+</script><script src="http://www.torchlightgame.com/wp-content/themes/torchlight/scripts/jquery.functions_compressed.js?v=201005251434" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="blog">
+  
+<div id="container">
+    
+  <div id="header" role="banner"> 
+  <div class="banner" id="logobanner">
+    <a href="/"><img id='logo' src="http://www.torchlightgame.com/assets/images/torchlightlogo_small.png" border="0" alt="Torchlight" /></a>
+  </div>
+  <div id="nav">
+    <div id="endcap-left"> </div>
+    <a id="homebutton" class="button" href="/"> </a>
+    <a id="aboutbutton" class="button" href="/about"> </a>
+    <a id="faqbutton" class="button" href="/faq"> </a>
+    <a id="mediabutton" class="button" href="/media"> </a>
+    <a id="pressbutton" class="button" href="/press"> </a>
+    <a id="supportbutton" class="button" href="/support"> </a>
+    <a id="forumbutton" class="button" href="http://forums.runicgames.com" target="_blank"> </a>
+    <div id="endcap-right"> </div>
+  </div>
+</div>
+  
+  <div id="content">
+    <div class="headboard" >
+      <a id="button-buy" class="button first col1" style="" href="/buy" title="Buy Torchlight for PC and Mac" onClick="javascript: pageTracker._trackPageview('/buy');"> </a> 
+      <a id="button-patches" class="button col2" href="/download" onClick="javascript: pageTracker._trackPageview('/download');" title="Torchlight Patches and Updates"> </a> 
+      <a id="button-demo" class="button col3" href="/download/#demo" onClick="javascript: pageTracker._trackPageview('/download-demo');" title="Download Torchlight Free Demo"> </a>
+      <a id="link-buy" class="link first col1" href="/buy" title="Buy Torchlight for PC and Mac" onClick="javascript: pageTracker._trackPageview('/buy');">Buy Now for PC and Mac</a> 
+      <a id="link-patches" class="link col2" href="/download" onClick="javascript: pageTracker._trackPageview('/download');" title="Torchlight Patches and Updates">Patches and Updates</a> 
+      <a id="link-demo" class="link col3" href="/download/#demo" onClick="javascript: pageTracker._trackPageview('/download-demo');" title="Download Torchlight Free Demo">Free Download</a>
+    </div>
+<script type="text/javascript" charset="utf-8">
+jQuery(window).load(function(){
+  if (jQuery.browser.safari && document.readyState != 'complete'){
+    setTimeout( arguments.callee, 100 );
+    return;
+  }
+  jQuery("#button-buy,#link-buy").hover( 
+    function() { jQuery("#button-buy").addClass("button-hover"); jQuery("#link-buy").addClass("button-hover"); }, 
+    function() { jQuery("#button-buy").removeClass("button-hover"); jQuery("#link-buy").removeClass("button-hover"); }
+  );
+  
+  jQuery("#button-patches,#link-patches").hover( 
+    function() { jQuery("#button-patches").addClass("button-hover"); jQuery("#link-patches").addClass("button-hover"); }, 
+    function() { jQuery("#button-patches").removeClass("button-hover"); jQuery("#link-patches").removeClass("button-hover"); }
+  );
+  
+  jQuery("#button-demo,#link-demo").hover( 
+    function() { jQuery("#button-demo").addClass("button-hover"); jQuery("#link-demo").addClass("button-hover"); }, 
+    function() { jQuery("#button-demo").removeClass("button-hover"); jQuery("#link-demo").removeClass("button-hover"); }
+  );
+});
+</script>
+    <div class="column-small">
+      
+<div id='box-left' class="pod-small"> 
+  <div class="pod-small-ul"></div> 
+  <div class="pod-small-ur"></div> 
+  <div class="pod-small-left"></div> 
+  <div class="pod-small-right"></div> 
+  <div class="pod-small-ll"></div> 
+  <div class="pod-small-lr"></div> 
+  <div class="pod-small-content"> 
+    <div class='pod-small-content-header'>
+      <h2><a href="/media"><img src="http://www.torchlightgame.com/assets/images/title-media.gif" border="0" /></a></h2>
+    </div>
+    
+    <div class="media-sidebar-box">
+		  <img class="imagebutton launchtrailerlink" src="http://www.torchlightgame.com/assets/images/launch-trailer.gif" border="0" /><br />
+		  <a href="#launchtrailer" class="launchtrailerlink">Launch Trailer</a>
+		</div>
+    
+    <div class="media-sidebar-box">
+		  <img class="imagebutton alchtrailerlink" src="http://www.torchlightgame.com/assets/images/alchemist-trailer.gif" border="0" /><br />
+		  <a href="#alchemisttrailer" class="alchtrailerlink">Alchemist Trailer</a>
+		</div>
+		
+    <div class="media-sidebar-box">
+		  <img class="imagebutton vanqtrailerlink" src="http://www.torchlightgame.com/assets/images/vanquisher-trailer.gif" border="0" /><br />
+		  <a href="#vanquishertrailer" class="vanqtrailerlink">Vanquisher Trailer</a>
+		</div>
+		
+    <div class="media-sidebar-box">
+		  <img class="imagebutton destroyertrailerlink" src="http://www.torchlightgame.com/assets/images/destroyer-trailer.gif" border="0" /><br />
+		  <a href="#destroyertrailer" class="destroyertrailerlink">Destroyer Trailer</a>
+		</div>
+		
+		
+		<div class="media-sidebar-box">
+		  <a href="/media"><img src="http://www.torchlightgame.com/assets/images/screenshot-teaser.gif" border="0" /><br />Screenshots and More</a>
+		</div>
+  </div>
+</div>
+
+<script type='text/javascript' charset='utf-8'>
+var overlay_wrapper;
+var overlay_panel;
+function append_overlay() {
+overlay_wrapper = jQuery('<div id="modaltrailer"></div>').appendTo( jQuery('BODY') );
+overlay_panel_content = "<div id='trailerbox'><div id='trailerbox-inner'><img src='http://www.torchlightgame.com/assets/images/trailer-title-media-ie.png' border='0' class='trailerbox-title' /><div id='trailer-content-box'><div style='margin-bottom:33px;'><a href='http://www.adobe.com/go/EN_US-H-GET-FLASH' target='_blank'>Please install the latest version of Flash to view our trailer.</a></div></div><div id='trailer-textbox' style='margin: 0px; padding: 0px;'></div><a id='trailer-close-button' class='trailer-content-box-button' href='javascript:close_overlay();'> </a></div></div>";
+overlay_panel = jQuery(overlay_panel_content).appendTo(overlay_wrapper); 
+};
+function show_overlay(panel_function) {
+if (!overlay_wrapper) append_overlay();
+setTimeout(panel_function + '()', 500);
+overlay_wrapper.fadeIn(700);
+}
+function clear_flashplayer(element_id) {
+swfobject.embedSWF('http://www.torchlightgame.com/assets/flash/empty.swf', element_id, '1', '1', '10.0.0', null, null, {wmode:'transparent'}, null);
+}
+function close_overlay() {
+setTimeout("clear_flashplayer('trailer-content-box');", 500);
+jQuery('#trailer-textbox').empty();
+hide_overlay();
+}
+function hide_overlay() {
+setTimeout('overlay_wrapper.fadeOut(500);', 500);
+raise_panel();
+}
+function raise_panel() {
+setTimeout("jQuery('#trailerbox-inner').hide();", 800)
+overlay_panel.animate({ marginTop: "+=10px"}, 100).animate({ marginTop: "-600px"}, 600);
+}
+</script>
+<script type="text/javascript">
+var destroyertrailer = function() {
+  $overlay_panel = jQuery("#trailerbox");
+  if (jQuery.browser.msie) {
+    $overlay_panel.animate({ marginTop: "-135px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  } else {
+    $overlay_panel.animate({ marginTop: "-300px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  }
+  
+  $textbox_text = "";
+  $is_link = true;
+  if ("http://www.youtube.com/watch?v=NhrNZZf-dOk" != "") $is_link = true;
+  
+  if ($is_link) $textbox_text = "<a href='http://www.youtube.com/watch?v=NhrNZZf-dOk' target='_blank'>";
+  $textbox_text += "Watch this video on Youtube";
+  if ($is_link) $textbox_text += "</a>";
+  
+  jQuery("#trailer-textbox").append($textbox_text);
+  
+  jQuery("#trailerbox-inner").show();
+  
+  var flashvars = {};
+	var params = {};
+	params.wmode = "transparent";
+	var attributes = {};
+	attributes.id = "trailer-content-box";
+	swfobject.embedSWF("/assets/flash/destroyer-trailer.swf", "trailer-content-box", "500", "320", "10.0.0", "/assets/flash/expressInstall.swf", flashvars, params, attributes);
+}
+</script><script type="text/javascript">
+var launchtrailer = function() {
+  $overlay_panel = jQuery("#trailerbox");
+  if (jQuery.browser.msie) {
+    $overlay_panel.animate({ marginTop: "-135px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  } else {
+    $overlay_panel.animate({ marginTop: "-300px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  }
+  
+  $textbox_text = "";
+  $is_link = true;
+  if ("http://www.youtube.com/watch?v=ghQBj6Gfn10" != "") $is_link = true;
+  
+  if ($is_link) $textbox_text = "<a href='http://www.youtube.com/watch?v=ghQBj6Gfn10' target='_blank'>";
+  $textbox_text += "Watch this video on Youtube";
+  if ($is_link) $textbox_text += "</a>";
+  
+  jQuery("#trailer-textbox").append($textbox_text);
+  
+  jQuery("#trailerbox-inner").show();
+  
+  var flashvars = {};
+	var params = {};
+	params.wmode = "transparent";
+	var attributes = {};
+	attributes.id = "trailer-content-box";
+	swfobject.embedSWF("/assets/flash/launch-trailer.swf", "trailer-content-box", "500", "320", "10.0.0", "/assets/flash/expressInstall.swf", flashvars, params, attributes);
+}
+</script><script type="text/javascript">
+var vanqtrailer = function() {
+  $overlay_panel = jQuery("#trailerbox");
+  if (jQuery.browser.msie) {
+    $overlay_panel.animate({ marginTop: "-135px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  } else {
+    $overlay_panel.animate({ marginTop: "-300px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  }
+  
+  $textbox_text = "";
+  $is_link = true;
+  if ("http://www.youtube.com/watch?v=sXNzJ9KYlWw" != "") $is_link = true;
+  
+  if ($is_link) $textbox_text = "<a href='http://www.youtube.com/watch?v=sXNzJ9KYlWw' target='_blank'>";
+  $textbox_text += "Watch this video on Youtube";
+  if ($is_link) $textbox_text += "</a>";
+  
+  jQuery("#trailer-textbox").append($textbox_text);
+  
+  jQuery("#trailerbox-inner").show();
+  
+  var flashvars = {};
+	var params = {};
+	params.wmode = "transparent";
+	var attributes = {};
+	attributes.id = "trailer-content-box";
+	swfobject.embedSWF("/assets/flash/vanquisher-trailer.swf", "trailer-content-box", "500", "320", "10.0.0", "/assets/flash/expressInstall.swf", flashvars, params, attributes);
+}
+</script><script type="text/javascript">
+var alchtrailer = function() {
+  $overlay_panel = jQuery("#trailerbox");
+  if (jQuery.browser.msie) {
+    $overlay_panel.animate({ marginTop: "-135px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  } else {
+    $overlay_panel.animate({ marginTop: "-300px"}, 600).animate({ marginTop: "-=40px"}, 140).animate({ marginTop: "+=40px"}, 140).animate({ marginTop: "-=10px"}, 140).animate({ marginTop: "+=10px"}, 140);
+  }
+  
+  $textbox_text = "";
+  $is_link = true;
+  if ("http://www.youtube.com/watch?v=huLl5Xzu2Aw" != "") $is_link = true;
+  
+  if ($is_link) $textbox_text = "<a href='http://www.youtube.com/watch?v=huLl5Xzu2Aw' target='_blank'>";
+  $textbox_text += "Watch this video on Youtube";
+  if ($is_link) $textbox_text += "</a>";
+  
+  jQuery("#trailer-textbox").append($textbox_text);
+  
+  jQuery("#trailerbox-inner").show();
+  
+  var flashvars = {};
+	var params = {};
+	params.wmode = "transparent";
+	var attributes = {};
+	attributes.id = "trailer-content-box";
+	swfobject.embedSWF("/assets/flash/alchemist-trailer.swf", "trailer-content-box", "500", "320", "10.0.0", "/assets/flash/expressInstall.swf", flashvars, params, attributes);
+}
+</script><script type='text/javascript'>
+jQuery(window).load(function(){
+if (jQuery.browser.safari && document.readyState != 'complete'){
+//console.info('ready...');
+setTimeout( arguments.callee, 100 );
+return;
+} 
+if ((jQuery.browser.msie && jQuery.browser.version < 7) || (jQuery.browser.mozilla && jQuery.browser.version.substring(0, 3) == '1.8')) {
+jQuery('.destroyertrailerlink').click(function() {
+var trailer = window.open('http://www.torchlightgame.com/wp-content/themes/torchlight/trailer.php?p=%2Fassets%2Fflash%2Fdestroyer-trailer.swf&l=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DNhrNZZf-dOk&t=Watch+this+video+on+Youtube', 'torchlighttrailer', 'width=596,height=469,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0');
+});
+jQuery('.launchtrailerlink').click(function() {
+var trailer = window.open('http://www.torchlightgame.com/wp-content/themes/torchlight/trailer.php?p=%2Fassets%2Fflash%2Flaunch-trailer.swf&l=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DghQBj6Gfn10&t=Watch+this+video+on+Youtube', 'torchlighttrailer', 'width=596,height=469,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0');
+});
+jQuery('.vanqtrailerlink').click(function() {
+var trailer = window.open('http://www.torchlightgame.com/wp-content/themes/torchlight/trailer.php?p=%2Fassets%2Fflash%2Fvanquisher-trailer.swf&l=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsXNzJ9KYlWw&t=Watch+this+video+on+Youtube', 'torchlighttrailer', 'width=596,height=469,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0');
+});
+jQuery('.alchtrailerlink').click(function() {
+var trailer = window.open('http://www.torchlightgame.com/wp-content/themes/torchlight/trailer.php?p=%2Fassets%2Fflash%2Falchemist-trailer.swf&l=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhuLl5Xzu2Aw&t=Watch+this+video+on+Youtube', 'torchlighttrailer', 'width=596,height=469,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0');
+});
+} else {
+append_overlay();
+hide_overlay();
+jQuery('.destroyertrailerlink').click(function() { show_overlay('destroyertrailer'); });
+jQuery('.launchtrailerlink').click(function() { show_overlay('launchtrailer'); });
+jQuery('.vanqtrailerlink').click(function() { show_overlay('vanqtrailer'); });
+jQuery('.alchtrailerlink').click(function() { show_overlay('alchtrailer'); });
+}
+});
+</script>
+      </div>
+    <div class="column-medium">
+            
+      <div id='box-center' class="pod"> 
+        <div class="pod-ul"></div> 
+        <div class="pod-ur"></div> 
+        <div class="pod-left"></div> 
+        <div class="pod-right"></div> 
+        <div class="pod-ll"></div> 
+        <div class="pod-lr"></div> 
+        <div class="pod-content"> 
+          <div class='pod-content-header'>
+            <h2><img id="newstitle" src="http://www.torchlightgame.com/assets/images/newstitle.gif" border="0" /></h2>
+          </div>
+                                                <div class="post-597 post hentry category-gamenews" id="post-597">
+                                                  <table cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                                            <td style="width: 100%;">
+                        <h2>
+                          <a href="http://www.torchlightgame.com/gamenews/2012/09/18/torchlight-on-linux/" rel="bookmark" title="Permanent Link to Torchlight on Linux!">
+                            Torchlight on Linux!                          </a>
+                        </h2>
+                        <small>September 18th, 2012</small>
+                      
+                        <div class="entry">
+                          <p>Runic Games is proud to have Torchlight as a part of <a href="http://www.humblebundle.com" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.humblebundle.com');">Humble Indie Bundle 6</a>, available now!</p>
+                        </div>
+                      </td>
+                      <td class='imagecolumn'><a href='http://www.torchlightgame.com/gamenews/2012/09/18/torchlight-on-linux/' title='Torchlight on Linux!'><img src='/wp-content/uploads/xbla-teaser.png' border='0' class='post-image' style='margin-left: 10px;' alt='' /></a></td>                    </tr>
+                  </table>
+                                <div class="clear"> </div>
+              </div>
+                          <div class="post-593 post hentry category-gamenews" id="post-593">
+                                                  <h2>
+                    <a href="http://www.torchlightgame.com/gamenews/2012/09/18/torchlight-ii-launches-on-9202012/" rel="bookmark" title="Permanent Link to Torchlight II launches on 9/20/2012!">
+                      Torchlight II launches on 9/20/2012!                    </a>
+                  </h2>
+                  <small>September 18th, 2012</small>
+                
+                  <div class="entry">
+                    <p>Torchlight II Launches on Sept 20th, 2012! For more information, visit <a href="http://www.torchlight2game.com" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.torchlight2game.com');">http://www.torchlight2game.com</a> !</p>
+                  </div>
+                                <div class="clear"> </div>
+              </div>
+                          <div class="post-581 post hentry category-gamenews" id="post-581">
+                                                  <h2>
+                    <a href="http://www.torchlightgame.com/gamenews/2011/03/09/happy-torchlight-xbla-launch-day/" rel="bookmark" title="Permanent Link to Happy Torchlight XBLA Launch Day!">
+                      Happy Torchlight XBLA Launch Day!                    </a>
+                  </h2>
+                  <small>March 9th, 2011</small>
+                
+                  <div class="entry">
+                    <p>We are thrilled with the response to <a href="http://www.torchlight360.com" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.torchlight360.com');">Torchlight on XBox Live Arcade</a> and are including just some of the wonderful press we’ve received here for you to explore. We hope you love the game, too! Thank you as always for supporting us and playing Torchlight! <span class="post-teaser-more">&nbsp;<a href="http://www.torchlightgame.com/gamenews/2011/03/09/happy-torchlight-xbla-launch-day/"  title="Permanent Link: Happy Torchlight XBLA Launch Day!" rel="bookmark">Read the rest of this entry...</a></span></p>                  </div>
+                                <div class="clear"> </div>
+              </div>
+                        <div class="pod-content-footer">
+              <div class="alignleft"></div>
+              <div class="alignright"><a href="http://www.torchlightgame.com/page/2/" >Older Entries &raquo;</a></div>
+            </div>
+            <div class="clear"> </div>
+                  </div>
+      </div>
+    </div>
+    <div class="column-small">
+      
+<!-- newsletter signup -->
+<div id='newsletter-box' class="pod-small"> 
+  <div class="pod-small-ul"></div> 
+  <div class="pod-small-ur"></div> 
+  <div class="pod-small-left"></div> 
+  <div class="pod-small-right"></div> 
+  <div class="pod-small-ll"></div> 
+  <div class="pod-small-lr"></div> 
+  <div class="pod-small-content"> 
+    <div class='pod-small-content-header'>
+      <h2><img src="http://www.torchlightgame.com/assets/images/title-torchlightupdates.gif" border="0" /></h2>
+    </div>
+    <div class='sidebar-smalltext'>Want to play Torchlight? Sign up here for news updates!</div>
+		<a id='newsletter-button' href="https://secure.runicgames.com/signup"> </a>
+  </div>
+</div>
+
+<div id='box-right' class="pod-small"> 
+  <div class="pod-small-ul"></div> 
+  <div class="pod-small-ur"></div> 
+  <div class="pod-small-left"></div> 
+  <div class="pod-small-right"></div> 
+  <div class="pod-small-ll"></div> 
+  <div class="pod-small-lr"></div> 
+  <div class="pod-small-content"> 
+    <div class='pod-small-content-header'>
+      <h2><a href="/developerblogs"><img src="http://www.torchlightgame.com/assets/images/title-devblog.gif" border="0" /></a></h2>
+    </div>
+    
+            <div>
+          <img src="http://www.torchlightgame.com/assets/images/runic_thumbnail.png" border="0" class="sidebar-thumbnail" />
+          <small>January 21st, 2011</small><br />
+          <a href="http://www.torchlightgame.com/developerblogs/2011/01/21/meet-the-team-matt-tinari/" rel="bookmark" title="Permanent Link to Meet the Team &#8211; Matt Tinari">
+            Meet the Team &#8211; Matt Tinari          </a>
+          <hr class="clear" />
+        </div>
+              <div>
+          <img src="http://www.torchlightgame.com/assets/images/runic_thumbnail.png" border="0" class="sidebar-thumbnail" />
+          <small>January 14th, 2011</small><br />
+          <a href="http://www.torchlightgame.com/developerblogs/2011/01/14/meet-the-team-matt-tanwantng/" rel="bookmark" title="Permanent Link to Meet the Team &#8211; Matt Tanwanteng">
+            Meet the Team &#8211; Matt Tanwanteng          </a>
+          <hr class="clear" />
+        </div>
+              <div>
+          <img src="http://www.torchlightgame.com/assets/images/runic_thumbnail.png" border="0" class="sidebar-thumbnail" />
+          <small>January 7th, 2011</small><br />
+          <a href="http://www.torchlightgame.com/developerblogs/2011/01/07/meet-the-team-tim-swope/" rel="bookmark" title="Permanent Link to Meet the Team &#8211; Tim Swope">
+            Meet the Team &#8211; Tim Swope          </a>
+          <hr class="clear" />
+        </div>
+              <div>
+          <img src="http://www.torchlightgame.com/assets/images/runic_thumbnail.png" border="0" class="sidebar-thumbnail" />
+          <small>April 16th, 2010</small><br />
+          <a href="http://www.torchlightgame.com/developerblogs/2010/04/16/meet-the-team-brock-jones/" rel="bookmark" title="Permanent Link to Meet the Team &#8211; Brock Jones">
+            Meet the Team &#8211; Brock Jones          </a>
+          <hr class="clear" />
+        </div>
+              <div>
+          <img src="http://www.torchlightgame.com/assets/images/runic_thumbnail.png" border="0" class="sidebar-thumbnail" />
+          <small>April 9th, 2010</small><br />
+          <a href="http://www.torchlightgame.com/developerblogs/2010/04/09/meet-the-team-marsh-lefler/" rel="bookmark" title="Permanent Link to Meet the Team &#8211; Marsh Lefler">
+            Meet the Team &#8211; Marsh Lefler          </a>
+          <hr class="clear" />
+        </div>
+            <div style="width:100%; text-align: center; font-size: 0.85em;">
+        <a href="/developerblogs">More Dev Blog Posts</a>
+      </div>
+        
+  </div>
+</div>
+    </div>
+  </div>
+    
+  <div id="footer" role="contentinfo">
+  <div class="banner">
+    <img src="http://www.torchlightgame.com/assets/images/footer.png" border="0" alt="Torchlight" />
+  </div>
+  <div id="footernav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/buy">Buy Torchlight</a></li>
+      <li><a href="/download">Download Torchlight</a></li>
+      <li><a href="/about">About Torchlight</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/developerblogs">Developer Blogs</a></li>
+      <li><a href="/media">Media</a></li>
+      <li><a href="/press">Press</a></li>
+      <li><a href="/support">Support</a></li>
+      <li><a href="http://forums.runicgames.com" target="_blank">Forums</a></li>
+    </ul>
+  </div>
+  &copy; Runic Games, Inc. - <a href="mailto:contact@runicgames.com">contact@runicgames.com</a><br />
+  <a href="http://www.torchlightgame.com/feed/">News Feed (RSS)</a> - <a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-of-use">Terms of Use</a>
+</div>
+
+
+<!-- Google Analytics for WordPress | http://yoast.com/wordpress/google-analytics/ -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-9029803-3");
+		pageTracker._setLocalRemoteServerMode();
+		// Cookied already: 
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+<!-- End of Google Analytics code -->
+    
+</div>
+
+<script type="text/javascript">
+
+jQuery(window).load(function(){
+  if (jQuery.browser.safari && document.readyState != "complete"){
+    //console.info('ready...');
+    setTimeout( arguments.callee, 100 );
+    return;
+  } 
+  var newsletter_box = jQuery("#newsletter-box");
+  var newsletter_offset = 0;
+  if (newsletter_box) {
+    newsletter_offset = newsletter_box.outerHeight();
+  }
+  
+  var countdown_offset = 0;
+  
+  var offsets = new Array();
+  offsets["box-center"] = countdown_offset;
+  offsets["box-left"] = 0;
+  offsets["box-right"] = newsletter_offset + 8;
+  
+  jQuery('#box-center, #box-left, #box-right').equalizeCols( offsets );
+});
+
+</script>
+
+<script type='text/javascript'>
+jQuery(window).load(function(){
+if (jQuery.browser.safari && document.readyState != 'complete'){
+//console.info('ready...');
+setTimeout( arguments.callee, 100 );
+return;
+} 
+initialize_pods();});
+</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.359 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2013-03-24 21:54:04 -->
+<!-- Compression = gzip -->
