@@ -5,6 +5,7 @@ author: Freeman Man
 layout: page
 categories:
 tags:
+permalink: about/
 ---
 Hi there, this is Freeman. (文愉中 Man Yu Chung)
 
