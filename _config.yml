@@ -34,9 +34,9 @@ markdown: kramdown
 gems:
   - jekyll-archives
   - jekyll-paginate
-  - jemoji
   - jekyll-redirect-from
-  - jekyll-sitemap
+  # - jekyll-sitemap
+  - jemoji
 
 # Build settings
 markdown: kramdown
@@ -45,3 +45,8 @@ permalink: /:categories/:year/:month/:day/:title/
 # Archive settings
 jekyll-archives:
   enabled: ['tags']
+
+sitemap:
+  exclude:
+    - "/bower_components/*"
+    - "/elements/*"

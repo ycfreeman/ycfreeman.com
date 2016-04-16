@@ -7,5 +7,4 @@ group :jekyll_plugins do
   gem "rouge"
   gem "jemoji"
   gem "jekyll-redirect-from"
-  gem 'jekyll-sitemap'
 end
