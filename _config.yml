@@ -23,10 +23,11 @@ google_analytics: UA-8760554-2
 
 # Pagination
 paginate: 5
-paginate_path: "page/:num"
+paginate_path: "page/:num/"
 excerpt_separator: <!--more-->
 
 exclude: ["README.md"] # files to exclude
+# keep_files: ["/wp-content/*"]
 highlighter: rouge
 markdown: kramdown
 
@@ -35,7 +36,6 @@ gems:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-redirect-from
-  # - jekyll-sitemap
   - jemoji
 
 # Build settings

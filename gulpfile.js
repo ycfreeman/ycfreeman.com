@@ -185,6 +185,9 @@ gulp.task('ensureFiles', function(cb) {
 gulp.task('images', function() {
   return imageOptimizeTask(src('images/**/*'), dist('images'));
 });
+gulp.task('wp-content', function() {
+  return imageOptimizeTask(src('wp-content/**/*'), dist('wp-content'));
+});
 
 // Copy all files at the root level (app)
 gulp.task('copy', function() {
@@ -366,7 +369,7 @@ gulp.task('default', ['clean'], function(cb) {
     'jekyllbuild',
     ['ensureFiles', 'copy', 'styles'],
     'elements',
-    ['images', 'fonts', 'scripts', 'html'], //, 'html'
+    ['images','wp-content', 'fonts', 'scripts', 'html'], //, 'html'
     'vulcanize', // 'cache-config',
     cb);
 });
