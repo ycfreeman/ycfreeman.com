@@ -23,7 +23,7 @@ google_analytics: UA-8760554-2
 
 # Pagination
 paginate: 5
-paginate_path: "page:num"
+paginate_path: "page/:num"
 excerpt_separator: <!--more-->
 
 exclude: ["README.md"] # files to exclude

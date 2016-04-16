@@ -379,7 +379,7 @@ gulp.task('build-deploy-gh-pages', function(cb) {
     cb);
 });
 
-gulp.task('deploy', 'build-deploy-gh-pages');
+gulp.task('deploy', ['build-deploy-gh-pages']);
 
 // Deploy to GitHub pages gh-pages branch
 gulp.task('deploy-gh-pages', function() {
