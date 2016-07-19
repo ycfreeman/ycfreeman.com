@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-overlay-behavior/iron-overlay-behavior.html">
+<link rel="import" href="../../bower_components/iron-overlay-behavior/iron-overlay-backdrop.html">
+
+<dom-module id="simple-overlay">
+    <template>
+        <style>
+            :host {
+                background: white;
+                color: black;
+                padding: 12px;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.24) -2.3408942051048403px 5.524510324047423px 12.090680100755666px 0px, rgba(0, 0, 0, 0.12) 0px 0px 12px 0px;
+            }
+        </style>
+
+        <content></content>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'simple-overlay',
+            behaviors: [
+                Polymer.IronOverlayBehavior
+            ]
+        });
+    </script>
+</dom-module>
