@@ -7,6 +7,8 @@ cache:
     - node_modules
     - app/bower_components
 before_script:
+  - git config user.name "Travis CI"
+  - git config user.email "$COMMIT_AUTHOR_EMAIL"
   - nvm install 6
   - bundle
   - npm i -g bower
