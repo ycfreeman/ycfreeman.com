@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ycfreeman/ycfreeman.com.svg?branch=master)](https://travis-ci.org/ycfreeman/ycfreeman.com)
+
 going full cheapo and migrate my personal website from vps hosted wordpress to
  [github pages](https://pages.github.com/), because it's free
 

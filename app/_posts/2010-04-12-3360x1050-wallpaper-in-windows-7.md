@@ -12,9 +12,7 @@ tags:
 If you manage to have two 22 inch wide screen monitors like me, you probably have done the some search for dual wide screen wallpapers. Here is a quick Google link:   
 [http://images.google.com.au/images?hl=en&q=3360&#215;1050%20wallpapers&um=1&ie=UTF-8&sa=N&tab=wi#start=0&imgw=3360&imgh=1050&tbo=1](http://ycfreeman.com/wp-content/uploads/2010/04/images?hl=en&q=3360x1050%20wallpapers&um=1&ie=UTF-8&sa=N&tab=wi#start=0&imgw=3360&imgh=1050&tbo=1)
 
-[<img border="0" src="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/04/randomwallpaper3.JPG?resize=320%2C200" data-recalc-dims="1" />](http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/04/randomwallpaper1.JPG)I&#8217;m here to talk about what to do after you&#8217;ve picked a few nice one :).
-
-<a name='more'></a>
+<lightbox-img src="{{ site.url }}/wp-content/uploads/2010/04/randomwallpaper1.JPG" ></lightbox-img>
 
 &#8220;What software should I download to use it?&#8221; the answer is you don&#8217;t need to download anything!
 
@@ -32,10 +30,8 @@ Here are the steps:
 5. Set Picture position to Tile, tick Shuffle, and choose timer  
 6. Tada! you&#8217;ve got your random dual wide screen wallpaper!
 
-<div class="separator" style="clear: both;text-align: center">
-  <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/04/screenshot.jpg"><img border="0" src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/04/screenshot1.jpg?resize=400%2C125" data-recalc-dims="1" /></a>
-</div>
+<lightbox-img src="{{site.url}}/wp-content/uploads/2010/04/screenshot.jpg"></lightbox-img>
 
-unfortunately the taskbar still won&#8217;t span to the other screen, but it&#8217;s not very necessary imo <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+unfortunately the taskbar still won&#8217;t span to the other screen, but it&#8217;s not very necessary imo :smile:
 
 <!--google_ad_client = "pub-9325509044951275";/* 468x60, created 4/9/10 */google_ad_slot = "6358062181";google_ad_width = 468;google_ad_height = 60;//-->

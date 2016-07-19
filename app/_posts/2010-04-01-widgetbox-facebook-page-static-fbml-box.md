@@ -20,42 +20,41 @@ However, as its code contains external script and object tag, it simply violates
 
 tags just simply doesn&#8217;t work on static FBML boxes.
 
-<a name="more"></a>
-
 &#8220;but Facebook says they support swf!&#8221;, Yes they support swf, in a weird way. First, you have to use FB:SWF to include the flash object, Second, it does not play on page load.
 
-So the way to solve this problem is to convert that object tag and those variables�into the fb:swf tag. Ya simple as that.
+So the way to solve this problem is to convert that object tag and those variables into the fb:swf tag. Ya simple as that.
 
 now here&#8217;s what you get from widgetbox &#8220;embed&#8221; button
 
 ```
-&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
  codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
  type="application/x-shockwave-flash"
  width="350px" height="523px"
  id="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
- align="middle"&gt; &lt;param name="movie"
- value="http://widgetserver.com/syndication/flash/wrapper/InsertWidget.swf"&gt;
-    &lt;param name="quality"
- value="high"&gt;
-   &lt;param name="wmode" value="transparent"&gt;
-    &lt;param name="menu" value="false"&gt;
-    &lt;param name="flashvars" value="r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3"&gt;
-    &lt;param name="allowScriptAccess" value="sameDomain"&gt;
-    &lt;embed src="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
+ align="middle"> <param name="movie"
+ value="http://widgetserver.com/syndication/flash/wrapper/InsertWidget.swf">
+    <param name="quality"
+ value="high">
+   <param name="wmode" value="transparent">
+    <param name="menu" value="false">
+    <param name="flashvars" value="r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3">
+    <param name="allowScriptAccess" value="sameDomain">
+    <embed src="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
  name="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
  width="350px" height="523px" quality="high" menu="false"
     pluginspage="http://www.macromedia.com/go/getflashplayer"
  type="application/x-shockwave-flash" wmode="transparent" align="middle"
  allowscriptaccess="sameDomain"
- flashvars="r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3" /&gt; &lt;/object&gt;
- ```
+ flashvars="r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3" /> </object>
+```
 
-pretty much clear on how to convert here now  <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />, just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the �lid of your hot pot�.
+pretty much clear on how to convert here now :smile:, just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the "lid of your pot".
 
 the converted code would be something like this:
 
-<pre>&lt;fb:swf
+```
+<fb:swf
  imgsrc="http://ycfreeman.com/wp-content/uploads/2010/04/playbuttonm.jpg"
  swfsrc="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
  flashvars='r=2&appId=883e1e81-33bf-42ba-a364-985360a915e3'
@@ -64,12 +63,13 @@ the converted code would be something like this:
  wmode='transparent'
  waitforclick='false'
  scale='exactfit'
-/&gt;</pre>
+/>
+```
 
 update 19/02/2011: demo page no longer available, but there should be some fb pages with flash these days.
 
-one more thing, you can always test those FBML codes at [FBML test console](http://ycfreeman.com/wp-content/uploads/2010/04/tools.php?fbml) before publish <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+one more thing, you can always test those FBML codes at [FBML test console](http://ycfreeman.com/wp-content/uploads/2010/04/tools.php?fbml) before publish :smile:
 
-update: FBML test console is no longer working <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+update: FBML test console is no longer working :frowning:
 
 Have fun!
