@@ -7,21 +7,19 @@ categories:
 tags:
   - wow-recruit-widget
 ---
-&nbsp;
 
 for more information about this plugin please go to [plugin description]({% post_url 2010-12-15-wow-recruitment-widget %})
 
 This widget requires wordpress 2.8+, works perfectly for my guild site which runs 2.9.2.
 
-Tested on 3.0 b1, b2, single site and multi sites, all working perfectly <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+Tested on 3.0 b1, b2, single site and multi sites, all working perfectly :smile:
 
-**Update 5/29/2010: seems fine on 3.0 RC1 as well. I&#8217;m rewriting many codes and remaking configuration��to support sorting and multiple entries per class. hopefully this major update can be finished when 3.0 goes live or soon after**
+**Update 5/29/2010: seems fine on 3.0 RC1 as well. I&#8217;m rewriting many codes and remaking configuration to support sorting and multiple entries per class.
+hopefully this major update can be finished when 3.0 goes live or soon after**
 
-Download from wordpress plugin gallery :): <http://wordpress.org/extend/plugins/wow-recruit-widget/>
+Download from [wordpress plugin gallery](http://wordpress.org/extend/plugins/wow-recruit-widget/)
 
 Thank you for all your support, stay tuned for updates~
-
-<a name="more"></a>
 
 <div>
   == Changelog ==

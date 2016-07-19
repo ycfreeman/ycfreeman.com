@@ -15,13 +15,13 @@ Welcome to the home page of**WOW Recruitment WordPress Widget (****wow-recruit-w
 
 17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github [<span style="font-size: 1rem;">https://github.com/ycfreeman/wow-recruit-widget</span>](https://github.com/ycfreeman/wow-recruit-widget), and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing
 
-17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i&#8217;m fixing it right now&#8230;.�github repo also pulled down due to these conflicts.
+17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i&#8217;m fixing it right now&#8230;. github repo also pulled down due to these conflicts.
 
 11 Dec 2012: <a href="http://demo.ycfreeman.com" target="_blank">updated code samples on demo site</a>
 
-27 Aug 2012:�[updated FAQ](http://ycfreeman.com/wow-recruitment-widget-not-dead/ "WOW Recruitment Widget is not dead")
+27 Aug 2012: [updated FAQ](http://ycfreeman.com/wow-recruitment-widget-not-dead/ "WOW Recruitment Widget is not dead")
 
-9 Aug 2012: this project is now on github <https://github.com/ycfreeman/wow-recruit-widget>�, feel free to &#8220;fork&#8221; it, cheers <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+9 Aug 2012: this project is now on github <https://github.com/ycfreeman/wow-recruit-widget>, feel free to &#8220;fork&#8221; it, cheers :smile:
 
 29 Feb 2012: [little update and FAQ](http://ycfreeman.com/wow-recruitment-widget-not-dead/ "WOW Recruitment Widget is not dead")
 
@@ -31,7 +31,8 @@ Welcome to the home page of**WOW Recruitment WordPress Widget (****wow-recruit-w
   </p>
 
   <p>
-    24 Oct 2010: From now on I&#8217;ll post in comments for teasers, or some workable ideas that come up in my mind about this plugin, (like when I have time to post a few lines but not enough to actually update the widget :p),�so check back once a while or subscribe if you have a google account/ if it works <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /> blogger doesn&#8217;t seem to have a comment feed which you can subscribe yet, it seems to work on gmail only at the moment.
+    24 Oct 2010: From now on I&#8217;ll post in comments for teasers, or some workable ideas that come up in my mind about this plugin, (like when I have time to post a few lines but not enough to actually update the widget :p),�so check back once a while or subscribe if you have a google account/ if it works :smile:
+    blogger doesn&#8217;t seem to have a comment feed which you can subscribe yet, it seems to work on gmail only at the moment.
   </p>
 
   <p>
@@ -48,23 +49,11 @@ Welcome to the home page of**WOW Recruitment WordPress Widget (****wow-recruit-w
     </div>
   </div>
 
-  <div>
-    <div>
-      <p>
-        <strong>If you would like to support this project, please consider</strong>
-      </p>
 
-      <div style="text-align: center;">
-      </div>
-
-      <p>
-        <strong>, I will give you my Goblin hug <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></strong>
-      </p>
-    </div>
-  </div>
+If you would like to support this project, please consider [Donate](https://paypal.me/ycfreeman), I will give you my Shaman hug :smile:
 
   <p>
-    <strong>Demo site:</strong> <a href="http://ycfreeman.com/wrdemo" target="_blank">http://ycfreeman.com/wrdemo/</a> <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+    <strong>Demo site:</strong> <a href="http://ycfreeman.com/wrdemo" target="_blank">http://ycfreeman.com/wrdemo/</a> :smile:
   </p>
 </div>
 
@@ -76,7 +65,7 @@ Download latest version from your WordPress site plugin panel or from WordPress 
   <tr>
     <td>
       <p style="text-align: center;">
-        <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/Capture.JPG"><img alt="" src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/Capture1.JPG?w=660" border="0" data-recalc-dims="1" /></a>
+<lightbox-img src="{{site.url}}/wp-content/uploads/2010/12/Capture.JPG"></lightbox-img>
       </p>
     </td>
   </tr>
@@ -92,7 +81,7 @@ Download latest version from your WordPress site plugin panel or from WordPress 
   <tr>
     <td>
       <p style="text-align: center;">
-        <a href="http://i1.wp.com/ycfreeman.com/wp-content/uploads/2010/12/widget2.jpg"><img alt="" src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/widget3.jpg?resize=294%2C320" border="0" data-recalc-dims="1" /></a>
+      <lightbox-img src="{{site.url}}/wp-content/uploads/2010/12/widget2.jpg"></lightbox-img>
       </p>
     </td>
   </tr>
@@ -107,7 +96,7 @@ Download latest version from your WordPress site plugin panel or from WordPress 
 <table cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td>
-      <a href="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/12/settings2.jpg"><img alt="" src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/settings3.jpg?resize=135%2C320" border="0" data-recalc-dims="1" /></a>
+    <lightbox-img src="{{site.url}}/wp-content/uploads/2010/12/settings2.jpg"></lightbox-img>
     </td>
   </tr>
 
@@ -121,7 +110,7 @@ Download latest version from your WordPress site plugin panel or from WordPress 
 <table cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td>
-      <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/options2.jpg"><img alt="" src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/options3.jpg?resize=239%2C320" border="0" data-recalc-dims="1" /></a>
+    <lightbox-img src="{{site.url}}/wp-content/uploads/2010/12/options2.jpg"></lightbox-img>
     </td>
   </tr>
 
@@ -136,9 +125,9 @@ Download latest version from your WordPress site plugin panel or from WordPress 
 
 Demo site with a few example style (best viewed on chrome4+ /safari4+, or latest FF3+/Opera10+/IE9+)
 
-<a href="http://ycfreeman.com/wrdemo" target="_blank">http://ycfreeman.com/wrdemo</a>
+<a href="http://demo.ycfreeman.com" target="_blank">http://demo.ycfreeman.com</a>
 
-[Customization (with pure CSS) tutorial](http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/ "WOW Recruitment Widget � Customization")
+[Customization (with pure CSS) tutorial]({% post_url 2010-08-01-wow-recruitment-wordpress-widget-customization %} "WOW Recruitment Widget Customization")
 
 &nbsp;
 

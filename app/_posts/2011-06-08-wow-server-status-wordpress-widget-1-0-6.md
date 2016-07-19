@@ -9,42 +9,16 @@ tags:
 ---
 Thanks Aoife for the info, I didn&#8217;t know Blizzard released their official API.
 
-<span style="color: #000000;">This plugin is now�updated to use official JSON feed,�(finally :p), php 5.2+ <strong>required</strong> (for native json_decode() support), although fallback JSON.php for earlier versions is included as well, no garrantee it works in 5.2-, too bad if it doesn&#8217;t work :(.</span>
+<span style="color: #000000;">This plugin is now updated to use official JSON feed, (finally :p), php 5.2+ <strong>required</strong> (for native json_decode() support), although fallback JSON.php for earlier versions is included as well, no garrantee it works in 5.2-, too bad if it doesn&#8217;t work :(.</span>
 
-<span style="color: #000000;">For non-wordpress users,�feel free to download the package�and extract the wow_ss.php to use it like the <a href="http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10" target="_blank">original one</a>. (text display mode may contain bugs),</span>�more information about [this plugin](http://ycfreeman.com/wow-server-status-wordpress-widget-10/ "WOW Server Status WordPress Widget 1.0")
+<span style="color: #000000;">For non-wordpress users, feel free to download the package and extract the wow_ss.php to use it like the <a href="http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10" target="_blank">original one</a>. (text display mode may contain bugs),</span> more information about [this plugin](http://ycfreeman.com/wow-server-status-wordpress-widget-10/ "WOW Server Status WordPress Widget 1.0")
 
-&nbsp;
+If you would like to support this project, please consider [Donate](https://paypal.me/ycfreeman), I will give you my Shaman hug :smile:
 
-<div>
-  <div>
-    <p>
-      <strong>If you would like to support this project, please consider</strong>
-    </p>
+Download from wordpress plugin gallery: <a href="http://wordpress.org/extend/plugins/wow-server-status-widget/">http://wordpress.org/extend/plugins/wow-server-status-widget/</a>
 
-    <div style="text-align: center;">
-    </div>
 
-    <p>
-      , I will give you my Shaman hug <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
-    </p>
-  </div>
-</div>
-
-<div>
-  <div>
-    <div>
-      <div>
-        Download from wordpress plugin gallery:�<a href="http://wordpress.org/extend/plugins/wow-server-status-widget/">http://wordpress.org/extend/plugins/wow-server-status-widget/</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div>
-    <!--more-->
-  </div>
-</div>
+<!--more-->
 
 <span style="font-size: x-large;">Changelog</span>
 

@@ -12,7 +12,7 @@ for more information about this plugin please go to [plugin description]({% post
   * <span style="color: red;"><strong><span style="font-weight: normal;"><strong>please save the widget once after upgrading from 1.0.x to make data work with new code</strong></span></strong></span>
   * <div style="color: black; font-weight: normal; margin: 0px;">
       <div>
-        Update 1/8/2010: I&#8217;ve just written a post about [customizing this widget]({% post_url 2010-08-01-wow-recruitment-wordpress-widget-customization %}) with only css codes, have a look <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+        Update 1/8/2010: I&#8217;ve just written a post about [customizing this widget]({% post_url 2010-08-01-wow-recruitment-wordpress-widget-customization %}) with only css codes, have a look :smile:
       </div>
     </div>
 
@@ -30,7 +30,7 @@ for more information about this plugin please go to [plugin description]({% post
 </div>
 
 <div style="margin: 0px;">
-  This version is updated and tested with 3.0.1 <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+  This version is updated and tested with 3.0.1 :smile:
 </div>
 
 <div style="margin: 0px;">

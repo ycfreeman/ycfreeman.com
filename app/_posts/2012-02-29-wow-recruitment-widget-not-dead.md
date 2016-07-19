@@ -25,9 +25,9 @@ if you want different recruitment widget to appear on different pages, you can c
 
 <a href="http://wordpress.org/extend/plugins/wp-page-widget/screenshots/" rel="nofollow">http://wordpress.org/extend/plugins/wp-page-widget/screenshots/</a>
 
-I�m closing comments on this site, so if there�s any more issue/questions, feel free to open an issue on project site on github
+I'm closing comments on this site, so if there's any more issue/questions, feel free to open an issue on project site on github
 
-&nbsp;
+
 
 The widget hasn&#8217;t been updated for over a year but it is not dead!
 

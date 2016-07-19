@@ -23,7 +23,7 @@ Maybe write an adapter to screen scrap official realm status page and convert it
 
 1.0.4: since official feed is moved to some mysterious place, this widget is changed to use�[Axho&#8217;s WoW Feeds](http://wowfeeds.wipeitau.com/)&#8230; at least for now. for any kind of widget that is using similar method (old xml feed) to look for data, you can look for the same feed to do things, it provides JSON and XML feed, and rather getting all realms at once and filter on your widget, their feed can provide only one realm on request, which would be slightly faster for something like desktop widget. Data is formated slightly different there, but it should be pretty obvious what has to be changed.
 
-alternatively, you can always screen scrap official realm status page. good luck and have fun <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+alternatively, you can always screen scrap official realm status page. good luck and have fun :smile:
 
 * 18/12/2010: confirmed it is breaking everywhere, appears blizzard has completely turned off the old xml realm status, maybe they&#8217;ve moved somewhere else, if that is the case it should be a quick fix. will look at it tomorrow
 
@@ -31,9 +31,7 @@ alternatively, you can always screen scrap official realm status page. good luck
 
 Easily add WOW Server Status 4.1 badge to your site by just a few clicks.
 
-<div class="separator" style="clear: both; text-align: center;">
-  <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/06/screenshot-1.jpg"><img src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/06/screenshot-11.jpg?w=660" border="0" alt="" data-recalc-dims="1" /></a>
-</div>
+<lightbox-img src="{{site.url}}/wp-content/uploads/2010/06/screenshot-1.jpg"></lightbox-img>
 
 <span style="font-size: x-large;">Description</span>
 
@@ -43,7 +41,7 @@ The original script can be found here, which is not my work:
 
 [http://53&#215;11.com/blog/2005/04/21/WoW-Server-Status-41.10](http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10)
 
-If you managed to find bugs or want to correct some of my codes, please don&#8217;t hesitate to leave a comment <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+If you managed to find bugs or want to correct some of my codes, please don&#8217;t hesitate to leave a comment :smile:
 
 <div style="margin: 0px;">
   <div style="margin: 0px;">

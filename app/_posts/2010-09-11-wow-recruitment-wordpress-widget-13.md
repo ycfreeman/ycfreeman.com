@@ -29,7 +29,7 @@ for more information about this plugin please go to [plugin description]({% post
 
 <div style="margin: 0px;">
   <div style="margin: 0px;">
-    This version is updated and tested with 3.0.x <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+    This version is updated and tested with 3.0.x :smile:
   </div>
 </div>
 
@@ -57,7 +57,7 @@ for more information about this plugin please go to [plugin description]({% post
     If you would like to support this project, please consider<br />
 
     <p>
-      , I will give you my Troll hug <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+      , I will give you my Troll hug :smile:
     </p>
   </div>
 </div>
@@ -105,9 +105,7 @@ for more information about this plugin please go to [plugin description]({% post
     Tooltip was added last version and in this version I&#8217;ve made it customizable with pattern.
   </div>
 
-  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
-    <a href="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture.jpg"><img src="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture1.jpg?resize=320%2C268" alt="" border="0" data-recalc-dims="1" /></a>
-  </div>
+  <lightbox-img src="{{site.url}}/wp-content/uploads/2010/09/Capture.jpg"></lightbox-img>
 
   <div class="separator" style="clear: both; text-align: center; margin: 0px;">
     <span style="font-size: x-small;">Figure 1.1 v1.3 widget settings</span>
@@ -137,9 +135,7 @@ for more information about this plugin please go to [plugin description]({% post
     then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
   </div>
 
-  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
-    <a href="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Untitled-1.jpg"><img src="http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Untitled-11.jpg?resize=320%2C224" alt="" border="0" data-recalc-dims="1" /></a>
-  </div>
+<lightbox-img src="{{site.url}}/wp-content/uploads/2010/09/Untitled-1.jpg"></lightbox-img>
 
   <div class="separator" style="clear: both; text-align: center; margin: 0px;">
     <span style="font-size: x-small;">Figure 1.2 v1.3 customizable tooltip</span>
@@ -149,9 +145,7 @@ for more information about this plugin please go to [plugin description]({% post
     <span style="font-size: small;"><br /> </span>
   </div>
 
-  <div class="separator" style="clear: both; text-align: center; margin: 0px;">
-    <a href="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture3.jpg"><img src="http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/09/Capture31.jpg?resize=320%2C188" alt="" border="0" data-recalc-dims="1" /></a>
-  </div>
+<lightbox-img src="{{site.url}}/wp-content/uploads/2010/09/Capture3.jpg"></lightbox-img>
 
   <div class="separator" style="clear: both; text-align: center; margin: 0px;">
     <span style="font-size: x-small;">Figure 1.3 one possible usage</span>
@@ -249,7 +243,7 @@ for more information about this plugin please go to [plugin description]({% post
   </div>
 
   <div class="separator" style="clear: both; text-align: left;">
-    well, you get the idea if you have read <a title="WOW Recruitment Widget � Customization" href="http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/">the customization post</a> <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+    well, you get the idea if you have read <a title="WOW Recruitment Widget � Customization" href="http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/">the customization post</a> :smile:
   </div>
 
   <div class="separator" style="clear: both; text-align: left;">
@@ -264,9 +258,7 @@ for more information about this plugin please go to [plugin description]({% post
     Say you have 15 rows of �Death Knight in &#8220;Closed&#8221; status (which is default option of the widget), checking that box will make them all displaying, so you have to set &#8220;Rows&#8221; in widget settings to a proper row number if this option is turned on.
   </div>
 
-  <div class="separator" style="clear: both; text-align: center;">
-    <a href="http://i0.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TIsGUw_OmkI/AAAAAAAAHFQ/fV3LSC-314Q/s1600/Capture2.JPG"><img src="http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TIsGUw_OmkI/AAAAAAAAHFQ/fV3LSC-314Q/s320/Capture2.JPG?resize=320%2C217" alt="" border="0" data-recalc-dims="1" /></a>
-  </div>
+<lightbox-img src="https://3.bp.blogspot.com/_qDb3uKm69NY/TIsGUw_OmkI/AAAAAAAAHFQ/fV3LSC-314Q/s1600/Capture2.JPG"></lightbox-img>
 
   <div class="separator" style="clear: both; text-align: center;">
     <span style="font-size: x-small;">Figure 2.1 added option to display &#8220;Closed&#8221; status</span>
