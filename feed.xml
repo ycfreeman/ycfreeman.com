@@ -5,8 +5,8 @@
     <description></description>
     <link>http://ycfreeman.com/</link>
     <atom:link href="http://ycfreeman.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jul 2016 15:31:21 +0000</pubDate>
-    <lastBuildDate>Tue, 19 Jul 2016 15:31:21 +0000</lastBuildDate>
+    <pubDate>Tue, 19 Jul 2016 16:45:55 +0000</pubDate>
+    <lastBuildDate>Tue, 19 Jul 2016 16:45:55 +0000</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -51,7 +51,8 @@
         <title>Website is back! (again)</title>
         <description>&lt;p&gt;my AWS free tier is over, $60+ per month for EC2+RDS is a bit too much for my own personal website…&lt;/p&gt;
 
-&lt;p&gt;the site was down for a few weeks, now everything is migrated to a &lt;a href=&quot;http://core.weloveservers.net/aff.php?aff=218&quot;&gt;cheap vps hosting&lt;/a&gt;,it should be fine for another while &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;the site was down for a few weeks, now everything is migrated to a &lt;a href=&quot;http://core.weloveservers.net/aff.php?aff=218&quot;&gt;cheap vps hosting&lt;/a&gt;,
+it should be fine for another while :smile:&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Oct 2013 00:00:00 +0000</pubDate>
         <link>http://ycfreeman.com/blog/2013/10/website-back/</link>
@@ -66,7 +67,7 @@
         <title>well RDS is now free</title>
         <description>&lt;p&gt;Amazon RDS is now in &lt;a href=&quot;http://aws.typepad.com/aws/2012/10/amazon-rds-now-available-in-the-aws-free-usage-tier.html&quot;&gt;free usage tier&lt;/a&gt;, actually it was already available on my last post haha&lt;/p&gt;
 
-&lt;p&gt;so of course I’m already using it, now the website should be fast and reliable,�no more memory headache  &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;happy time&lt;/p&gt;
+&lt;p&gt;so of course I’m already using it, now the website should be fast and reliable, no more memory headache :smile: happy time&lt;/p&gt;
 </description>
         <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
         <link>http://ycfreeman.com/blog/2013/01/well-rds-is-now-free/</link>
@@ -81,15 +82,11 @@
         <title>Site went down, but it&amp;#8217;s back</title>
         <description>&lt;p&gt;This site went down for a few days due to a common AWS micro instance issue — out of memory and mysqld got killed.&lt;/p&gt;
 
-&lt;p&gt;So I went in and &lt;a href=&quot;http://imperialwicket.com/tuning-apache-for-a-low-memory-server-like-aws-micro-ec2-instances&quot;&gt;tweaked some apache settings&lt;/a&gt;�…�&lt;span style=&quot;line-height: 1.6em;&quot;&gt;also upgraded to apache 2.4+php 5.4… for maybe slightly lower memory usage…&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So I went in and &lt;a href=&quot;http://imperialwicket.com/tuning-apache-for-a-low-memory-server-like-aws-micro-ec2-instances&quot;&gt;tweaked some apache settings&lt;/a&gt; … &lt;span style=&quot;line-height: 1.6em;&quot;&gt;also upgraded to apache 2.4+php 5.4… for maybe slightly lower memory usage…&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;hope it won’t go down again that soon&lt;/p&gt;
 
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;— just tried nginx,  &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660&quot; alt=&quot;:(&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;got it running and doing phpinfo() correctly but takes too long to manually setup all these rewriting stuff for wordpress…… maybe I’ll try that again some time&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;— just tried nginx, :frowning: got it running and doing phpinfo() correctly but takes too long to manually setup all these rewriting stuff for wordpress…… maybe I’ll try that again some time&lt;/p&gt;
 
 &lt;p&gt;…. down again, added &lt;a href=&quot;http://randomind.com/tips/how-to-create-swap-partition-on-amazon-aws-micro-instance-linux-2012-08-29&quot;&gt;swap partition&lt;/a&gt;…..&lt;/p&gt;
 </description>
@@ -106,11 +103,11 @@
         <title>Same old site, Lightning fast</title>
         <description>&lt;p&gt;Finally got the time to migrate my site from crappy shared hosting to AWS,&lt;/p&gt;
 
-&lt;p&gt;It’s now on Amazon Linux (CentOS) with basic AMP (mod_php) stack — php php-mysql mysql-server — I’m no nginx guru and�mod_fcgid gives me headache…&lt;/p&gt;
+&lt;p&gt;It’s now on Amazon Linux (CentOS) with basic AMP (mod_php) stack — php php-mysql mysql-server — I’m no nginx guru and mod_fcgid gives me headache…&lt;/p&gt;
 
-&lt;p&gt;so I just got APC caching — php-pecl-apc — which is already much faster than file based caching — and of course with W3 Total Cache &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;so I just got APC caching — php-pecl-apc — which is already much faster than file based caching — and of course with W3 Total Cache :smile:&lt;/p&gt;
 
-&lt;p&gt;and &lt;a href=&quot;https://developers.google.com/speed/docs/mod_pagespeed/download&quot;&gt;mod_pagespeed binary from google&lt;/a&gt;�helps a little as well&lt;/p&gt;
+&lt;p&gt;and &lt;a href=&quot;https://developers.google.com/speed/docs/mod_pagespeed/download&quot;&gt;mod_pagespeed binary from google&lt;/a&gt; helps a little as well&lt;/p&gt;
 
 &lt;p&gt;Site speed should be much faster now, and I haven’t even looked at this &lt;a href=&quot;http://codex.wordpress.org/WordPress_Optimization&quot;&gt;long list&lt;/a&gt; yet&lt;/p&gt;
 
@@ -127,25 +124,25 @@
     
       <item>
         <title>&amp;#8220;Git&amp;#8221;ing my plugins</title>
-        <description>&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;update 9/8/2012: done &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;update 9/8/2012: done :smile: &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/ycfreeman/wow-server-status-widget&quot;&gt;https://github.com/ycfreeman/wow-server-status-widget�&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ycfreeman/wow-server-status-widget&quot;&gt;https://github.com/ycfreeman/wow-server-status-widget&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;WOW Recruitment Widget was updated to 1.4.1 around 3 months ago, which included the Monk update and bigger icons,&lt;/p&gt;
 
-&lt;p&gt;just update from your wordpress plugins panel if you haven’t &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;just update from your wordpress plugins panel if you haven’t :smile:&lt;/p&gt;
 
 &lt;p&gt;Latest release note is updated on the Extension gallery page. Please give a 5 star and favorite if you like this plugin.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://wordpress.org/extend/plugins/wow-recruit-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-recruit-widget/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I’m converting WOW Recruitment Widget and WOW Server Status Widget�to Git, then push to Github (although I love Google, Github seems easier for you fellas to fork)&lt;/p&gt;
+&lt;p&gt;I’m converting WOW Recruitment Widget and WOW Server Status Widget to Git, then push to Github (although I love Google, Github seems easier for you fellas to fork)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Why?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;so I can track issues better and you guys can fork it for other games much easier :), also prepare for major code�changes, SVN just won’t cut it if you want to do branches properly.&lt;/p&gt;
+&lt;p&gt;so I can track issues better and you guys can fork it for other games much easier :), also prepare for major code changes, SVN just won’t cut it if you want to do branches properly.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Why now?&lt;/strong&gt;&lt;/p&gt;
 
@@ -194,9 +191,7 @@
 
 &lt;p&gt;&lt;a href=&quot;http://wordpress.org/extend/plugins/wp-page-widget/screenshots/&quot; rel=&quot;nofollow&quot;&gt;http://wordpress.org/extend/plugins/wp-page-widget/screenshots/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I�m closing comments on this site, so if there�s any more issue/questions, feel free to open an issue on project site on github&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I’m closing comments on this site, so if there’s any more issue/questions, feel free to open an issue on project site on github&lt;/p&gt;
 
 &lt;p&gt;The widget hasn’t been updated for over a year but it is not dead!&lt;/p&gt;
 
@@ -233,7 +228,7 @@
     
       <item>
         <title>Support forum offline</title>
-        <description>&lt;p&gt;Support Forum is offline due to spam &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660&quot; alt=&quot;:(&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Support Forum is offline due to spam :frowning:&lt;/p&gt;
 </description>
         <pubDate>Thu, 01 Dec 2011 00:00:00 +0000</pubDate>
         <link>http://ycfreeman.com/blog/2011/12/support-forum-offline/</link>
@@ -248,42 +243,15 @@
         <title>WOW Server Status WordPress Widget 1.0.7</title>
         <description>&lt;p&gt;Thanks Aoife for the info, I didn’t know Blizzard released their official API.&lt;/p&gt;
 
-&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;This plugin is now�updated to use official JSON feed,�(finally :p), php 5.2+ &lt;strong&gt;required&lt;/strong&gt; (for native json_decode() support), although fallback JSON.php for earlier versions is included as well, no garrantee it works in 5.2-, too bad if it doesn’t work :(.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;This plugin is now updated to use official JSON feed, (finally :p), php 5.2+ &lt;strong&gt;required&lt;/strong&gt; (for native json_decode() support), although fallback JSON.php for earlier versions is included as well, no garrantee it works in 5.2-, too bad if it doesn’t work :(.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;For non-wordpress users,�feel free to download the package�and extract the wow_ss.php to use it like the &lt;a href=&quot;http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10&quot; target=&quot;_blank&quot;&gt;original one&lt;/a&gt;. (text display mode may contain bugs),&lt;/span&gt;�more information about &lt;a href=&quot;http://ycfreeman.com/wow-server-status-wordpress-widget-10/&quot; title=&quot;WOW Server Status WordPress Widget 1.0&quot;&gt;this plugin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;For non-wordpress users, feel free to download the package and extract the wow_ss.php to use it like the &lt;a href=&quot;http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10&quot; target=&quot;_blank&quot;&gt;original one&lt;/a&gt;. (text display mode may contain bugs),&lt;/span&gt; more information about &lt;a href=&quot;http://ycfreeman.com/wow-server-status-wordpress-widget-10/&quot; title=&quot;WOW Server Status WordPress Widget 1.0&quot;&gt;this plugin&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;If you would like to support this project, please consider &lt;a href=&quot;https://paypal.me/ycfreeman&quot;&gt;Donate&lt;/a&gt;, I will give you my Shaman hug :smile:&lt;/p&gt;
 
-&lt;div&gt;
-  &lt;div&gt;
-    &lt;p&gt;
-      &lt;strong&gt;If you would like to support this project, please consider&lt;/strong&gt;
-    &lt;/p&gt;
+&lt;p&gt;Download from wordpress plugin gallery: &lt;a href=&quot;http://wordpress.org/extend/plugins/wow-server-status-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-server-status-widget/&lt;/a&gt;&lt;/p&gt;
 
-    &lt;div style=&quot;text-align: center;&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;p&gt;
-      , I will give you my Shaman hug &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;div&gt;
-        Download from wordpress plugin gallery:�&lt;a href=&quot;http://wordpress.org/extend/plugins/wow-server-status-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-server-status-widget/&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;div&gt;
-    &lt;!--more--&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;!--more--&gt;
 
 &lt;p&gt;&lt;span style=&quot;font-size: x-large;&quot;&gt;Changelog&lt;/span&gt;&lt;/p&gt;
 
@@ -318,13 +286,13 @@
 
 &lt;p&gt;17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github &lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;&lt;span style=&quot;font-size: 1rem;&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/span&gt;&lt;/a&gt;, and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing&lt;/p&gt;
 
-&lt;p&gt;17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i’m fixing it right now….�github repo also pulled down due to these conflicts.&lt;/p&gt;
+&lt;p&gt;17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i’m fixing it right now…. github repo also pulled down due to these conflicts.&lt;/p&gt;
 
 &lt;p&gt;11 Dec 2012: &lt;a href=&quot;http://demo.ycfreeman.com&quot; target=&quot;_blank&quot;&gt;updated code samples on demo site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;27 Aug 2012:�&lt;a href=&quot;http://ycfreeman.com/wow-recruitment-widget-not-dead/&quot; title=&quot;WOW Recruitment Widget is not dead&quot;&gt;updated FAQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;27 Aug 2012: &lt;a href=&quot;http://ycfreeman.com/wow-recruitment-widget-not-dead/&quot; title=&quot;WOW Recruitment Widget is not dead&quot;&gt;updated FAQ&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;9 Aug 2012: this project is now on github &lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/a&gt;�, feel free to “fork” it, cheers &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;9 Aug 2012: this project is now on github &lt;a href=&quot;https://github.com/ycfreeman/wow-recruit-widget&quot;&gt;https://github.com/ycfreeman/wow-recruit-widget&lt;/a&gt;, feel free to “fork” it, cheers :smile:&lt;/p&gt;
 
 &lt;p&gt;29 Feb 2012: &lt;a href=&quot;http://ycfreeman.com/wow-recruitment-widget-not-dead/&quot; title=&quot;WOW Recruitment Widget is not dead&quot;&gt;little update and FAQ&lt;/a&gt;&lt;/p&gt;
 
@@ -334,7 +302,8 @@
   &lt;/p&gt;
 
   &lt;p&gt;
-    24 Oct 2010: From now on I&amp;#8217;ll post in comments for teasers, or some workable ideas that come up in my mind about this plugin, (like when I have time to post a few lines but not enough to actually update the widget :p),�so check back once a while or subscribe if you have a google account/ if it works &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt; blogger doesn&amp;#8217;t seem to have a comment feed which you can subscribe yet, it seems to work on gmail only at the moment.
+    24 Oct 2010: From now on I&amp;#8217;ll post in comments for teasers, or some workable ideas that come up in my mind about this plugin, (like when I have time to post a few lines but not enough to actually update the widget :p),�so check back once a while or subscribe if you have a google account/ if it works :smile:
+    blogger doesn&amp;#8217;t seem to have a comment feed which you can subscribe yet, it seems to work on gmail only at the moment.
   &lt;/p&gt;
 
   &lt;p&gt;
@@ -351,23 +320,11 @@
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;p&gt;
-        &lt;strong&gt;If you would like to support this project, please consider&lt;/strong&gt;
-      &lt;/p&gt;
 
-      &lt;div style=&quot;text-align: center;&quot;&gt;
-      &lt;/div&gt;
-
-      &lt;p&gt;
-        &lt;strong&gt;, I will give you my Goblin hug &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/strong&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+If you would like to support this project, please consider [Donate](https://paypal.me/ycfreeman), I will give you my Shaman hug :smile:
 
   &lt;p&gt;
-    &lt;strong&gt;Demo site:&lt;/strong&gt; &lt;a href=&quot;http://ycfreeman.com/wrdemo&quot; target=&quot;_blank&quot;&gt;http://ycfreeman.com/wrdemo/&lt;/a&gt; &lt;img src=&quot;http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; data-recalc-dims=&quot;1&quot; /&gt;
+    &lt;strong&gt;Demo site:&lt;/strong&gt; &lt;a href=&quot;http://ycfreeman.com/wrdemo&quot; target=&quot;_blank&quot;&gt;http://ycfreeman.com/wrdemo/&lt;/a&gt; :smile:
   &lt;/p&gt;
 &lt;/div&gt;
 
@@ -379,7 +336,7 @@
   &lt;tr&gt;
     &lt;td&gt;
       &lt;p style=&quot;text-align: center;&quot;&gt;
-        &lt;a href=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/Capture.JPG&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/Capture1.JPG?w=660&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+&lt;lightbox-img src=&quot;http://ycfreeman.com/wp-content/uploads/2010/12/Capture.JPG&quot;&gt;&lt;/lightbox-img&gt;
       &lt;/p&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -395,7 +352,7 @@
   &lt;tr&gt;
     &lt;td&gt;
       &lt;p style=&quot;text-align: center;&quot;&gt;
-        &lt;a href=&quot;http://i1.wp.com/ycfreeman.com/wp-content/uploads/2010/12/widget2.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/widget3.jpg?resize=294%2C320&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+      &lt;lightbox-img src=&quot;http://ycfreeman.com/wp-content/uploads/2010/12/widget2.jpg&quot;&gt;&lt;/lightbox-img&gt;
       &lt;/p&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -410,7 +367,7 @@
 &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      &lt;a href=&quot;http://i0.wp.com/ycfreeman.com/wp-content/uploads/2010/12/settings2.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/settings3.jpg?resize=135%2C320&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+    &lt;lightbox-img src=&quot;http://ycfreeman.com/wp-content/uploads/2010/12/settings2.jpg&quot;&gt;&lt;/lightbox-img&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
 
@@ -424,7 +381,7 @@
 &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      &lt;a href=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/options2.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://i2.wp.com/ycfreeman.com/wp-content/uploads/2010/12/options3.jpg?resize=239%2C320&quot; border=&quot;0&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+    &lt;lightbox-img src=&quot;http://ycfreeman.com/wp-content/uploads/2010/12/options2.jpg&quot;&gt;&lt;/lightbox-img&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
 
@@ -439,9 +396,9 @@
 
 &lt;p&gt;Demo site with a few example style (best viewed on chrome4+ /safari4+, or latest FF3+/Opera10+/IE9+)&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://ycfreeman.com/wrdemo&quot; target=&quot;_blank&quot;&gt;http://ycfreeman.com/wrdemo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://demo.ycfreeman.com&quot; target=&quot;_blank&quot;&gt;http://demo.ycfreeman.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/&quot; title=&quot;WOW Recruitment Widget � Customization&quot;&gt;Customization (with pure CSS) tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/blog/2010/08/wow-recruitment-wordpress-widget-customization/&quot; title=&quot;WOW Recruitment Widget Customization&quot;&gt;Customization (with pure CSS) tutorial&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 

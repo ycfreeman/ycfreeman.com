@@ -1,17 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="ycfreeman's" />
+    <meta name="generator" content="ycfreeman's">
 
     <title>WOW Recruitment Widget 1.1</title>
-    <meta name="description" content="    for more information about this plugin please go to [plugin description](/wow-recruitment-widget/)                        current stable release 1.1.4   ...">
+    <meta name="description" content="for more information about this plugin please go to plugin description      current stable release 1.1.4         please save the widget once after upgrading ...">
 
     <link rel="canonical" href="http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/">
-    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href='http://ycfreeman.com/feed.xml' />
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href="http://ycfreeman.com/feed.xml">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Chrome for Android theme color -->
@@ -60,11 +61,7 @@
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- seahorseasianrestaurant_sidebar-right-1_AdSense1_1x1_as -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9325509044951275"
-         data-ad-slot="3184134841"
-         data-ad-format="auto"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9325509044951275" data-ad-slot="3184134841" data-ad-format="auto"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
@@ -83,7 +80,7 @@
         <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
 
         <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="/blog/2010/06/wow-recruitment-wordpress-widget-11/" on-iron-select="onMenuSelect">
+        <paper-menu class="list" attr-for-selected="data-route" selected on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
           <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
@@ -97,7 +94,7 @@
         
         <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
         
-        <a href="/tag/wow-recruit-widget/" ><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        <a href="/tag/wow-recruit-widget/"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
         
         <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
         
@@ -135,7 +132,7 @@
         </paper-menu>
         <div class="push"></div>
       </div>
-      <div id="copyright-info">&copy; 2016, Freeman Man</div>
+      <div id="copyright-info">© 2016, Freeman Man</div>
     </paper-scroll-header-panel>
 
     <!-- Main Area -->
@@ -164,7 +161,8 @@
       </paper-toolbar>
 
       <!-- Main Content -->
-      <div class="content"><style>
+      <div class="content">
+<style>
   body {
     background-color: #f9f9f9 !important;
   }
@@ -178,140 +176,132 @@
   <h4 class="paper-font-subhead" id="date">Jun 10, 2010</h4>
 
   <div id="post-content">
-    <div style="margin: 0px">
-  <span style="color: #ff0000"><strong>
+    <p>for more information about this plugin please go to <a href="/wow-recruitment-widget/">plugin description</a></p>
 
-  for more information about this plugin please go to [plugin description](/wow-recruitment-widget/)
+<ul>
+  <li>
+    <span style="color: red"><strong>current stable release 1.1.4<br> </strong></span>
+  </li>
+  <li>
+    <span style="color: red"><strong><span style="font-weight: normal"><strong>please save the widget once after upgrading from 1.0.x to make data work with new codes<br> </strong></span></strong></span>
+  </li>
+</ul>
 
+<ul>
+  <li>
+    The 1.1.3 admin panel bug only happened to Internet Explorer due to an incomplete html tag (IE hides contents inside while all other browsers show contents inside), so if you are using Internet Explorer, please update to 1.1.4 to fix this bug.
+  </li>
+</ul>
 
-  <p>
-    
+<ul>
+  <li>
+    Update 24/6/2010: eh…. took me ages to find the bug… turns out it is only missing a close “&gt;” so the drop down box breaks in certain browsers, namely, freaking Internet Explorer, come on, stop using IE guys! anyway, 1.1.4 released, enjoy.
+  </li>
+  <li>
+    Update 23/6/2010: looks like there can be a bug on admin form on some servers, if you have problem using 1.1.x just revert back to 1.0.1 at the mean time. I’ll upload a beta version to this page these few days, please stay tuned with this post thanks!
+  </li>
+  <li>
+    Update 19/6/2010: fixed a bug that may cause by css float
+  </li>
+  <li>
+    Update 19/6/2010: fixed a typo “Huner” and released 1.1.2 lol, also fixed some subversion stuffs, now it won’t give you dead images if you need to revert to older versions.
+  </li>
+  <li>
+    Update 18/6/2010: turns out there’s really some bug on sorting algorithm also does not quite work on multi-site, I’ve fixed and released 1.1.1, it should work fine now, please comment here it doesn’t work on your site <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle">
+  </li>
+  <li>
+    Update 16/6/2010: er … the sorting algorithm is still buggy, I’ll look into it again in the next update.
+  </li>
+</ul>
 
-    <ul>
-      <li>
-        <span style="color: red"><strong>current stable release 1.1.4<br /> </strong></span>
-      </li>
-      <li>
-        <span style="color: red"><strong><span style="font-weight: normal"><strong>please save the widget once after upgrading from 1.0.x to make data work with new codes<br /> </strong></span></strong></span>
-      </li>
-    </ul>
+<p>
+  <span style="font-size: x-large">Description</span>
+</p>
 
-    <ul>
-      <li>
-        The 1.1.3 admin panel bug only happened to Internet Explorer due to an incomplete html tag (IE hides contents inside while all other browsers show contents inside), so�if you are using Internet Explorer,�please update to 1.1.4 to fix this bug.
-      </li>
-    </ul>
+<p>
+  This version is updated to work with 3.0 single and multi site <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle">
+</p>
 
-    <ul>
-      <li>
-        Update 24/6/2010: eh&#8230;. took me ages to find the bug&#8230; turns out it is only missing a close &#8220;&gt;&#8221; so the drop down box breaks in certain browsers, namely, freaking Internet Explorer, come on, stop using IE guys! anyway, 1.1.4 released, enjoy.
-      </li>
-      <li>
-        Update 23/6/2010: looks like there can be a bug on admin form on some servers, if you have problem using 1.1.x just revert back to 1.0.1 at the mean time. I&#8217;ll upload a beta version to this page these few days, please stay tuned with this post thanks!
-      </li>
-      <li>
-        Update 19/6/2010: fixed a bug that may cause by css float
-      </li>
-      <li>
-        Update 19/6/2010: fixed a typo &#8220;Huner&#8221; and released 1.1.2 lol, also fixed some subversion stuffs, now it won&#8217;t give you dead images if you need to revert to older versions.
-      </li>
-      <li>
-        Update 18/6/2010: turns out there&#8217;s really some bug on sorting algorithm also does not quite work on multi-site, I&#8217;ve fixed and released 1.1.1, it should work fine now, please comment here it doesn&#8217;t work on your site <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
-      </li>
-      <li>
-        Update 16/6/2010: er &#8230; the sorting algorithm is still buggy, I&#8217;ll look into it again in the next update.
-      </li>
-    </ul>
+<p>
+  I’ve revamped the whole widget and did a lot of changes to old codes, it should be way much cleaner than before.
+</p>
 
-    <p>
-      <span style="font-size: x-large">Description</span>
-    </p>
+<p>
+  <strong>New Features in 1.1:</strong>
+</p>
 
-    <p>
-      This version is updated to work with 3.0 single and multi site <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
-    </p>
+<ul>
+  <li>
+    no more old school table layout, all are recoded with css2 (works on IE8 as well)
+  </li>
+  <li>
+    since there is no more layout codes in the widget itself, custom layout can be done just by editing the css
+  </li>
+  <li>
+    color and layout are seperated into 2 css files
+  </li>
+  <li>
+    data structure is changed, old data will be changed to new structure automatically
+  </li>
+  <li>
+    class icons are combined into css sprite
+  </li>
+  <li>
+    new sorting method used, it should sort by status then class as intended now.
+  </li>
+</ul>
 
-    <p>
-      I&#8217;ve revamped the whole widget and did a lot of changes to old codes, it should be way much cleaner than before.
-    </p>
+<p>
+  ** row order in widget settings does not affect order that displays in front, it will just automatically sorts by status then class, I will improve this in future version
+</p>
 
-    <p>
-      <strong>New Features in 1.1:</strong>
-    </p>
+<p>
+  <strong>Thank you for all your support, stay tuned for updates~</strong>
+</p>
 
-    <ul>
-      <li>
-        no more old school table layout, all are recoded with css2 (works on IE8 as well)
-      </li>
-      <li>
-        since there is no more layout codes in the widget itself, custom layout can be done just by editing the css
-      </li>
-      <li>
-        color and layout are seperated into 2 css files
-      </li>
-      <li>
-        data structure is changed, old data will be changed to new structure automatically
-      </li>
-      <li>
-        class icons are combined into css sprite
-      </li>
-      <li>
-        new sorting method used, it should sort by status then class as intended now.
-      </li>
-    </ul>
+<div style="margin: 0px">
+  <div style="margin: 0px">
+    Download from wordpress plugin gallery:�<a href="http://wordpress.org/extend/plugins/wow-recruit-widget/">http://wordpress.org/extend/plugins/wow-recruit-widget/</a>
+  </div>
+</div>
 
-    <p>
-      ** row order in widget settings does not affect order that displays in front, it will just automatically sorts by status then class, I will improve this in future version
-    </p>
+<p>
+  Full change log, plugin description after the break.
+</p>
 
-    <p>
-      <strong>Thank you for all your support, stay tuned for updates~</strong>
-    </p>
+<p>
+  <a name="more"></a>
+</p>
 
-    <div style="margin: 0px">
-      <div style="margin: 0px">
-        Download from wordpress plugin gallery:�<a href="http://wordpress.org/extend/plugins/wow-recruit-widget/">http://wordpress.org/extend/plugins/wow-recruit-widget/</a>
-      </div>
-    </div>
+<div style="margin: 0px">
+  <span style="font-size: x-large">Changelog</span>
+</div>
 
-    <p>
-      Full change log, plugin description after the break.
-    </p>
+<p>
+  = 1.1 =<br> * major recode to everything including data structure<br> * no more table layout, all replaced by div, which can be easily customized by editing css/layout.css<br> * color and layout are seperated into css/layout.css and css/color.css<br> * class icons are combined into css sprite<br> * new sorting method used, it should sort by status then class as intended now<br> = 1.1.1 =<br> * fixed a few non-set variable and duplicate function declaration bug, thanks Ramides<br> * fixed sorting mechanism, it should sort by status from high to low, then by class in alphabetical order, tell me if it is still bugged<br> = 1.1.2 =<br> * fixed a typing mistake “Huner”, lol, thanks KGBAgent<br> = 1.1.3 =<br> * fixed a layout bug that may cause by css float<br> = 1.1.4 =<br> * fixed a lovely IE only bug, thanks KGBAgent again
+</p>
 
-    <p>
-      <a name="more"></a>
-    </p>
+<p>
+  <span style="font-size: x-large">Future Improvements:</span>
+</p>
 
-    <div style="margin: 0px">
-      <span style="font-size: x-large">Changelog</span>
-    </div>
-
-    <p>
-      = 1.1 =<br /> * major recode to everything including data structure<br /> * no more table layout, all replaced by div, which can be easily customized by editing css/layout.css<br /> * color and layout are seperated into css/layout.css and css/color.css<br /> * class icons are combined into css sprite<br /> * new sorting method used, it should sort by status then class as intended now<br /> = 1.1.1 =<br /> * fixed a few non-set variable and duplicate function declaration bug, thanks Ramides<br /> * fixed sorting mechanism, it should sort by status from high to low, then by class in alphabetical order, tell me if it is still bugged<br /> = 1.1.2 =<br /> * fixed a typing mistake &#8220;Huner&#8221;, lol,�thanks KGBAgent<br /> = 1.1.3 =<br /> * fixed a layout bug that may cause by css float<br /> = 1.1.4 =<br /> * fixed a lovely IE only bug, thanks KGBAgent again
-    </p>
-
-    <p>
-      <span style="font-size: x-large">Future Improvements:</span>
-    </p>
-
-    <ul>
-      <li>
-        Custom order
-      </li>
-      <li>
-        Custom status text
-      </li>
-      <li>
-        More readable widget settings
-      </li>
-      <li>
-        Able to toggle display/not display instead of hiding all �Closed� status
-      </li>
-      <li>
-        Able to toggle usage of�embedded�style sheets
-      </li>
-    </ul>
-</p></strong></span></div>
+<ul>
+  <li>
+    Custom order
+  </li>
+  <li>
+    Custom status text
+  </li>
+  <li>
+    More readable widget settings
+  </li>
+  <li>
+    Able to toggle display/not display instead of hiding all Closed status
+  </li>
+  <li>
+    Able to toggle usage of embedded style sheets
+  </li>
+</ul>
 
   </div>
 
@@ -320,20 +310,20 @@
     <x-chip href="/tag/wow-recruit-widget/">Wow-recruit-widget</x-chip>
   
 
-  <hr/>
+  <hr>
 
   <div class="share section">
     <a href="https://facebook.com/sharer.php?u=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/" rel="nofollow" target="_blank" title="Share on Facebook">
       <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
     <a href="https://plus.google.com/share?url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/" rel="nofollow" target="_blank" title="Share on Google+">
       <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&title=WOW Recruitment Widget 1.1&summary=&source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&amp;title=WOW%20Recruitment%20Widget%201.1&amp;summary=&amp;source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
       <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
-    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&title=WOW Recruitment Widget 1.1" rel="nofollow" target="_blank" title="Share on Reddit">
+    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&amp;title=WOW%20Recruitment%20Widget%201.1" rel="nofollow" target="_blank" title="Share on Reddit">
       <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
-    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&amp;name=%7B%5B%20page.title%20%7D%7D&amp;description=" rel="nofollow" target="_blank" title="Share on Tumblr">
       <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
-    <a href="https://twitter.com/intent/tweet?text=WOW Recruitment Widget 1.1&url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+    <a href="https://twitter.com/intent/tweet?text=WOW%20Recruitment%20Widget%201.1&amp;url=http://ycfreeman.com/blog/2010/06/wow-recruitment-wordpress-widget-11/&amp;via=&amp;related=" rel="nofollow" target="_blank" title="Share on Twitter">
       <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
   </div>
 
@@ -367,7 +357,8 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
   
 
 </div>

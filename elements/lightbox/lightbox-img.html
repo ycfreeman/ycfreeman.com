@@ -3,14 +3,19 @@
 <dom-module id="lightbox-img">
 
     <style>
-
+        .scrollable {
+            overflow: auto;
+        }
+        .with-margin {
+            margin: 24px 40px;
+        }
     </style>
 
     <template>
         <a id="imageLink" src="{{src}}" style="display:block; clear: both; text-align: center">
             <img src="{{src}}" alt="{{caption}}" style="max-width:100%;">
         </a>
-        <simple-overlay id="overlay" with-backdrop>
+        <simple-overlay id="overlay" class="scrollable with-margin" with-backdrop>
             <img src="{{src}}" alt="{{caption}}" style="max-width:100%;">
         </simple-overlay>
     </template>
