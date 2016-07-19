@@ -1,17 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="ycfreeman's" />
+    <meta name="generator" content="ycfreeman's">
 
     <title>Widgetbox + Facebook Page + static FBML box</title>
     <meta name="description" content="So I finally got the time and mood to put a little bit work on this problem.While there’s seem to be very few clear tutorial or some sort in google specifica...">
 
     <link rel="canonical" href="http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/">
-    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href='http://ycfreeman.com/feed.xml' />
+    <link rel="alternate" type="application/rss+xml" title="ycfreeman's" href="http://ycfreeman.com/feed.xml">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Chrome for Android theme color -->
@@ -47,8 +48,6 @@
     <link rel="stylesheet" href="/styles/code-highlight.css">
     <!-- endbuild-->
 
-    <link rel="stylesheet" href="/scripts/lightbox/css/lightbox.css">
-
     <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <!-- endbuild -->
@@ -62,11 +61,7 @@
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- seahorseasianrestaurant_sidebar-right-1_AdSense1_1x1_as -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9325509044951275"
-         data-ad-slot="3184134841"
-         data-ad-format="auto"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9325509044951275" data-ad-slot="3184134841" data-ad-format="auto"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
@@ -85,7 +80,7 @@
         <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
 
         <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="/blog/2010/04/widgetbox-facebook-page-static-fbml-box/" on-iron-select="onMenuSelect">
+        <paper-menu class="list" attr-for-selected="data-route" selected on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
           <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
@@ -99,7 +94,7 @@
         
         <a href="https://github.com/ycfreeman/jplayer-podcast-wordpress-widget" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>JPlayer Podcast Widget</span></a>
         
-        <a href="/tag/wow-recruit-widget/" ><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
+        <a href="/tag/wow-recruit-widget/"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Recruitment Widget</span></a>
         
         <a href="/tag/wow-server-status-widget/" target="_blank"><iron-icon icon="fa:wordpress"></iron-icon><span>Wow Server Status Widget</span></a>
         
@@ -137,7 +132,7 @@
         </paper-menu>
         <div class="push"></div>
       </div>
-      <div id="copyright-info">&copy; 2016, Freeman Man</div>
+      <div id="copyright-info">© 2016, Freeman Man</div>
     </paper-scroll-header-panel>
 
     <!-- Main Area -->
@@ -166,7 +161,8 @@
       </paper-toolbar>
 
       <!-- Main Content -->
-      <div class="content"><style>
+      <div class="content">
+<style>
   body {
     background-color: #f9f9f9 !important;
   }
@@ -190,42 +186,42 @@
 
 <p>tags just simply doesn’t work on static FBML boxes.</p>
 
-<p><a name="more"></a></p>
-
 <p>“but Facebook says they support swf!”, Yes they support swf, in a weird way. First, you have to use FB:SWF to include the flash object, Second, it does not play on page load.</p>
 
-<p>So the way to solve this problem is to convert that object tag and those variables�into the fb:swf tag. Ya simple as that.</p>
+<p>So the way to solve this problem is to convert that object tag and those variables into the fb:swf tag. Ya simple as that.</p>
 
 <p>now here’s what you get from widgetbox “embed” button</p>
 
-<p><code class="highlighter-rouge">
-&amp;lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+<div class="highlighter-rouge">
+<pre class="highlight"><code>&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
  codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
  type="application/x-shockwave-flash"
  width="350px" height="523px"
  id="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
- align="middle"&amp;gt; &amp;lt;param name="movie"
- value="http://widgetserver.com/syndication/flash/wrapper/InsertWidget.swf"&amp;gt;
-    &amp;lt;param name="quality"
- value="high"&amp;gt;
-   &amp;lt;param name="wmode" value="transparent"&amp;gt;
-    &amp;lt;param name="menu" value="false"&amp;gt;
-    &amp;lt;param name="flashvars" value="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3"&amp;gt;
-    &amp;lt;param name="allowScriptAccess" value="sameDomain"&amp;gt;
-    &amp;lt;embed src="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
+ align="middle"&gt; &lt;param name="movie"
+ value="http://widgetserver.com/syndication/flash/wrapper/InsertWidget.swf"&gt;
+    &lt;param name="quality"
+ value="high"&gt;
+   &lt;param name="wmode" value="transparent"&gt;
+    &lt;param name="menu" value="false"&gt;
+    &lt;param name="flashvars" value="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3"&gt;
+    &lt;param name="allowScriptAccess" value="sameDomain"&gt;
+    &lt;embed src="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
  name="InsertWidget_883e1e81-33bf-42ba-a364-985360a915e3"
  width="350px" height="523px" quality="high" menu="false"
     pluginspage="http://www.macromedia.com/go/getflashplayer"
  type="application/x-shockwave-flash" wmode="transparent" align="middle"
  allowscriptaccess="sameDomain"
- flashvars="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3" /&amp;gt; &amp;lt;/object&amp;gt;
-</code></p>
+ flashvars="r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3" /&gt; &lt;/object&gt;
+</code></pre>
+</div>
 
-<p>pretty much clear on how to convert here now  <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />, just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the �lid of your hot pot�.</p>
+<p>pretty much clear on how to convert here now <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle">, just change embed tag to fb:swf, and delete some not allowed parameters, then convert those like src to swfsrc. And finally add a printscreen or something to be the “lid of your pot”.</p>
 
 <p>the converted code would be something like this:</p>
 
-<pre>&lt;fb:swf
+<div class="highlighter-rouge">
+<pre class="highlight"><code>&lt;fb:swf
  imgsrc="http://ycfreeman.com/wp-content/uploads/2010/04/playbuttonm.jpg"
  swfsrc="http://ycfreeman.com/wp-content/uploads/2010/04/InsertWidget.swf"
  flashvars='r=2&amp;appId=883e1e81-33bf-42ba-a364-985360a915e3'
@@ -234,13 +230,15 @@
  wmode='transparent'
  waitforclick='false'
  scale='exactfit'
-/&gt;</pre>
+/&gt;
+</code></pre>
+</div>
 
 <p>update 19/02/2011: demo page no longer available, but there should be some fb pages with flash these days.</p>
 
-<p>one more thing, you can always test those FBML codes at <a href="http://ycfreeman.com/wp-content/uploads/2010/04/tools.php?fbml">FBML test console</a> before publish <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/simple-smile.png?w=660" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></p>
+<p>one more thing, you can always test those FBML codes at <a href="http://ycfreeman.com/wp-content/uploads/2010/04/tools.php?fbml">FBML test console</a> before publish <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"></p>
 
-<p>update: FBML test console is no longer working <img src="http://i1.wp.com/ycfreeman.com/wp-includes/images/smilies/frownie.png?w=660" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" /></p>
+<p>update: FBML test console is no longer working <img class="emoji" title=":frowning:" alt=":frowning:" src="https://assets.github.com/images/icons/emoji/unicode/1f626.png" height="20" width="20" align="absmiddle"></p>
 
 <p>Have fun!</p>
 
@@ -260,20 +258,20 @@
     <x-chip href="/tag/widgetbox/">Widgetbox</x-chip>
   
 
-  <hr/>
+  <hr>
 
   <div class="share section">
     <a href="https://facebook.com/sharer.php?u=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/" rel="nofollow" target="_blank" title="Share on Facebook">
       <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
     <a href="https://plus.google.com/share?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/" rel="nofollow" target="_blank" title="Share on Google+">
       <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&title=Widgetbox + Facebook Page + static FBML box&summary=&source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&amp;title=Widgetbox%20+%20Facebook%20Page%20+%20static%20FBML%20box&amp;summary=&amp;source=http://ycfreeman.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
       <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
-    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&title=Widgetbox + Facebook Page + static FBML box" rel="nofollow" target="_blank" title="Share on Reddit">
+    <a href="http://www.reddit.com/submit?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&amp;title=Widgetbox%20+%20Facebook%20Page%20+%20static%20FBML%20box" rel="nofollow" target="_blank" title="Share on Reddit">
       <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
-    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+    <a href="http://www.tumblr.com/share/link?url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&amp;name=%7B%5B%20page.title%20%7D%7D&amp;description=" rel="nofollow" target="_blank" title="Share on Tumblr">
       <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
-    <a href="https://twitter.com/intent/tweet?text=Widgetbox + Facebook Page + static FBML box&url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+    <a href="https://twitter.com/intent/tweet?text=Widgetbox%20+%20Facebook%20Page%20+%20static%20FBML%20box&amp;url=http://ycfreeman.com/blog/2010/04/widgetbox-facebook-page-static-fbml-box/&amp;via=&amp;related=" rel="nofollow" target="_blank" title="Share on Twitter">
       <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
   </div>
 
@@ -307,7 +305,8 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
   
 
 </div>
@@ -321,11 +320,6 @@
   </paper-toast>
 
 </template>
-
-<!-- MathJax -->
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 <!-- build:js scripts/app.js -->
 <script src="/scripts/app.js"></script>
@@ -345,9 +339,6 @@
 	<!-- End Google Analytics -->
 
 
-
-<script type="text/javascript" src="/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/scripts/lightbox/js/lightbox.js"></script>
 
 </body>
 
