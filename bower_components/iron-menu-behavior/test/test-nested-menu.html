@@ -9,38 +9,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../iron-overlay-behavior.html">
+<link rel="import" href="test-menu.html">
 
-<dom-module id="simple-overlay">
+<dom-module id="test-nested-menu">
   <template>
     <style>
-      :host {
-        background: white;
-        color: black;
-        padding: 24px;
-        box-shadow: rgba(0, 0, 0, 0.24) -2px 5px 12px 0px, rgba(0, 0, 0, 0.12) 0px 0px 12px 0px;
+      .ghost, [hidden] {
+        display: none !important;
+      }
+      .invisible {
+        visibility: hidden;
       }
     </style>
-
-    <content></content>
+    <test-menu id="actualMenu">
+      <div>item 1</div>
+      <div hidden>item 2</div>
+      <div class="ghost">item 3</div>
+      <div class="invisible">item 3.1</div>
+      <div>item 4</div>
+      <div hidden>item 5</div>
+      <div class="ghost">item 6</div>
+    </test-menu>
   </template>
-
 </dom-module>
 
 <script>
 
 (function() {
-
   Polymer({
-
-    is: 'simple-overlay',
-
-    behaviors: [
-      Polymer.IronOverlayBehavior
-    ]
-
+    is: 'test-nested-menu',
   });
-
 })();
 
 </script>
