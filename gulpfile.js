@@ -32,6 +32,8 @@ var htmlmin = require('gulp-htmlmin');
 var gulpCallBack = require('gulp-callback');
 
 var ghPages = require('gulp-gh-pages');
+var cloudflare = require("gulp-cloudflare");
+
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -382,7 +384,7 @@ gulp.task('build-deploy-gh-pages', function(cb) {
     cb);
 });
 
-gulp.task('deploy', ['build-deploy-gh-pages']);
+gulp.task('deploy', ['build-deploy-gh-pages', 'purge-cdn-cache']);
 
 // Deploy to GitHub pages gh-pages branch
 gulp.task('deploy-gh-pages', function() {
@@ -390,11 +392,26 @@ gulp.task('deploy-gh-pages', function() {
     // Check if running task from Travis CI, if so run using GH_TOKEN
     // otherwise run using ghPages defaults.
     .pipe($.if(process.env.TRAVIS === 'true', $.ghPages({
-      remoteUrl: 'https://$GH_TOKEN@github.com/ycfreeman/ycfreeman.com.git',
+      remoteUrl: 'https://' + process.env.GH_TOKEN + '@github.com/ycfreeman/ycfreeman.com.git',
       silent: true,
       branch: 'gh-pages'
     }), $.ghPages()));
 });
+
+
+gulp.task('purge-cdn-cache', function() {
+  if (process.env.CF_TOKEN && process.env.CF_EMAIL) {
+    console.log('Purging CDN Cache');
+    var options = {
+        token  : process.env.CF_TOKEN,
+        email  : process.env.CF_EMAIL,
+        domain : 'ycfreeman.com'
+    };
+
+    cloudflare(options);
+  }
+  return
+})
 
 // Load tasks for web-component-tester
 // Adds tasks for `gulp test:local` and `gulp test:remote`
