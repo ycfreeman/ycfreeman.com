@@ -19,7 +19,6 @@ before_script:
 script:
 - npm run gulp purge-cdn-cache
 - npm run gulp 
-- bash deploy.sh
 deploy:
   local_dir: dist
   provider: pages
