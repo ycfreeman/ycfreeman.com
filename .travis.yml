@@ -7,8 +7,10 @@ cache:
     - node_modules
     - app/bower_components
 before_script:
-  - git config --global user.name "Travis CI"
-  - git config --global user.email "$COMMIT_AUTHOR_EMAIL"
+  - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
+  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  - git config --global user.name "$AUTHOR_NAME"
+  - git config --global user.email "$COMMITTER_EMAIL"
   - nvm install 6
   - bundle
   - npm i -g bower
