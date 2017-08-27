@@ -7,4 +7,5 @@ group :jekyll_plugins do
   gem "rouge"
   gem "jemoji"
   gem "jekyll-redirect-from"
+  gem 'gh-pages-travis'
 end
