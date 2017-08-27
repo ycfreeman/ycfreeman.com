@@ -6,11 +6,13 @@ cache:
   directories:
   - node_modules
   - app/bower_components
-before_script:
+before_install:
+- git config credential.helper "store --file=.git/credentials"; echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials 2>/dev/null
 - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
 - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
 - git config --global user.name "$AUTHOR_NAME"
 - git config --global user.email "$COMMITTER_EMAIL"
+before_script:
 - nvm install 6
 - bundle
 - npm i -g bower
