@@ -3,7 +3,7 @@
 set -o errexit
 
 # deploy
-cd .publish
+cd dist
 git init
 git add .
 git commit -m "Deploy to Github Pages"
