@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'jekyll'
+gem 'gh-pages-travis'
 
 group :jekyll_plugins do
   gem "jekyll-archives"
@@ -7,5 +8,4 @@ group :jekyll_plugins do
   gem "rouge"
   gem "jemoji"
   gem "jekyll-redirect-from"
-  gem 'gh-pages-travis'
 end

@@ -10,6 +10,7 @@ GEM
     colorator (0.1)
     ffi (1.9.10)
     gemoji (2.1.0)
+    gh-pages-travis (1.0.4)
     html-pipeline (2.4.0)
       activesupport (>= 2, < 5)
       nokogiri (>= 1.4)
@@ -61,6 +62,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gh-pages-travis
   jekyll
   jekyll-archives
   jekyll-paginate
@@ -69,4 +71,4 @@ DEPENDENCIES
   rouge
 
 BUNDLED WITH
-   1.11.2
+   1.12.4
