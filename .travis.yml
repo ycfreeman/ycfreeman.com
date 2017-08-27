@@ -1,20 +1,23 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 cache:
   bundler: true
   directories:
-    - node_modules
-    - app/bower_components
+  - node_modules
+  - app/bower_components
 before_script:
-  - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
-  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
-  - git config --global user.name "$AUTHOR_NAME"
-  - git config --global user.email "$COMMITTER_EMAIL"
-  - nvm install 6
-  - bundle
-  - npm i -g bower
-  - bower i -f
-  - npm i
+- export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
+- export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+- git config --global user.name "$AUTHOR_NAME"
+- git config --global user.email "$COMMITTER_EMAIL"
+- nvm install 6
+- bundle
+- npm i -g bower
+- bower i -f
+- npm i
 script:
-  - npm run deploy
+- npm run deploy
+env:
+  global:
+    secure: iyrmRhP/qL7XWDgu7SqBaPpcfEP/4xMyaeCk99lWv+DOBMebn3QpsllsIOzvJ3BpR5zvsFqmNcO1ElgDJZAmepVgOZS9gKpwdaU/p+XIat86CuoStovLZvhkwEOLBTDNx1EbMZ8KvUpEhY8JOtv5qI+pNaXEHhEpEt5FdFntNOEos099brG/kE7HxYTHxFAVdE6I3BAA7u9QCoA2yc8hO6eN1xsqJdLcbeswD+BLbmrTp6BuuSUn1EIendFzfQ3So6j7aiLQTm/ZrmyU/1hvdiq4s3wcPR9Zq+sFSxmpFFEC3zng6ucFzTqw/0B3g/npHeoC7knEk5hCXIQ2fb6LZRcBqKYn0infuvF0DEhzzFCH0BOlV7NON9Ye6iJ/gtCFCzwQTgTvdeGmopRe3MZGcmhCKMyIw8YPmHnU3tCb23WwXxLY7Mpmsf+otFxkVDYsV2Oy3oj4xW4DBSyWN39lAdU7k7J0nWuUYiJ/nAe7YrffG7S4awV+FoRHK6Ws7UXyOG8ikpL0h2LmNiuK5WjI7UK0aB0eFLa3sgYj3QkNvWc8MfmPiUg1fl88b8lNXjrpKoWigviFgv5N1EE1D4tflzY6gWGB8lZSU7xbOfdhKKkjLUWZH14y+PSvlUfAcJyXukCfAQkpHlNLuTjisO12c/ekeTOZJCEAtdOjlaQY4+0=

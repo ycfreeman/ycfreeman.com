@@ -31,7 +31,6 @@ var YAML = require('yamljs');
 var htmlmin = require('gulp-htmlmin');
 var gulpCallBack = require('gulp-callback');
 
-var ghPages = require('gulp-gh-pages');
 var cloudflare = require("gulp-cloudflare");
 
 
