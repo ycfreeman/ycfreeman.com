@@ -5,9 +5,26 @@
     <description></description>
     <link>http://ycfreeman.com/</link>
     <atom:link href="http://ycfreeman.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Aug 2016 03:31:45 +0000</pubDate>
-    <lastBuildDate>Wed, 10 Aug 2016 03:31:45 +0000</lastBuildDate>
+    <pubDate>Sun, 27 Aug 2017 15:20:44 +0000</pubDate>
+    <lastBuildDate>Sun, 27 Aug 2017 15:20:44 +0000</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Openshift is not free anymore for wordpress</title>
+        <description>&lt;p&gt;Openshift is &lt;a href=&quot;https://blog.openshift.com/migrating-wordpress-openshift-3/&quot;&gt;not free&lt;/a&gt; anymore for wordpress sites :cry:&lt;/p&gt;
+
+&lt;p&gt;Migrating all my non-profit wordpress sites to &lt;a href=&quot;https://www.000webhost.com/1000613.html&quot;&gt;000webhost&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:cry:&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+        <link>http://ycfreeman.com/web-development/2017/08/27/openshift-not-free-anymore/</link>
+        <guid isPermaLink="true">http://ycfreeman.com/web-development/2017/08/27/openshift-not-free-anymore/</guid>
+        
+        
+        <category>web-development</category>
+        
+      </item>
     
       <item>
         <title>Cloudflare and Travis CI</title>
@@ -251,43 +268,6 @@ it should be fine for another while :smile:&lt;/p&gt;
         
         
         <category>web-development</category>
-        
-      </item>
-    
-      <item>
-        <title>WOW Server Status WordPress Widget 1.0.7</title>
-        <description>&lt;p&gt;Thanks Aoife for the info, I didn’t know Blizzard released their official API.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;This plugin is now updated to use official JSON feed, (finally :p), php 5.2+ &lt;strong&gt;required&lt;/strong&gt; (for native json_decode() support), although fallback JSON.php for earlier versions is included as well, no garrantee it works in 5.2-, too bad if it doesn’t work :(.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;For non-wordpress users, feel free to download the package and extract the wow_ss.php to use it like the &lt;a href=&quot;http://53x11.com/blog/2005/04/21/WoW-Server-Status-41.10&quot; target=&quot;_blank&quot;&gt;original one&lt;/a&gt;. (text display mode may contain bugs),&lt;/span&gt; more information about &lt;a href=&quot;http://ycfreeman.com/wow-server-status-wordpress-widget-10/&quot; title=&quot;WOW Server Status WordPress Widget 1.0&quot;&gt;this plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If you would like to support this project, please consider &lt;a href=&quot;https://paypal.me/ycfreeman&quot;&gt;Donate&lt;/a&gt;, I will give you my Shaman hug :smile:&lt;/p&gt;
-
-&lt;p&gt;Download from wordpress plugin gallery: &lt;a href=&quot;http://wordpress.org/extend/plugins/wow-server-status-widget/&quot;&gt;http://wordpress.org/extend/plugins/wow-server-status-widget/&lt;/a&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;span style=&quot;font-size: x-large;&quot;&gt;Changelog&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;= 1.0.7 =* just re-upload and make sure all files are newest&lt;/p&gt;
-
-&lt;p&gt;= 1.0.6 =* patched to use official JSON feed&lt;/p&gt;
-
-&lt;p&gt;= 1.0.5 =* fixed bug of space becomes %20 in the new wow_ss.php, thanks Mike&lt;/p&gt;
-
-&lt;p&gt;= 1.0.4 =* since official realm status xml is not there anymore, I’ve modified the original wow server status badge to use [Axho’s WoW Feeds](http://wowfeeds.wipeitau.com/)… at least for now, feel free to extract the modified badge php for your own use.&lt;/p&gt;
-
-&lt;p&gt;= 1.0.3 =* take 2, fixed the apostrophe realm not showing bug in original wow_ss.php, aparently the original script has 3 places doing the same thing, so I merged them to one, and encode it correctly to ANSIit should be fine now if your keyboard is US keyboard, that renders apostrophe as &#39;, sorry for having it not working for so long&lt;/p&gt;
-</description>
-        <pubDate>Wed, 08 Jun 2011 00:00:00 +0000</pubDate>
-        <link>http://ycfreeman.com/blog/2011/06/wow-server-status-wordpress-widget-1-0-6/</link>
-        <guid isPermaLink="true">http://ycfreeman.com/blog/2011/06/wow-server-status-wordpress-widget-1-0-6/</guid>
-        
-        <category>wow-server-status-widget</category>
-        
-        
-        <category>wordpress-plugin</category>
         
       </item>
     

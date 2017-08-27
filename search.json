@@ -1,6 +1,15 @@
 [
 
 {
+"title"    : "Openshift is not free anymore for wordpress",
+"category" : "",
+"tags"     : "",
+"url"      : "/web-development/2017/08/27/openshift-not-free-anymore/",
+"date"     : "2017 August 27",
+"content"  : "Openshift is not free anymore for wordpress sites :cry:Migrating all my non-profit wordpress sites to 000webhost:cry:"
+} ,
+
+{
 "title"    : "Cloudflare and Travis CI",
 "category" : "",
 "tags"     : "",

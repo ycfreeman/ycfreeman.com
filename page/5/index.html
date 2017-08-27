@@ -132,7 +132,7 @@
         </paper-menu>
         <div class="push"></div>
       </div>
-      <div id="copyright-info">© 2016, Freeman Man</div>
+      <div id="copyright-info">© 2017, Freeman Man</div>
     </paper-scroll-header-panel>
 
     <!-- Main Area -->
@@ -164,6 +164,38 @@
       <div class="content">
 <div class="card-wrapper">
 <!-- This loops through the paginated posts -->
+
+
+  <paper-card class="custom">
+    <div class="card-content">
+      <div class="title">JQuery slider with blogger</div>
+      <div class="subtitle">2010 May 18</div>
+      <p>gonna <a href="http://sixrevisions.com/tutorials/javascript_tutorial/create-a-slick-and-accessible-slideshow-using-jquery/">love jquery</a></p>
+
+<p>with just a couple of lines, it can make a slider, and it works nicely with blogger structure <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle">
+now I can add a nice looking slider to my blogger based portfolio</p>
+
+<p>i can even keep the original post layout and just wrap the slider on top, it just slides the whole block <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"></p>
+
+<p>Here’s how:<br>
+simply look for the post loop in your blogger template, which is between</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>&lt;b:loop values="data:posts" var="post"&gt;
+...
+&lt;/b:loop&gt;
+</code></pre>
+</div>
+
+<p>then wrap “slideshow” and “slideContainer” divs outside the loop and “slide” div inside the loop for each post<br>
+others pretty much copy and paste and edit those width and height to fit your site</p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/blog/2010/05/jquery-slider-with-blogger/"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
 
 
   <paper-card class="custom">
@@ -439,23 +471,6 @@ of games with longer play time appear on mobile phones.</p>
   </paper-card>
 
 
-
-  <paper-card class="custom">
-    <div class="card-content">
-      <div class="title">Torchlight yet another arpg before diablo 3</div>
-      <div class="subtitle">2010 January 6</div>
-      <p>ARPG just like Diablo, hack and slash style, but in 3D and comic style arts. kinda like
-<a href="http://ycfreeman.com/wp-content/uploads/2010/01/fate1">Fate</a>, but enemies with slightly darker demonic “diabloish”
-tone, levels randomly generated except important bosses. Single player only. Surprisingly addictive. Some screenshots after the break.</p>
-
-
-    </div>
-    <div class="card-actions">
-      <a href="/blog/2010/01/torchlight-yet-another-arpg-before-diablo-3/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
-
-
 </div>
 
 <!-- Page navigation links -->
@@ -490,10 +505,14 @@ tone, levels randomly generated except important bosses. Single player only. Sur
     <my-page-link active>5</my-page-link>
     
   
+    
+    <my-page-link href="/page/6/">6</my-page-link>
+    
+  
 
   <!-- Right Arrow -->
   
-  <my-page-link disabled><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  <my-page-link href="/page/6/"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
   
 </my-pagination>
 
