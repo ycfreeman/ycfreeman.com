@@ -8,11 +8,10 @@ description:
 
 
 author: Freeman Man
-author_website: http://ycfreeman.com
-email: freeman@ycfreeman.com
+author_website: https://ycfreeman.com
 
 baseurl: "" # the subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
-url: "http://ycfreeman.com" # the base hostname & protocol for your site
+url: "https://ycfreeman.com" # the base hostname & protocol for your site
 
 twitter_username: ''
 github_username:  ycfreeman
