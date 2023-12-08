@@ -1,6 +1,7 @@
 import ListLayout from "@/layouts/ListLayoutWithTags";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer";
 import { allBlogs } from "contentlayer/generated";
+import { tagData } from "app/tag-data";
 
 const POSTS_PER_PAGE = 5;
 
@@ -13,7 +14,7 @@ export const generateStaticParams = async () => {
   return paths;
 };
 
-export default function Page({ params }: { params: { page: string } }) {
+export default async function Page({ params }: { params: { page: string } }) {
   const posts = allCoreContent(sortPosts(allBlogs));
   const pageNumber = parseInt(params.page as string);
   const initialDisplayPosts = posts.slice(
@@ -31,6 +32,7 @@ export default function Page({ params }: { params: { page: string } }) {
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Posts"
+      tagData={await tagData}
     />
   );
 }

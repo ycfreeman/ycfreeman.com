@@ -3,9 +3,9 @@ import { allCoreContent, sortPosts } from "pliny/utils/contentlayer";
 import siteMetadata from "@/data/siteMetadata";
 import ListLayout from "@/layouts/ListLayoutWithTags";
 import { allBlogs } from "contentlayer/generated";
-import tagData from "app/tag-data.json";
 import { genPageMetadata } from "app/seo";
 import { Metadata } from "next";
+import { tagData } from "app/tag-data";
 
 export async function generateMetadata({
   params,
@@ -26,7 +26,7 @@ export async function generateMetadata({
 }
 
 export const generateStaticParams = async () => {
-  const tagCounts = tagData as Record<string, number>;
+  const tagCounts = await tagData;
   const tagKeys = Object.keys(tagCounts);
   const paths = tagKeys.map((tag) => ({
     tag: tag,
@@ -34,7 +34,7 @@ export const generateStaticParams = async () => {
   return paths;
 };
 
-export default function TagPage({ params }: { params: { tag: string } }) {
+export default async function TagPage({ params }: { params: { tag: string } }) {
   const tag = decodeURI(params.tag);
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
@@ -45,5 +45,7 @@ export default function TagPage({ params }: { params: { tag: string } }) {
       ),
     ),
   );
-  return <ListLayout posts={filteredPosts} title={title} />;
+  return (
+    <ListLayout posts={filteredPosts} title={title} tagData={await tagData} />
+  );
 }

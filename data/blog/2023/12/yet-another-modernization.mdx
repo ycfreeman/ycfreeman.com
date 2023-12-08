@@ -1,0 +1,89 @@
+---
+title: Yet another modernisation
+date: 2023-12-08
+tags:
+  - reflection
+draft: false
+summary: "These days static site generators are not as cool as they were before."
+---
+
+So it's 2023, and I'm still using a static site generator. I'm not sure if it's cool or not, but I'm sure it's not as cool as it was before. I'm not sure if I'm cool or not, but I'm sure I'm not as cool as I was before.
+
+(LOL, above content is a plain tab and accept what's coming from copilot.)
+
+and copilot is still shoving me with the same content, so I'm going to write something else. (lol - copilot again)
+
+omfg copilot, enough of padding this post with your content. (rofl, still copilot)
+
+I'm going to write something else. (rofl - i'm literally laughing in front of the screen like an idiot)
+
+---
+
+# Nuke and start over
+
+ok ok enough of this
+
+
+it is now 2023, and these days it's all back to dynamic content and server pages, like back in the days of php
+
+where you just write code in the page and it gets executed (lol, copilot again) (even this bracket is from copilot)
+
+so I just decided to migrate my good old blog from jerkyll to nextjs, and may as well host it on vercel, because it seems all cool kids do it these days.
+
+---
+
+Oh right, i've been looking at tailwindcss as well recently, a quick google `nextjs tailwind blog template` and shopped around for a while, i found this one https://github.com/timlrx/tailwind-nextjs-starter-blog
+
+ooo cutting edge stuff
+- contentlayer
+  - 0.3.4 at the time im writing this
+  - looks like it's lighter than having an entire gatsby to wrap mdx
+  - and looks like gatsby is not cool any more?
+
+---
+
+I was thinking about nuking the whole site and start a new repo, but then I think may as well try nuke the whole app within the same repo, just for applying what I've learnt for a whole ago about using git subtree
+
+---
+
+Here's the scenario:
+
+- i want to keep the github repo, so that the forks, stars, comments, issues will stay the same - e.g. it’s using github to do the project management as well, or there’s hanging pull requests
+- i also want to fork this new site from another repo / starter template
+
+maybe playing with git subtree would solve the issue
+
+since this git subtree can basically ignore the old branch / trunk and start new while keeping both histories
+
+a quick google gives me this https://stackoverflow.com/questions/72019163/git-subtree-to-add-the-files-directly-under-root-folder
+
+looks exactly like what i need
+
+```
+git switch -c temp
+git subtree add -P temp --squash <remote-repo> main
+
+git switch - # return to original branch
+
+git switch -c init temp^2 # select squashed commit as starting point
+# the following sed is probably somewhat unstable, but does the job
+# the important point is to change to 'git-subtree-dir: .' within commit message body here!
+patchedCommitMessage=$(git show -s --format=%B init | sed 's/temp/./')
+git commit --amend --no-edit -m "$patchedCommitMessage"
+
+git switch - # return to original branch
+
+# allow merge conflicts and resolve in next step
+git merge --allow-unrelated-histories --no-edit init
+
+# then to quickly resolve all conflicts and discard “ours”
+# git checkout --theirs .
+
+# cleanup
+git branch -D init
+git branch -D temp
+```
+
+cool beans, next step
+
+---

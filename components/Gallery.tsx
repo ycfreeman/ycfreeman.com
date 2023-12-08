@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
 
 import { Fancybox as NativeFancybox, OptionsType } from "@fancyapps/ui";
@@ -9,7 +11,7 @@ interface FancyboxProps {
   children: React.ReactNode;
 }
 
-export function Fancybox(props: FancyboxProps) {
+function Gallery(props: FancyboxProps) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -28,3 +30,5 @@ export function Fancybox(props: FancyboxProps) {
 
   return <div ref={containerRef}>{props.children}</div>;
 }
+
+export default Gallery;

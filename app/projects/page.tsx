@@ -7,7 +7,7 @@ const projectsData = [
   {
     title: "WOW Recruit Widget",
     description: `A widget that helps to display recruitment message of a World of Warcraft guild.`,
-    imgSrc: "https://ps.w.org/wow-recruit-widget/trunk/screenshot-1.jpg",
+    imgSrc: "/static/images/screenshot-1.jpg",
     href: "https://www.google.com",
   },
   {
