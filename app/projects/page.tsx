@@ -1,24 +1,24 @@
-import Card from '@/components/Card'
-import { genPageMetadata } from 'app/seo'
+import Card from "@/components/Card";
+import { genPageMetadata } from "app/seo";
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export const metadata = genPageMetadata({ title: "Projects" });
 
 const projectsData = [
   {
-    title: 'WOW Recruit Widget',
+    title: "WOW Recruit Widget",
     description: `A widget that helps to display recruitment message of a World of Warcraft guild.`,
-    imgSrc: 'https://ps.w.org/wow-recruit-widget/trunk/screenshot-1.jpg',
-    href: 'https://www.google.com',
+    imgSrc: "https://ps.w.org/wow-recruit-widget/trunk/screenshot-1.jpg",
+    href: "https://www.google.com",
   },
   {
-    title: 'The Time Machine',
+    title: "The Time Machine",
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    imgSrc: "/static/images/time-machine.jpg",
+    href: "/blog/the-time-machine",
   },
-]
+];
 
 export default function Projects() {
   return (
@@ -47,5 +47,5 @@ export default function Projects() {
         </div>
       </div>
     </>
-  )
+  );
 }
