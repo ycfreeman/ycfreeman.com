@@ -1,0 +1,145 @@
+---
+draft: false
+title: WOW Recruitment Widget
+date: 2010-12-15
+tags:
+  - wordpress-plugin
+  - wow-recruit-widget
+---
+Welcome to the home page of**WOW Recruitment WordPress Widget (****wow-recruit-widget**)
+
+[Demo Site](http://demo.ycfreeman.com)
+
+18 Dec 2012: plugin is back on wordpress plugin listing
+
+17 Dec 2012: fixed conflicts and wrong versions, latest version 1.4.5 is back on github [https://github.com/ycfreeman/wow-recruit-widget](https://github.com/ycfreeman/wow-recruit-widget), and wordpress plugin repo, waiting for approval to get back to wordpress plugin listing
+
+17 Dec 2012: plugin is down from wordpress repo temporarily due to bad commits (did something wrong with the git to svn workflow), i&#8217;m fixing it right now&#8230;. github repo also pulled down due to these conflicts.
+
+11 Dec 2012: <a href="http://demo.ycfreeman.com" target="_blank">updated code samples on demo site</a>
+
+27 Aug 2012: [updated FAQ](http://ycfreeman.com/wow-recruitment-widget-not-dead/ "WOW Recruitment Widget is not dead")
+
+9 Aug 2012: this project is now on github [https://github.com/ycfreeman/wow-recruit-widget](https://github.com/ycfreeman/wow-recruit-widget), feel free to &#8220;fork&#8221; it, cheers :smile:
+
+29 Feb 2012: [little update and FAQ](http://ycfreeman.com/wow-recruitment-widget-not-dead/ "WOW Recruitment Widget is not dead")
+
+14 Dec 2010: started 1.4 update these days, hopefully can be done during holidays (been actually playing wow these days :p)
+
+24 Oct 2010: From now on I’ll post in comments for teasers, or some workable ideas that come up in my mind about this plugin, (like when I have time to post a few lines but not enough to actually update the widget :p),�so check back once a while or subscribe if you have a google account/ if it works :smile: blogger doesn’t seem to have a comment feed which you can subscribe yet, it seems to work on gmail only at the moment.
+
+new major updates will still be in the form of new blog posts, so you can check out major updates by subscribing to feed. I’ll try to keep my blog updates relevant (lol about that IE post, cuz it’s too awesome).
+
+WOW Recruitment Widget is a wordpress widget based plugin that helps to display recruitment message of a World of Warcraft guild.
+
+**Thank you for all your support, stay tuned for updates~**
+
+If you would like to support this project, please consider \[Donate\](https://paypal.me/ycfreeman), I will give you my Shaman hug :smile:
+
+**Demo site:** [http://ycfreeman.com/wrdemo/](http://ycfreeman.com/wrdemo) :smile:
+
+Download latest version from your WordPress site plugin panel or from WordPress Plugin Directory:
+
+default look (excluding background colour)
+
+widget setting
+
+settings menu
+
+admin settings page for “translations” etc
+
+\### Customization\*\*:\*\* Demo site with a few example style (best viewed on chrome4+ /safari4+, or latest FF3+/Opera10+/IE9+) [http://demo.ycfreeman.com](http://demo.ycfreeman.com)   ### Detailed Description
+
+_**Widget Settings (Widget):**_
+
+**Title: the title of the widget (optional)**
+
+— The title bar will be hidden if Title is empty.
+
+**  
+Recruitment URL: links to your recruitment page (optional).**
+
+— The whole box will become clickable and links to the URL if Title URL is specified.
+
+**  
+Recruitment Message: some message between title and the list (optional)**
+
+Tooltip Pattern:�customize tooltip with tokens
+
+— you can customize tooltip with tokens, mind that these tokens are case sensitive.
+
+\[class\] – will be replaced with class text
+
+\[status\] – will be replaced with status text
+
+\[note\] -will be replaced with note
+
+say you have a pattern like \[class\] | \[note\] | \[status\]
+
+then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
+
+(it will get everything inside that particular text box, if you put some html tags in that text box, it will show up as well, it maybe improved if this feature is becoming popular)
+
+— you can customize tooltip with tokens, mind that these tokens are case sensitive.\[class\] – will be replaced with class text\[status\] – will be replaced with status text\[note\] -will be replaced with notesay you have a pattern like \[class\] | \[note\] | \[status\]then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
+
+#### **Class: (default texts are 10 classes in WOW)**
+
+— so it is possible to make multiple entries for same class.
+
+**Status: consist of 4 status (default text: High, Medium, Low, Closed).**
+
+— The class will not be displayed if status is Closed (unless it is set to display in admin settings).
+
+Note: additional note for the recruitment message (usually for different spec of the class).
+
+**_Plugin Settings (Settings > WOW Recruit Widget):_**
+
+#### **Use Custom Style Sheet:**
+
+— checking this will stop default style sheet from loading
+
+**Status texts: consist of 4 status�**
+
+— default text: High, Medium, Low, Closed.
+
+— “closed” status will show if “display?” is checked
+
+**Class texts: consist of 10 class slots�**
+
+–�default texts are 10 classes in WOW in English
+
+#### If you managed to find bugs or typos, please feel free to leave a comment here.
+
+### Installation
+
+1\. Unpack and Upload all files to the \\\`/wp-content/plugins/wow-recruit-widget\\\` directory 2. Activate the plugin through the ‘Plugins’ menu in WordPress 3. Drag ‘WOW Recruitment Widget’ to your sidebar 4. Enter details and done! 5. (optional) go to Settings > WOW Recruit Widget to set up all classes and status texts to your own language
+
+### Frequently Asked Questions
+
+**\= These color/font/size does not match my template, can I change them? =**
+
+Yes, copy all contents in the widget style.css to your theme style.css, then choose “Use Custom Style Sheet” in admin panel, and remember to point .wr-icon sprite to a correct image, i.e. if you want to use the default image sprite, change .wr-icon > background-image to
+
+url(../../plugins/wow-recruit-widget/img/class-sprite.png)
+
+or using absolute link
+
+url(http://\{your site's url\}/wp-content/plugins/wow-recruit-widget/img/class-sprite.png)
+
+**\= I don’t want the icon class note to layout like that, can I change it? =**
+
+Yes, all layouts are done with css, please refer to the latest plugin URL for some useful links and examples
+
+**\= Can I sort recruitment messages in another way? =**
+
+Unfortunately no, please leave me a comment if you want this feature :).
+
+### Bed Time Readings…
+
+It first started with a really simple widget only for displaying some recruitment message, since there was nearly no plugins doing something I want in the wordpress plugin directory, which look nice on my guild site, and can be used easily by not-so-IT officers in my own guild.
+
+Since 1.1 -�seems there are quite a number of sites using this widget by that time, I thought it would be a bit boring if it is not customizable, after all I thought it would lost the point of having wonderful looking WordPress site if they all look like those Joomla WOW sites with the same set, same looking plugins out there, so it was then designed to be highly customizable with very little CSS techniques to meet most design needs for individual WordPress website/blog.
+
+Since 1.2 -�seems some sites using this widget are based on non-english contents, it would look weird to have English only on this widget, so it was then designed to be customizable for almost all texts so you can enter any information into those “recruitment” slots, and thus able to achieve multilingual support or even easily tailored for non-world of warcraft related uses.
+
+Since 1.3 – graphical layout seems to be a reasonable feature and it is used in a couple of similar plugin, but it does not make sense if there are no grouping (by class) and tooltip on rollover, so in this version I’ve added tooltip first, grouping requires quite a lot of rework, so I’ve put it to todo list for 1.4.

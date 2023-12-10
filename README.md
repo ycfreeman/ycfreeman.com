@@ -1,13 +1,13 @@
-[![Build Status](https://travis-ci.org/ycfreeman/ycfreeman.com.svg?branch=master)](https://travis-ci.org/ycfreeman/ycfreeman.com)
+another round of modernisation
 
-going full cheapo and migrate my personal website from vps hosted wordpress to
- [github pages](https://pages.github.com/), because it's free
+these days edge hosting like vercel has a very generous free tier, may as well utilising it and go back to server pages for more flexibilty, instead of having to resort to static site generation
 
-let's face it, why pay for hosting while you don't make money from it
-
-theme based on: http://juliaebert.com/jekyll-polymer
-
-
-#Write a post
-
-just create a new .md file in app/_post folder (it can be done on github website), then wait for another build and it will show up on live site.
+# Changes from the original template
+- added a Gallery component using fancyapp / fancybox
+- `tag-data` now uses generated allBlogs code directly as opposed to needing to generate a `tag-data.json` file, so it updates properly on hot reload
+  - I will open a PR for this and contribute back to the original repo
+- use pnpm as opposed to yarn
+  - just because
+- added `remark-emoji`
+  - fixes this 7+ year broken emoji issue just by adding a package
+- finish with an AI generated logo
