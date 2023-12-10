@@ -11,7 +11,7 @@ interface FancyboxProps {
   children: React.ReactNode;
 }
 
-function Gallery(props: FancyboxProps) {
+function Fancybox(props: FancyboxProps) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ function Gallery(props: FancyboxProps) {
   return <div ref={containerRef}>{props.children}</div>;
 }
 
-export default Gallery;
+export default Fancybox;

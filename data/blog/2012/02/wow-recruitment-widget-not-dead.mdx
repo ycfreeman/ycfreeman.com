@@ -1,0 +1,51 @@
+---
+draft: false
+title: WOW Recruitment Widget is not dead
+date: 2012-02-29
+tags:
+  - wordpress-plugin
+  - wow-recruit-widget
+---
+27/8/2012 update:
+
+**3. Can you make it display on a page instead of only on the side bar?**
+
+If you are still looking for an easy solution, I've found out a trick recently that may help.
+
+&#8211; create a page template with a special widget area that sits in content area of your site template (instead of a post loop)
+
+&#8211; use the widget in that special widget area
+
+you may want to check wordpress codex about how to do this:
+
+[http://codex.wordpress.org/Widgetizing\_Themes](http://codex.wordpress.org/Widgetizing_Themes)
+
+if you want different recruitment widget to appear on different pages, you can create just one of these special widget area then use a per-page widget plugin like
+
+[http://wordpress.org/extend/plugins/wp-page-widget/screenshots/](http://wordpress.org/extend/plugins/wp-page-widget/screenshots/)
+
+I'm closing comments on this site, so if there's any more issue/questions, feel free to open an issue on project site on github
+
+
+
+The widget hasn&#8217;t been updated for over a year but it is not dead!
+
+Thank you for all your support.
+
+I&#8217;ve been getting quite a number of emails these days regarding to this plug-in. Here is a little FAQ.
+
+**1. Will you add Monk class in and when?**
+
+&#8211; Yes I will add Monk class in and it will be done before MOP I promise.
+
+**2. I&#8217;ve tried to modify your plug-in for [SWTOR / Rift / Insert your game here] classes, but I can&#8217;t get it to work by [Insert your modification here] &#8230;&#8230;**
+
+&#8211; Unfortunately I don&#8217;t play SWTOR, and I&#8217;m not sure how many classes there are in the game. This widget right now only &#8220;supports&#8221; 10 classes, and you will need to modify the php file (and the style sheet of course) in order to get more classes in. Try to find $wr\_class and $options arrays and add more classes to it, $options is used to initialize class names, while $wr\_class is used to build the markup for the stylesheet of the previous version(1.0) to work properly. The code base is very messy and I&#8217;ll definitely do a major re-code in the next version.
+
+**3. Can you make it display on a page instead of only on the side bar?**
+
+&#8211; You mean short code support or even a plug-in page. Unfortunately it is not supported at the moment. I&#8217;ve thought about it but can&#8217;t quite figure out the best way to support short code while still storing data through widget instance and widget update function.
+
+**4. Can you make a version for [Joomla / Drupal / Insert your CMS here]?**
+
+&#8211; This widget is strongly based on wordpress at the moment. It is not the highest priority to make one for different CMSes at the moment, but it is definitely in my to-do list.

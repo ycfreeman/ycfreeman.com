@@ -17,6 +17,7 @@ const siteMetadata = {
   // facebook: "https://facebook.com",
   // youtube: "https://youtube.com",
   linkedin: "https://www.linkedin.com",
+  paypal: "https://paypal.me/ycfreeman",
   locale: "en-US",
   analytics: {
     // If you want to use an analytics provider you have to add it to the

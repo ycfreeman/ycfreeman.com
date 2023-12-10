@@ -59,7 +59,10 @@ const securityHeaders = [
  **/
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer];
-  return plugins.reduce((acc, next) => next(acc), {
+  /**
+   * @type {import('next').NextConfig}
+   */
+  const nextConfig = {
     reactStrictMode: true,
     pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
     eslint: {
@@ -80,6 +83,23 @@ module.exports = () => {
         },
       ];
     },
+    async rewrites() {
+      return [
+        // rewrite post wordpress legacy pages, that doesn't sit inside /blog
+        {
+          source: "/web-development/2016/04/09/website-now-on-github-pages",
+          destination: "/blog/2016-04-09-website-now-on-github-pages",
+        },
+        {
+          source: "/web-development/2016/07/20/cloudflare-and-travis-ci",
+          destination: "/blog/2016-07-20-cloudflare-and-travis-ci",
+        },
+        {
+          source: "/web-development/2017/08/27/openshift-not-free-anymore",
+          destination: "/blog/2017-08-27-openshift-not-free-anymore",
+        },
+      ];
+    },
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
@@ -88,5 +108,7 @@ module.exports = () => {
 
       return config;
     },
-  });
+  };
+
+  return plugins.reduce((acc, next) => next(acc), nextConfig);
 };
