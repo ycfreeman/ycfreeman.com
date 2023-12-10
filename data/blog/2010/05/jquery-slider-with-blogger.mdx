@@ -1,0 +1,30 @@
+---
+draft: false
+title: JQuery slider with blogger
+date: 2010-05-18
+tags:
+  - web-development
+  - blogger
+  - css
+  - javascript
+  - jquery
+---
+
+gonna [love jquery](http://sixrevisions.com/tutorials/javascript_tutorial/create-a-slick-and-accessible-slideshow-using-jquery/)
+
+with just a couple of lines, it can make a slider, and it works nicely with blogger structure :smile:
+now I can add a nice looking slider to my blogger based portfolio
+
+i can even keep the original post layout and just wrap the slider on top, it just slides the whole block :smile:
+
+Here&#8217;s how:  
+simply look for the post loop in your blogger template, which is between
+
+```
+<b:loop values="data:posts" var="post">
+...
+</b:loop>
+```
+
+then wrap &#8220;slideshow&#8221; and &#8220;slideContainer&#8221; divs outside the loop and &#8220;slide&#8221; div inside the loop for each post  
+others pretty much copy and paste and edit those width and height to fit your site

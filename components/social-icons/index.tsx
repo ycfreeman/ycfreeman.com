@@ -6,6 +6,7 @@ import {
   Linkedin,
   Twitter,
   Mastodon,
+  Paypal,
 } from "./icons";
 
 const components = {
@@ -16,6 +17,7 @@ const components = {
   linkedin: Linkedin,
   twitter: Twitter,
   mastodon: Mastodon,
+  paypal: Paypal,
 };
 
 type SocialIconProps = {

@@ -1,0 +1,162 @@
+---
+draft: false
+title: WOW Recruitment Widget 1.3
+date: 2010-09-11
+tags:
+  - wordpress-plugin
+  - wow-recruit-widget
+---
+for more information about this plugin please go to [wordpress plugin gallery](http://wordpress.org/extend/plugins/wow-recruit-widget/)
+
+Description
+
+A widget that helps to display recruitment message of a World of Warcraft guild.
+
+This version is updated and tested with 3.0.x :smile:
+
+**New Features in 1.3:**
+
+\* Customizable�tooltip! opens up even more layout possibilities! \* Bug report icon which links to the latest blog post of current version \* Able to display “Closed” status! (not in a very smart way, so be careful while using it)
+
+**Thank you for all your support, stay tuned for updates~**
+
+If you would like to support this project, please consider  
+
+, I will give you my Troll hug :smile:
+
+Download from wordpress plugin gallery:�[http://wordpress.org/extend/plugins/wow-recruit-widget/](http://wordpress.org/extend/plugins/wow-recruit-widget/)
+
+Full change log, plugin description after the break.
+
+What’s New in 1.3
+
+**1\. Customizable tooltip**
+
+Tooltip was added last version and in this version I’ve made it customizable with pattern.
+
+Figure 1.1 v1.3 widget settings
+
+Figure 1.1 shows a new option under widget settings, where you can customize tooltip with tokens, mind that these tokens are case sensitive.
+
+\[class\] – will be replaced with customized class text
+
+\[status\] – will be replaced with customized status text
+
+\[note\] – will be replaced with customized note
+
+say you have a pattern like \[class\] | \[note\] |�\[status\]
+
+then you will see something like Death Knight | Blood | Medium when you roll your mouse cursor onto a recruitment item
+
+Figure 1.2 v1.3 customizable tooltip
+
+  
+
+Figure 1.3 one possible usage
+
+so what’s so cool about it?
+
+with the ability to put all those texts to tooltip, now it makes more sense to make a pure icon based recruitment message with my widget!�some possible usage will be like Figure 1.3
+
+(note that I’ve also added note and status css class to item wrapper, so it is now very easy to use different icon/style for different spec, and setting different style for different status)
+
+```css
+.wr-status3 .wr-icon
+{
+    opacity:1.0;
+}
+ 
+.wr-status2 .wr-icon
+{
+    opacity:0.6;
+}
+ 
+.wr-status1 .wr-icon
+{
+    opacity:0.3;
+}
+ 
+.wr-status0 .wr-icon
+{
+    opacity:0.0;
+}
+ 
+.wr-icon
+{
+    border:3px solid #ccc;
+    border-radius:10px;
+    height:40px;
+    width:40px;
+}
+ 
+.wr-item
+{
+    height:40px;
+    padding:5px;
+    width:40px;
+}
+ 
+.wr-note,.wr-status,.wr-class-text
+{
+    display:none;
+}
+ 
+.wr-deathknight .wr-blood
+.wr-icon
+{
+    background:url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_BloodPresence\_sm.png) no-repeat;
+    border:3px solid #C41F3B;
+}
+ 
+.wr-deathknight .wr-frost .wr-icon
+{
+    background:url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_UnholyPresence\_sm.png) no-repeat;
+    border:3px solid #0C81CE;
+}
+ 
+.wr-deathknight .wr-unholy .wr-icon
+{
+    background:url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_FrostPresence\_sm.png) no-repeat;
+    border:3px solid green;
+}
+ 
+.wr-shaman.wr-elemental .wr-icon
+{
+    background:url(http://www.sicaine.net/wowprofiler/img/Interface/Icons/Spell\_Nature\_Lightning.png) no-repeat;
+    border:3px solid #2459FF;
+}
+ 
+.wr-shaman .wr-resto .wr-icon
+{
+    background:url(http://www.hotwow.com/icons/middle/Spell\_Nature\_HealingWaveGreater.jpg) no-repeat;
+    border:3px solid green;
+}
+
+```
+well, you get the idea if you have read [the customization post](http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/ "WOW Recruitment Widget � Customization") :smile:
+
+**2\. Added an option to display “Closed” status**
+
+I’ve added this option in a super simple way, just a tick box in plugin settings that enables all “Closed” status to display in front. If this box is checked, it will make all “Closed” status to display.
+
+Say you have 15 rows of �Death Knight in “Closed” status (which is default option of the widget), checking that box will make them all displaying, so you have to set “Rows” in widget settings to a proper row number if this option is turned on.
+
+Figure 2.1 added option to display “Closed” status
+
+Changelog
+
+\= 1.3.1 =  
+\* changed help/bug icons to host at external source, updated license wordings
+
+\= 1.3.0 =
+
+\* customizable tooltip!
+
+\* ability to enable display of “closed” status!
+
+\* bug report icon!
+
+Future Improvements:
+
+*   Custom order
+*   More readable widget settings

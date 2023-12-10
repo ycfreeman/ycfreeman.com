@@ -1,0 +1,366 @@
+---
+draft: false
+title: WOW Recruitment Widget Customization
+date: 2010-08-01
+tags:
+  - wordpress-plugin
+  - wow-recruit-widget
+---
+11/12/2012: updated�[demo site](http://ycfreeman.com/wrdemo)css samples
+
+17/9/2012: this tutorial is a bit outdated, you can now use [jetpack](http://wordpress.org/extend/plugins/jetpack/)�or plugins like [scripts and styles](http://wordpress.org/extend/plugins/scripts-n-styles/) to easily write override css rules after all your theme and plugin style sheets, however I believe this is still a good introduction to DOM and CSS and so on.
+
+
+```
+# Introduction
+
+I had always been trying to make this widget really customizable in the first place, because I just don&#8217;t want to make all of these wordpress sites look like those in Guild Launch or those Joomla sites out there. At one point I even thought about making a drag & drop type of customization like Facebook, but it is just not feasible to do something like that with the time I want to spend on this plugin.
+
+So what I did is to make it fully customizable with some CSS techniques. This feature had been supported since 1.1 when I had got rid of all table layouts, today I finally have the time to write this tutorial after the release of 1.2.2
+
+This is a little tutorial of how to customize this widget, if you read through this, it may help you learn some CSS techniques as well.
+
+Before writing any codes, you will want to keep your changes right? so copy all style codes of the widget css (go to Plugins > Editor > Select plugin to edit: WOW Recruitment Widget > wow-recruit-widget/css/style.css) copy everything inside, and paste to bottom of your theme css (Appearance > Editor > Select your theme > style.css), then tick &#8220;Use Custom Style Sheet&#8221; in Settings > WOW Recruit Widget.
+
+This will stop the widget style sheet from loading at all, which reduces a lot of conflicts and headache.
+
+then�remember to point .wr-icon sprite to a correct image, i.e. if you want to use the default image sprite, change .wr-icon > background-image to
+
+url(../../plugins/wow-recruit-widget/img/class-sprite.png)
+
+or using absolute link
+
+url(http://{your site's url}/wp-content/plugins/wow-recruit-widget/img/class-sprite.png)
+
+  \*\* If you don’t want to edit your theme style sheet, there is a plugin�[here](http://wordpress.org/extend/plugins/persistent-styles-plugin/) that helps you keep all your widget styles separated�from your main theme style, I may consider including something like this in the future I’ll separate this tutorial into 3 difficulty levels, in some WOW terms, Casual(Basic CSS), Intermediate(Advanced CSS), Hard Core(for Coders) \*All screenshots are taken with chrome 5, but they should look the same (or very similar) on chrome 4+, firefox 3.5+ and safari 4+, opera does not support specific corner roundness thingy, so all will become rounded, Internet explorer does not support any css3 rounded corner and shadows (but it’s hackable with [filter](http://css3pie.com/)). Casual So your guild just make you web master but you don’t know any html or css, and you just want to change some colors right? no worries, it’s easy. just find out the class that you want to change color, and replace the original color code to the new one you want, or even easier, add those lines to very bottom of your style sheet and they should do just fine. That’s how \[cascading style sheet\](http://www.w3schools.com/css/css\_intro.asp) works, “the second mouse gets the cheese”, latter rule always overwrite previous rule, if there is no special rule or id involved which means, if you add your custom style code to very bottom to the only style sheet you have (aka the theme style sheet), those rules will always overwrite previous ones. say you have a white theme and want to change Priest class to something instead of white, and other classes to a darker tone, just change the corresponding color codes
+
+.wr-priest { color: #FFFFFF; }
+
+to something else say grey
+
+.wr-priest { color: #999999; }
+
+[![](http://i2.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUWmAYEYBI/AAAAAAAAHCM/3zsGLj1cL0g/s320/beginner1.PNG?w=660)](http://i0.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUWmAYEYBI/AAAAAAAAHCM/3zsGLj1cL0g/s1600/beginner1.PNG)
+
+or background of each item (.wr-item) to a different color, just add in this line
+
+.wr-item  { background:#222222;}
+
+[![](http://i2.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUWs50EbyI/AAAAAAAAHCU/8FpVBySK-G4/s320/beginner2.PNG?w=660)](http://i0.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUWs50EbyI/AAAAAAAAHCU/8FpVBySK-G4/s1600/beginner2.PNG)
+
+or background of alternate item (.wr-odd, .wr-even) \*yes I know CSS3 offers alternating row styling, but my plugin is using all divs so it may not suppoort seamlessly, and remember, IE8 doesn’t support many CSS3 features
+
+.wr-odd  { background:#999999;}
+.wr-even  { background:#222222;}
+
+[![](http://i0.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUW1ZoBwxI/AAAAAAAAHCk/QFiEjHSP3Nk/s320/beginner3.PNG?w=660)](http://i2.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUW1ZoBwxI/AAAAAAAAHCk/QFiEjHSP3Nk/s1600/beginner3.PNG)
+
+still doesn’t look quite right? let’s add a background for the whole widget
+
+.wow-recruit-widget {
+ 
+        background:#111111;
+        padding:10px;
+}
+
+[![](http://i0.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUWwWi_YJI/AAAAAAAAHCc/4vP5reMCSpw/s320/beginner4.PNG?w=660)](http://i0.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUWwWi_YJI/AAAAAAAAHCc/4vP5reMCSpw/s1600/beginner4.PNG)
+
+looks a bit weird, let’s add border to each item instead.
+
+.wow-recruit-widget {
+ 
+        background:#111111;
+        padding:10px;
+}
+
+[![](http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUW6XBKJNI/AAAAAAAAHCs/QhGogWp429Y/s320/beginner5.PNG?w=660)](http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUW6XBKJNI/AAAAAAAAHCs/QhGogWp429Y/s1600/beginner5.PNG)
+
+hmm, how about different border color, lol looks a bit like old school windows xp button
+
+.wr-item {padding:5px;}
+.wr-odd { background:#444444;
+        border-top:3px solid #cccccc;
+        border-left:3px solid #cccccc;
+        border-right:3px solid #999999;
+        border-bottom:3px solid #999999;
+}
+.wr-even {background:#222222;
+        border-top:3px solid #cccccc;
+        border-left:3px solid #cccccc;
+        border-right:3px solid #666666;
+        border-bottom:3px so
+lid #666666;
+}
+
+[![](http://i1.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUW-Lv68BI/AAAAAAAAHC0/wkMPpzV6prg/s320/beginner6.PNG?w=660)](http://i2.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUW-Lv68BI/AAAAAAAAHC0/wkMPpzV6prg/s1600/beginner6.PNG)
+
+now how about some rounded corners (it’s css3 so… sorry IE fans. -moz-border-radius is for Firefox, -webkit-border-radius is for Safari and Chrome, border-radius is css3 standard, since not all 3 browsers are supporting standard css3 yet, so it’s better to have them all)
+
+.wr-odd { background:#444444;
+          border-top:3px solid #cccccc;
+          border-left:3px solid #cccccc;
+          border-right:3px solid #999999;
+          border-bottom:3px solid #999999;
+          -moz-border-radius:10px;
+          -webkit-border-radius:10px;
+          border-radius:10px;
+}
+.wr-even {background:#222222;
+          border-top:3px solid #cccccc;
+          border-left:3px solid #cccccc;
+          border-right:3px solid #666666;
+          border-bottom:3px solid #666666;
+          -moz-border-radius:10px;
+          -webkit-border-radius:10px;
+          border-radius:10px;
+}
+
+[![](http://i2.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUXB_2zazI/AAAAAAAAHC8/eM8gsaFPNNI/s320/beginner7.PNG?w=660)](http://i1.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUXB_2zazI/AAAAAAAAHC8/eM8gsaFPNNI/s1600/beginner7.PNG)
+
+hmm how about rounded corner for those icons?
+
+.wr-icon {
+    border:2px solid #cccccc;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+ 
+}
+
+[![](http://i0.wp.com/1.bp.blogspot.com/_qDb3uKm69NY/TFUXEhIvNEI/AAAAAAAAHDE/IgcqqVrEDBE/s320/beginner8.PNG?w=660)](http://i2.wp.com/1.bp.blogspot.com/_qDb3uKm69NY/TFUXEhIvNEI/AAAAAAAAHDE/IgcqqVrEDBE/s1600/beginner8.PNG)
+
+hmm how about \[fonts\](http://web.mit.edu/jmorzins/www/fonts.html), I just don’t like my theme default font for my widget
+
+.wow-recruit-widget {
+ 
+    font-family:verdana;
+ 
+}
+
+[![](http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUXNlSZ_UI/AAAAAAAAHDU/NrQvyd-NTg4/s320/beginner9.PNG?w=660)](http://i0.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUXNlSZ_UI/AAAAAAAAHDU/NrQvyd-NTg4/s1600/beginner9.PNG)
+
+So I want different color for different spec text (1.2.2 I’ve made note has a class name corresponding to what you typed in the note, i.e. if you typed “Frost” in the note, the class of that note will be “wr-frost”) \*note Death Knight becomes DKnight here, class texts are now fully customizable in 1.2.x, so you can change to whatever you want
+
+.wr-frost                       { color:#409FFF;}
+.wr-blood                       { color:#FF4F4F;}
+.wr-feraltank                   { color:#52B2A5;}
+ 
+.wr-note                        {font-style:normal;}
+
+[![](http://i2.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUXQ2TpMCI/AAAAAAAAHDc/KVr_OmKWoCY/s320/beginner10.PNG?w=660)](http://i0.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUXQ2TpMCI/AAAAAAAAHDc/KVr_OmKWoCY/s1600/beginner10.PNG)
+
+Intermediate So you do know some html and css, but maybe not much php,�enough for\](http://html-color-codes.com/) and\](http://code.google.com/webfonts) as you probably know all of those already, since the outputs of this widget are all divs, we can do a lot more than that. At this point I assume you should know and understand\](http://www.w3schools.com/css/) , so I will only post important style codes for each examples below From here, a good \[text editor with syntax highlighting\](http://notepad-plus-plus.org/) or even \[IDE with�syntax checking\](http://netbeans.org/) will help big time. Then you may want to \[work with a local\](http://www.wampserver.com/en/) \[wordpress installation\](http://wordpress.org/) before you put them onto your site. And if you want to make rounded corner and box shadow work in IE, you may want to have a look at\](http://css3pie.com/) , upload that to root folder of your server and add
+
+behavior: url(/PIE.htc);
+
+to your rounded classes, and it should work, but it sometimes break in IE 6 if coupled with other filters like png filters and definitely not work at 5.x ……. that is, \[if you care about those ancient technologies\](http://idroppedie6.com/), believe me, your \[target audiences\](http://www.dailygame.net/forums/index.php?topic=375.0) won’t be using that 2002 computer that came with \[those browsers\](http://en.wikipedia.org/wiki/Internet\_Explorer#Internet\_Explorer\_6) Ok let’s go back to our tute. say you want something look like this, it looks like a big change? nah, it is still achievable by just editing a few classes!
+
+[![](http://i1.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUXWgTG5-I/AAAAAAAAHDk/_nJcOnK3x1U/s320/intermediate1.PNG?w=660)](http://i2.wp.com/4.bp.blogspot.com/_qDb3uKm69NY/TFUXWgTG5-I/AAAAAAAAHDk/_nJcOnK3x1U/s1600/intermediate1.PNG)
+
+ 
+
+.wr-item {
+    display:block;
+    float:left;
+    width:90px;
+    height:65px;
+    padding:0px;
+    margin:2px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    -moz-border-radius-bottomright:0px;
+    -webkit-border-bottom-right-radius:0px;
+    -moz-box-shadow: 3px 3px 3px #666; /\* Firefox \*/
+    -webkit-box-shadow: 3px 3px 3px #666; /\* Safari, Chrome \*/
+    box-shadow: 3px 3px 3px #666; /\* CSS3 \*/
+    background:#444444;
+}
+.wr-odd {
+ 
+}
+.wr-even {
+ 
+}
+.wr-left {
+    display:block;
+    float: left;
+    width: 25px;
+    height: 30px;
+    text-align:center;
+}
+.wr-right {
+    display:block;
+    float:left;
+    height:30px;
+    width:50px;
+    position:relative;
+}
+ 
+.wr-class-text {
+    display:block;
+    margin-left:5px;
+    height:30px;
+    line-height:15px;
+    width:40px;
+    margin-top:5px;
+    /\*position:absolute;
+    top:0px;
+    left:0px;\*/
+}
+.wr-status {
+    display:block;
+    margin-left:5px;
+    height:15px;
+    line-height:15px;
+    width:20px;
+    position:absolute;
+    top:45px;
+    left:\-25px;
+}
+.wr-note {
+    display:inline-block;
+    font-weight:normal;
+    font-style:italic;
+    color:#cee683;
+    line-height:15px;
+    width:30px;
+    height:15px;
+    margin-left:5px;
+    position:absolute;
+    top:30px;
+    left:\-25px;
+}
+ 
+.wr-icon {
+    vertical-align:middle;
+    width: 25px;
+    height:25px;
+    background:url(../../plugins/wow-recruit-widget/img/class-sprite.png);
+ 
+}
+
+so you want to change the icon? no worries (note that css background resizing is very problematic, so it’s better not doing it, the work around is to resize .wr-icon class to fit the icon,�or resize the icon image itself with paint or whatsoever,�hot linking image is not a very good practice, unless it’s a very reliable source, code below is just an example) note that here I’ve used .wr-icon.wr-deathknight, and removed background from .wr-icon, because if you only put background to .wr-deathknight, the background image will apply to class text block as well.
+
+[![](http://i2.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUXfcnBlDI/AAAAAAAAHDs/2HEC-06HiE0/s320/intermediate2.PNG?w=660)](http://i0.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUXfcnBlDI/AAAAAAAAHDs/2HEC-06HiE0/s1600/intermediate2.PNG)
+
+ 
+
+.wr-icon {
+    vertical-align:middle;
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:\-10px;
+    left:\-10px;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+.wr-icon.wr-deathknight { background-image:url(http://area52.wowstead.com/files/icons/favicon/classround/class\_deathknight.png);}
+ 
+.wr-icon.wr-druid   { background-image:url(http://area52.wowstead.com/files/icons/favicon/classround/class\_druid.png);}
+ 
+.wr-icon.wr-priest  { background-image:url(http://area52.wowstead.com/files/icons/favicon/classround/class\_priest.png);}
+.wr-icon.wr-rogue  { background-image:url(http://area52.wowstead.com/files/icons/favicon/classround/class\_rogue.png);}
+
+I just think status is not very necessary
+
+[![](http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUXi7A0J2I/AAAAAAAAHD0/P1nce-Ja2e4/s320/intermediate3.PNG?w=660)](http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TFUXi7A0J2I/AAAAAAAAHD0/P1nce-Ja2e4/s1600/intermediate3.PNG)
+
+ 
+
+.wr-status
+{
+    display:none;
+}
+ 
+.wr-item
+{
+    height:50px;
+}
+
+nope I changed my mind, I don’t want class text instead.
+
+[![](http://i1.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUXmDgeEkI/AAAAAAAAHD8/9N0UliKh9ek/s320/intermediate4.PNG?w=660)](http://i0.wp.com/2.bp.blogspot.com/_qDb3uKm69NY/TFUXmDgeEkI/AAAAAAAAHD8/9N0UliKh9ek/s1600/intermediate4.PNG)
+
+ 
+
+.wr-item
+{
+    height:40px;
+}
+ 
+.wr-status {
+    display:block;
+    margin-left:5px;
+    height:15px;
+    line-height:15px;
+    width:20px;
+   /\*position:absolute;
+    top:45px;
+    left:-25px;\*/
+}
+ 
+.wr-note {
+    display:block;
+    font-weight:normal;
+    font-style:italic;
+    color:#cee683;
+    line-height:15px;
+    width:30px;
+    height:15px;
+    margin-left:5px;
+    /\*position:absolute;
+    top:30px;
+    left:-25px;\*/
+}
+ 
+.wr-class-text {
+    display:none;
+}
+
+Hard Core hey you are coder already what do you need me to teach you? you maybe better than me already
+
+At this point you may notice, I have only used very few�[css](http://www.w3schools.com/css/) properties, not even used much�[positioning](http://www.w3schools.com/css/css_positioning.asp),�[float](http://www.w3schools.com/css/css_float.asp),�[z-index](http://www.w3schools.com/css/pr_pos_z-index.asp),�[alignment](http://www.w3schools.com/css/css_align.asp), etc, as well as�[css3](http://www.css3.info/preview/) [stuffs](http://www.css3.com/) like transform(rotate), alpha, text shadow, etc and I haven’t used any graphic manipulation tools at all for the whole article.
+
+so you can even do more if you can do some graphic manipulation, like adding gradient backgrounds, ([css3 gradient](http://www.zenelements.com/blog/css3-gradients/) is not supported by quite a few browsers yet, so I don’t recommend that option), make cooler icons, etc etc.
+
+ok something more for you. that is, wordpress gives each widget a unique id, say your 10 man recruit widget is wow-recruit-widget-6 and 25 man one is wow-recruit-widget-9, you can style individual widget with its own class by specifying css id, check your browser’s developer tool for the actual div id on the generated html
+
+#wow-recruit-widget-6 .wow-recruit
+{
+    /\*something something\*/
+}
+ 
+#wow-recruit-widget-9 .wr-item
+{
+    /\*something something\*/
+}
+
+Conclusion so you can pretty much break the whole layout and reconstruct as long as they are still having the same elements, or if you know jQuery or know how to use DOM model with other javascript libraries, you can even replace those elements with what you want. here I won’t say much about those, since if it requires so much code, it loses the point of plug in already. at this point I have no plan to make a more graphical version for this widget, like with more icons instead of texts hope this tutorial helps to customize your WOW Recruitment Widget, and maybe you’ve learnt some css here, if you like this article about css, feel free to leave a comment here or recommend to your friends Oh yeah, share with me with your cool looking themes! :smile: Have fun! Appendix
+
+**CSS Block Structure for reference:**
+
+wow-recruit-widget
+
+|wr-container
+
+||wr-item wr-odd
+
+|||wr-left
+
+||||wr-icon wr-shaman
+
+|||wr-right
+
+||||wr-class-text wr-shaman
+
+||||wr-note
+
+||||wr-status wr-High
+
+||wr-item wr-even
+```
+
+**Default Layout (lines below illustrate CSS block structure):**
+
+[![](http://i1.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TBw3Uj7uOJI/AAAAAAAAHBA/Bqit2noV9-k/s400/Capture.JPG?resize=315%2C400)](http://i0.wp.com/3.bp.blogspot.com/_qDb3uKm69NY/TBw3Uj7uOJI/AAAAAAAAHBA/Bqit2noV9-k/s1600/Capture.JPG)

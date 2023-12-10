@@ -8,7 +8,7 @@ const projectsData = [
     title: "WOW Recruit Widget",
     description: `A widget that helps to display recruitment message of a World of Warcraft guild.`,
     imgSrc: "/static/images/screenshot-1.jpg",
-    href: "https://www.google.com",
+    href: "https://github.com/ycfreeman/wow-recruit-widget",
   },
   // {
   //   title: "The Time Machine",

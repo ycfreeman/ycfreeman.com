@@ -1,6 +1,5 @@
 import siteMetadata from "@/data/siteMetadata";
 import headerNavLinks from "@/data/headerNavLinks";
-import Logo from "@/data/logo.svg";
 import Link from "./Link";
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
@@ -15,6 +14,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <Image
+                className="bg-gray-600 dark:bg-transparent"
                 src="/static/images/logo.png"
                 width={100}
                 height={100}
