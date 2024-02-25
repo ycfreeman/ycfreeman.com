@@ -13,11 +13,11 @@ export default function Projects() {
           </h1>
 
           <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
-            Wordpress Plugins
+            Wordpress Plugins (Legacy)
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            I don't maintain these any more, but they are still available in the
-            wordpress plugin directory
+            I don't maintain these any more, but they're still available for
+            download in the wordpress plugin directory.
           </p>
         </div>
         <div className="container py-12">
