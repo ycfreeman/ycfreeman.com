@@ -2,6 +2,8 @@
 title: Firebase App Hosting
 date: 2024-05-20
 tags:
+  - web-development
+  - gcp
   - opinion
 draft: false
 summary: "some early thoughts on firebase app hosting"
@@ -9,9 +11,23 @@ summary: "some early thoughts on firebase app hosting"
 
 Recently I've got some free time to muck around cutting edge again, and just this time there's this interesting product announced in Google I/O 2024, Firebase App Hosting.
 
+<div className="aspect-w-16 aspect-h-9">
+  <iframe
+    className="w-full h-full"
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/qyhdKb8liEA?si=d5a55bxsBAVIWhv4"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</div>
+
 I was a heavy GCP user before, but I never touched Firebase side of products as it was always seem disconnected to me, and the only way to properly use it is to use Terraform, which I'm not a fan of.
 
-But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the nextjs frontend while the backend is on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in the cluster and setup all the ingress and deployment for it.
+But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the nextjs SSR frontend while the backend is on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in the cluster and setup all the ingress and deployment for it.
 
 I think Firebase App Hosting may solve this problem, so I decided to give it a try with my personal blog. End up spending some time on migrating my blog from Vercel to Firebase App Hosting, and here are some thoughts.
 
@@ -25,7 +41,7 @@ It has GA in the same dashboard, which is probably something existing with fireb
 
 # The Meh
 
-After getting it kind of work, I found out there's some missing environment variables, there's nothing in the UI to set it.  so I looked at the doc again, and i just created a `apphosting.yaml`, there it goes a bit vague, as i manually add the secret in secret manager, then add the secret in `apphosting.yaml`, and it throws permission error. I was like "Ok, so there's no magic, we still need to setup the IAM permissions for cloud run to read the secrets"
+After getting it kind of work, I found out there's some missing environment variables, there's nothing in the UI to set it. so I looked at the doc again, and i just created a `apphosting.yaml`, there it goes a bit vague, as i manually add the secret in secret manager, then add the secret in `apphosting.yaml`, and it throws permission error. I was like "Ok, so there's no magic, we still need to setup the IAM permissions for cloud run to read the secrets"
 
 So I had to re-read the whole doc section, end up I found this single line suggesting to use firebase cli to do that, otherwise it will need to manually add the secret in secret manager, then add the proper IAM policy, etc (I know this part from my previous knowledge to GCP). I think this is a bit of a miss, as it's not very clear in the doc.
 
