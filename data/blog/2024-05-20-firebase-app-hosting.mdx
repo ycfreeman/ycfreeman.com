@@ -1,0 +1,44 @@
+---
+title: Firebase App Hosting
+date: 2024-05-20
+tags:
+  - opinion
+draft: false
+summary: "some early thoughts on firebase app hosting"
+---
+
+Recently I've got some free time to play around the cutting edge again, and just this time there's this interesting product announced in Google I/O 2024, Firebase App Hosting.
+
+I was a heavy GCP user before at work, but I never touched Firebase side of products as it was always seem disconnected to me, and the only way to properly use it is to use Terraform, which I'm not a fan of.
+
+But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the frontend while the backend is hosting on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in the cluster and setup all the ingress and deployment for it.
+
+I think Firebase App Hosting may solve this problem, so I'm going to give it a try with my personal blog. End up spending some time on migrating my blog from Vercel to Firebase App Hosting, and here are some thoughts.
+
+# The Good
+
+It was relatively easy, at first I didn't use the firebase cli, but just use the UI to create the project, link to github, link to google analytics, and deploy the app, and it basically just worked, it only took me less than half an hour to get the app up and running under the generated domain.
+
+Then I dug around and see it's pretty much just provisioning some normal GCP resources, and all the container logs, cloud run resources are all there, which I greatly appreciate because it looks like it's not a black box like Vercel.
+
+It has GA in the same dashboard, which is probably something existing with firebase hosting, that i'm probably just not familiar with - this excels vercel as all the metrics and logs are there without additional library setup or cost.
+
+# The Meh
+
+After getting it kind of work, I found out there's some missing environment variables, there's nothing in the UI to set it.  so I looked at the doc again, and i just created a `apphosting.yaml`, there it goes a bit vague, as i manually add the secret in secret manager, then add the secret in `apphosting.yaml`, and it throws permission error. I was like "Ok, so there's no magic, we still need to setup the IAM permissions for cloud run to read the secrets"
+
+So I had to re-read the whole doc section, end up I found this single line suggesting to use firebase cli to do that, otherwise it will need to manually add the secret in secret manager, then add the proper IAM policy, etc (I know this part from my previous knowledge to GCP). I think this is a bit of a miss, as it's not very clear in the doc.
+
+Got the env var working, next step is setup the custom domain, given I've used GCP before and I know GCP ingress/loadbalancer takes a bit of time needed to provision the SSL certificate has I can kind of tolerate some downtime when switching over the domain, but it's still kind of disappointing that it's not as smooth as Vercel.
+
+# The Show Stopper
+
+At the moment it only supports cloud build, and there's not much control how it builds the app. It is just slow :sad: to see like a 5-6 minutes build for a simple nextjs + tailwindcss blog.
+
+However I think the actual show stopper is it only support a main branch out of the box, it doesn't even support a staging branch, which i think is a bummer as this is kind of where vercel shines, as web devs love feature branch deployment, if a new product doesn't have this, it feels like there's no much different than a single Terraform / Pulumi file, which can be hacked up in a day or two.
+
+Given underneath it's provisioning GCP resources, I think VPC support should be on the way, which would a great direction, as usually what people have is a GKE or something similar backend, and other GCP resources like SQL, etc, and they want is a easy scalable way to slap a SSR frontend to it, having VPC / peering support will make it a lot easier to integrate with existing GCP resources, without worrying about ingress/egress cost and security between the frontend and backend.
+
+# Conclusion
+
+Firebase App Hosting looks like a fresh take, but definitely not quite there yet. I think I will keep an eye on it, as it looks like GCP is trying to make Firebase more like a layer 3 constructs / helper patterns with GCP, and I think it's a promising direction.
