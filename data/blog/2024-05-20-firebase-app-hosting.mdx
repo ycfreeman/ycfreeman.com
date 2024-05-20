@@ -7,13 +7,13 @@ draft: false
 summary: "some early thoughts on firebase app hosting"
 ---
 
-Recently I've got some free time to play around the cutting edge again, and just this time there's this interesting product announced in Google I/O 2024, Firebase App Hosting.
+Recently I've got some free time to muck around cutting edge again, and just this time there's this interesting product announced in Google I/O 2024, Firebase App Hosting.
 
-I was a heavy GCP user before at work, but I never touched Firebase side of products as it was always seem disconnected to me, and the only way to properly use it is to use Terraform, which I'm not a fan of.
+I was a heavy GCP user before, but I never touched Firebase side of products as it was always seem disconnected to me, and the only way to properly use it is to use Terraform, which I'm not a fan of.
 
-But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the frontend while the backend is hosting on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in the cluster and setup all the ingress and deployment for it.
+But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the nextjs frontend while the backend is on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in the cluster and setup all the ingress and deployment for it.
 
-I think Firebase App Hosting may solve this problem, so I'm going to give it a try with my personal blog. End up spending some time on migrating my blog from Vercel to Firebase App Hosting, and here are some thoughts.
+I think Firebase App Hosting may solve this problem, so I decided to give it a try with my personal blog. End up spending some time on migrating my blog from Vercel to Firebase App Hosting, and here are some thoughts.
 
 # The Good
 
