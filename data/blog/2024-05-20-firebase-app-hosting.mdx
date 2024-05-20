@@ -47,6 +47,8 @@ So I had to re-read the whole doc section, end up I found this single line sugge
 
 Got the env var working, next step is setup the custom domain, given I've used GCP before and I know GCP ingress/loadbalancer takes a bit of time needed to provision the SSL certificate has I can kind of tolerate some downtime when switching over the domain, but it's still kind of disappointing that it's not as smooth as Vercel.
 
+Then it i tried to do a root -> www redirection and it simply doesn't work properly and throwing 500 ...
+
 # The Show Stopper
 
 At the moment it only supports cloud build, and there's not much control how it builds the app. It is just slow :sad: to see like a 5-6 minutes build for a simple nextjs + tailwindcss blog.
