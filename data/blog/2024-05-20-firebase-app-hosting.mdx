@@ -45,9 +45,9 @@ After getting it kind of work, I found out there's some missing environment vari
 
 So I had to re-read the whole doc section, end up I found this single line suggesting to use firebase cli to do that, otherwise it will need to manually add the secret in secret manager, then add the proper IAM policy, etc (I know this part from my previous knowledge to GCP). I think this is a bit of a miss, as it's not very clear in the doc.
 
-Got the env var working, next step is setup the custom domain, given I've used GCP before and I know GCP ingress/loadbalancer takes a bit of time needed to provision the SSL certificate has I can kind of tolerate some downtime when switching over the domain, but it's still kind of disappointing that it's not as smooth as Vercel.
+Got the env var working, next step is setup the custom domain, given I've used GCP before and I know GCP ingress/loadbalancer takes a bit of time needed to provision the SSL certificate. I can kind of tolerate some downtime when switching over the domain, but it's still kind of disappointing that it's not as smooth as Vercel.
 
-Then it i tried to do a root -> www redirection and it simply doesn't work properly and throwing 500 ...
+Then i tried to do a root -> www redirection and it simply doesn't work properly and throwing 500 ... (with some envoy error, maybe this is all built on k8s + anthos / istio?)
 
 # The Show Stopper
 
