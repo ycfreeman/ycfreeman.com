@@ -1,9 +1,0 @@
-env:
-  - variable: NEXT_PUBLIC_GISCUS_REPO
-    secret: ycfreeman-com-NEXT_PUBLIC_GISCUS_REPO
-  - variable: NEXT_PUBLIC_GISCUS_REPOSITORY_ID
-    secret: ycfreeman-com-NEXT_PUBLIC_GISCUS_REPOSITORY_ID
-  - variable: NEXT_PUBLIC_GISCUS_CATEGORY
-    secret: ycfreeman-com-NEXT_PUBLIC_GISCUS_CATEGORY
-  - variable: NEXT_PUBLIC_GISCUS_CATEGORY_ID
-    secret: ycfreeman-com-NEXT_PUBLIC_GISCUS_CATEGORY_ID
