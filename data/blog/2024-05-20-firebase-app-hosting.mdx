@@ -27,7 +27,7 @@ Recently I've got some free time to muck around cutting edge again, and just thi
 
 I was a heavy GCP user before, but I rarely use Firebase side of products as it was always seem disconnected to me, and feeling the only way to properly use it is to use Terraform, which I'm not a fan of.
 
-But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the nextjs SSR frontend while the backend is on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in the cluster and setup all the ingress and deployment for it.
+But this time, Firebase App Hosting seems to be getting somewhere. Previously I've stumbled upon a problem of hosting the nextjs SSR frontend while the backend is on GKE, and I wanted control on the frontend routing, so I end up just put the nextjs app in a nodejs workload + nginx proxy in front + manually setting up some of those paths in the Ingress... it was just painful.
 
 I think Firebase App Hosting may solve this problem, so I decided to give it a try with my personal blog. End up spending some time on migrating my blog from Vercel to Firebase App Hosting, and here are some thoughts.
 
