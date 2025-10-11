@@ -11363,6 +11363,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tailwind-nextjs-starter-blog@workspace:."
   dependencies:
+    "@eslint/eslintrc": "npm:^3.3.1"
     "@fancyapps/ui": "npm:^6.0.34"
     "@next/bundle-analyzer": "npm:16.0.0-beta.0"
     "@svgr/webpack": "npm:^8.1.0"

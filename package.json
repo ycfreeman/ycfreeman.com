@@ -7,8 +7,7 @@
     "dev": "cross-env INIT_CWD=$PWD next dev --webpack",
     "build": "cross-env INIT_CWD=$PWD next build  --webpack",
     "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts"
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@fancyapps/ui": "^6.0.34",
@@ -44,6 +43,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
