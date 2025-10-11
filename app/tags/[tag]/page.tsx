@@ -9,11 +9,9 @@ import { tagData } from "app/tag-data";
 
 type Props = {
   params: Promise<{ tag: string }>;
-}
+};
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tag = decodeURI((await params).tag);
   return genPageMetadata({
     title: tag,

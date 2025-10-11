@@ -26,7 +26,7 @@ const layouts = {
 
 type Props = {
   params: Promise<{ slug: string[] }>;
-}
+};
 
 export async function generateMetadata({
   params,
