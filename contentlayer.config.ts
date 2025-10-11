@@ -2,7 +2,7 @@ import {
   defineDocumentType,
   ComputedFields,
   makeSource,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 import { writeFile } from "fs";
 import readingTime from "reading-time";
 import GithubSlugger from "github-slugger";
@@ -154,10 +154,10 @@ export default makeSource({
     rehypePlugins: [
       rehypeSlug,
       rehypeAutolinkHeadings,
-      rehypeKatex,
+      // rehypeKatex,
       [rehypeCitation, { path: path.join(root, "data") }],
       [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
-      rehypePresetMinify,
+      // rehypePresetMinify,
     ],
   },
   onSuccess: async (importData) => {

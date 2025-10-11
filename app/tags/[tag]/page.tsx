@@ -7,12 +7,14 @@ import { genPageMetadata } from "app/seo";
 import { Metadata } from "next";
 import { tagData } from "app/tag-data";
 
+type Props = {
+  params: Promise<{ tag: string }>;
+}
+
 export async function generateMetadata({
   params,
-}: {
-  params: { tag: string };
-}): Promise<Metadata> {
-  const tag = decodeURI(params.tag);
+}: Props): Promise<Metadata> {
+  const tag = decodeURI((await params).tag);
   return genPageMetadata({
     title: tag,
     description: `${siteMetadata.title} ${tag} tagged content`,
@@ -28,8 +30,8 @@ export const generateStaticParams = async () => {
   return paths;
 };
 
-export default async function TagPage({ params }: { params: { tag: string } }) {
-  const tag = decodeURI(params.tag);
+export default async function TagPage({ params }: Props) {
+  const tag = decodeURI((await params).tag);
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
   const filteredPosts = allCoreContent(

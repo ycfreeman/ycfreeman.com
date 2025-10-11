@@ -5,6 +5,11 @@ import { tagData } from "app/tag-data";
 
 const POSTS_PER_PAGE = 5;
 
+type Props = {
+  params: Promise<{ page: string }>;
+}
+
+
 export const generateStaticParams = async () => {
   const totalPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
   const paths = Array.from({ length: totalPages }, (_, i) => ({
@@ -14,9 +19,9 @@ export const generateStaticParams = async () => {
   return paths;
 };
 
-export default async function Page({ params }: { params: { page: string } }) {
+export default async function Page({ params }: Props) {
   const posts = allCoreContent(sortPosts(allBlogs));
-  const pageNumber = parseInt(params.page as string);
+  const pageNumber = parseInt((await params).page);
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
     POSTS_PER_PAGE * pageNumber,
