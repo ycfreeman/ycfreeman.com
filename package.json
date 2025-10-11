@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "next dev",
-    "dev": "cross-env INIT_CWD=$PWD next dev",
+    "dev": "cross-env INIT_CWD=$PWD next dev --turbopack",
     "build": "cross-env INIT_CWD=$PWD next build",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.0.34",
-    "@next/bundle-analyzer": "~14.2.33",
+    "@next/bundle-analyzer": "16.0.0-beta.0",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.14",
     "@tailwindcss/typography": "^0.5.19",
@@ -22,7 +22,7 @@
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "image-size": "2.0.2",
-    "next": "~15.5.4",
+    "next": "16.0.0-beta.0",
     "next-contentlayer2": "^0.5.8",
     "next-themes": "^0.4.6",
     "pliny": "0.4.1",
@@ -49,12 +49,12 @@
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/mdx": "^2.0.13",
     "@types/node": "^24.7.1",
-    "@types/react": "^18.3.26",
+    "@types/react": "19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
     "@typescript-eslint/parser": "^8.46.0",
     "cross-env": "^10.1.0",
     "eslint": "^9.37.0",
-    "eslint-config-next": "^15.5.4",
+    "eslint-config-next": "16.0.0-beta.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.4",
@@ -81,5 +81,8 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f"
+  "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+  "resolutions": {
+    "@types/react": "19.2.2"
+  }
 }

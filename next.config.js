@@ -69,10 +69,19 @@ module.exports = () => {
       dirs: ["app", "components", "layouts", "scripts"],
     },
     images: {
-      domains: [
-        "picsum.photos",
-        "gravatar.com",
-        "avatars.githubusercontent.com",
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "**.picsum.photos",
+        },
+        {
+          protocol: "https",
+          hostname: "**.gravatar.com",
+        },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
       ],
     },
     async headers() {
