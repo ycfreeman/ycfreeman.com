@@ -11,17 +11,13 @@ import nextPlugin from "@next/eslint-plugin-next";
 
 export default tseslint.config(
   {
-    linterOptions: {
-      parserOptions: {
-        project: ["./tsconfig.json"],
-      },
-    },
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: "module",
         ecmaFeatures: { jsx: true },
+        project: ["./tsconfig.json"],
       },
       globals: {
         ...globals.browser,
