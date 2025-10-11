@@ -1,2 +1,4 @@
 node_modules
-.eslintrc.js
+.next/**/*
+eslint.config.js
+next.config.js

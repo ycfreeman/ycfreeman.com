@@ -6,6 +6,7 @@ tags:
   - wordpress-plugin
   - wow-recruit-widget
 ---
+
 for more information about this plugin please go to [wordpress plugin gallery](http://wordpress.org/extend/plugins/wow-recruit-widget/)
 
 Description
@@ -20,7 +21,7 @@ This version is updated and tested with 3.0.x :smile:
 
 **Thank you for all your support, stay tuned for updates~**
 
-If you would like to support this project, please consider  
+If you would like to support this project, please consider
 
 , I will give you my Troll hug :smile:
 
@@ -50,8 +51,6 @@ then you will see something like Death Knight | Blood | Medium when you roll you
 
 Figure 1.2 v1.3 customizable tooltip
 
-  
-
 Figure 1.3 one possible usage
 
 so what’s so cool about it?
@@ -61,78 +60,61 @@ with the ability to put all those texts to tooltip, now it makes more sense to m
 (note that I’ve also added note and status css class to item wrapper, so it is now very easy to use different icon/style for different spec, and setting different style for different status)
 
 ```css
-.wr-status3 .wr-icon
-{
-    opacity:1.0;
+.wr-status3 .wr-icon {
+  opacity: 1;
 }
- 
-.wr-status2 .wr-icon
-{
-    opacity:0.6;
+  .wr-status2 .wr-icon {
+  opacity: 0.6;
 }
- 
-.wr-status1 .wr-icon
-{
-    opacity:0.3;
+  .wr-status1 .wr-icon {
+  opacity: 0.3;
 }
- 
-.wr-status0 .wr-icon
-{
-    opacity:0.0;
+  .wr-status0 .wr-icon {
+  opacity: 0;
 }
- 
-.wr-icon
-{
-    border:3px solid #ccc;
-    border-radius:10px;
-    height:40px;
-    width:40px;
+  .wr-icon {
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
 }
- 
-.wr-item
-{
-    height:40px;
-    padding:5px;
-    width:40px;
+  .wr-item {
+  height: 40px;
+  padding: 5px;
+  width: 40px;
 }
- 
-.wr-note,.wr-status,.wr-class-text
-{
-    display:none;
+  .wr-note,
+.wr-status,
+.wr-class-text {
+  display: none;
 }
- 
-.wr-deathknight .wr-blood
-.wr-icon
-{
-    background:url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_BloodPresence\_sm.png) no-repeat;
-    border:3px solid #C41F3B;
+  .wr-deathknight .wr-blood .wr-icon {
+  background: url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_BloodPresence\_sm.png)
+    no-repeat;
+  border: 3px solid #c41f3b;
 }
- 
-.wr-deathknight .wr-frost .wr-icon
-{
-    background:url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_UnholyPresence\_sm.png) no-repeat;
-    border:3px solid #0C81CE;
+  .wr-deathknight .wr-frost .wr-icon {
+  background: url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_UnholyPresence\_sm.png)
+    no-repeat;
+  border: 3px solid #0c81ce;
 }
- 
-.wr-deathknight .wr-unholy .wr-icon
-{
-    background:url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_FrostPresence\_sm.png) no-repeat;
-    border:3px solid green;
+  .wr-deathknight .wr-unholy .wr-icon {
+  background: url(http://vnmedia.ign.com/wowvault.ign.com/icons/Spell\_Deathknight\_FrostPresence\_sm.png)
+    no-repeat;
+  border: 3px solid green;
 }
- 
-.wr-shaman.wr-elemental .wr-icon
-{
-    background:url(http://www.sicaine.net/wowprofiler/img/Interface/Icons/Spell\_Nature\_Lightning.png) no-repeat;
-    border:3px solid #2459FF;
+  .wr-shaman.wr-elemental .wr-icon {
+  background: url(http://www.sicaine.net/wowprofiler/img/Interface/Icons/Spell\_Nature\_Lightning.png)
+    no-repeat;
+  border: 3px solid #2459ff;
 }
- 
-.wr-shaman .wr-resto .wr-icon
-{
-    background:url(http://www.hotwow.com/icons/middle/Spell\_Nature\_HealingWaveGreater.jpg) no-repeat;
-    border:3px solid green;
+  .wr-shaman .wr-resto .wr-icon {
+  background: url(http://www.hotwow.com/icons/middle/Spell\_Nature\_HealingWaveGreater.jpg)
+    no-repeat;
+  border: 3px solid green;
 }
-
 ```
+
 well, you get the idea if you have read [the customization post](http://ycfreeman.com/wow-recruitment-wordpress-widget-customization/ "WOW Recruitment Widget � Customization") :smile:
 
 **2\. Added an option to display “Closed” status**
@@ -158,5 +140,5 @@ Changelog
 
 Future Improvements:
 
-*   Custom order
-*   More readable widget settings
+- Custom order
+- More readable widget settings
