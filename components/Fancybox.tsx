@@ -2,12 +2,12 @@
 
 import React, { useRef, useEffect } from "react";
 
-import { Fancybox as NativeFancybox, OptionsType } from "@fancyapps/ui";
+import { Fancybox as NativeFancybox, FancyboxOptions } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 interface FancyboxProps {
   delegate?: string;
-  options?: OptionsType;
+  options?: FancyboxOptions;
   children: React.ReactNode;
 }
 
