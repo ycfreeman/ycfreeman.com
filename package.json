@@ -8,10 +8,10 @@
     "build": "cross-env INIT_CWD=$PWD next build  --webpack",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "cf:build": "opennextjs-cloudflare build",
-    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf:upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf:build": "pnpm build",
+    "cf:preview": "pnpm cf:build && wrangler dev",
+    "cf:deploy": "pnpm cf:build && wrangler deploy",
+    "cf:upload": "pnpm cf:build && wrangler versions upload",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
@@ -51,7 +51,6 @@
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "16.0.0-beta.0",
-    "@opennextjs/cloudflare": "^1.20.1",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
