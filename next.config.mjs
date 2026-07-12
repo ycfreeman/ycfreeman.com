@@ -11,7 +11,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import { remarkCodeTitles, remarkImgToJsx } from "pliny/mdx-plugins/index.js";
+import { remarkCodeTitles } from "./lib/mdx-plugins.mjs";
 
 const root = process.cwd();
 const withBundleAnalyzer = createBundleAnalyzer({
@@ -68,7 +68,6 @@ const withMDX = createMDX({
       remarkGfm,
       remarkCodeTitles,
       remarkMath,
-      remarkImgToJsx,
       remarkEmoji,
     ],
     rehypePlugins: [

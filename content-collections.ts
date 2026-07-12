@@ -10,7 +10,7 @@ import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import { z } from "zod";
-import { extractTocHeadings } from "pliny/mdx-plugins/index.js";
+import { extractTocHeadings } from "./lib/mdx-plugins.mjs";
 import siteMetadata from "./data/siteMetadata";
 
 const root = process.cwd();
