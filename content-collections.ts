@@ -9,8 +9,8 @@ import path from "node:path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import { z } from "zod";
-import { extractTocHeadings } from "./lib/mdx-plugins.mjs";
-import siteMetadata from "./data/siteMetadata";
+import { extractTocHeadings } from "./src/lib/mdx-plugins.mjs";
+import siteMetadata from "./src/data/siteMetadata";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
@@ -84,12 +84,12 @@ function createSearchIndex<T extends object>(documents: T[]) {
 const blogs = defineCollection({
   name: "blogs",
   typeName: "Blog",
-  directory: "./data/blog",
+  directory: "./src/data/blog",
   include: "**/*.mdx",
   parser: "frontmatter-only",
   schema: blogSchema,
   transform: async ({ _meta, ...blog }) => {
-    const content = readMdx("data/blog", _meta.filePath);
+    const content = readMdx("src/data/blog", _meta.filePath);
     const readTime = readingTime(content);
     const toc = (await extractTocHeadings(content)).map(
       ({ value, url, depth }) => ({ value, url, depth }),
@@ -134,12 +134,12 @@ const blogs = defineCollection({
 const authors = defineCollection({
   name: "authors",
   typeName: "Author",
-  directory: "./data/authors",
+  directory: "./src/data/authors",
   include: "**/*.mdx",
   parser: "frontmatter-only",
   schema: authorSchema,
   transform: async ({ _meta, ...author }) => {
-    const content = readMdx("data/authors", _meta.filePath);
+    const content = readMdx("src/data/authors", _meta.filePath);
     const readTime = readingTime(content);
     const toc = (await extractTocHeadings(content)).map(
       ({ value, url, depth }) => ({ value, url, depth }),

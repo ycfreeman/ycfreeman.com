@@ -11,7 +11,7 @@ import siteMetadata from "@/data/siteMetadata";
 import ScrollTopAndComment from "@/components/ScrollTopAndComment";
 import Fancybox from "@/components/Fancybox";
 
-const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`;
+const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/src/data/${path}`;
 const discussUrl = (path) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/${path}`,
