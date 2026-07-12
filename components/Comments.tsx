@@ -15,36 +15,46 @@ export default function Comments({ slug }: { slug: string }) {
   const [loadComments, setLoadComments] = useState(false);
   const { resolvedTheme } = useTheme();
   const config = siteMetadata.comments?.giscusConfig;
+  const giscusConfig =
+    config?.repo && config.repositoryId && config.category && config.categoryId
+      ? {
+          ...config,
+          repo: config.repo as Repo,
+          repositoryId: config.repositoryId,
+          category: config.category,
+          categoryId: config.categoryId,
+        }
+      : null;
 
   return (
     <>
-      {!loadComments && (
+      {!giscusConfig && (
+        <p role="status">Comments are temporarily unavailable.</p>
+      )}
+      {giscusConfig && !loadComments && (
         <button onClick={() => setLoadComments(true)}>Load Comments</button>
       )}
-      {loadComments &&
-        config?.repo &&
-        config.repositoryId &&
-        config.categoryId && (
-          <Giscus
-            id="comments-container"
-            repo={config.repo as Repo}
-            repoId={config.repositoryId}
-            category={config.category}
-            categoryId={config.categoryId}
-            mapping={config.mapping as Mapping}
-            term={slug}
-            reactionsEnabled={config.reactions as BooleanString}
-            emitMetadata={config.metadata as BooleanString}
-            inputPosition="bottom"
-            theme={
-              (resolvedTheme === "dark"
-                ? config.darkTheme
-                : config.theme) as Theme
-            }
-            lang={config.lang as AvailableLanguage}
-            loading="lazy"
-          />
-        )}
+      {giscusConfig && loadComments && (
+        <Giscus
+          id="comments-container"
+          repo={giscusConfig.repo}
+          repoId={giscusConfig.repositoryId}
+          category={giscusConfig.category}
+          categoryId={giscusConfig.categoryId}
+          mapping={giscusConfig.mapping as Mapping}
+          term={slug}
+          reactionsEnabled={giscusConfig.reactions as BooleanString}
+          emitMetadata={giscusConfig.metadata as BooleanString}
+          inputPosition="bottom"
+          theme={
+            (resolvedTheme === "dark"
+              ? giscusConfig.darkTheme
+              : giscusConfig.theme) as Theme
+          }
+          lang={giscusConfig.lang as AvailableLanguage}
+          loading="lazy"
+        />
+      )}
     </>
   );
 }
