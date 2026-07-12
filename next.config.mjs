@@ -1,38 +1,24 @@
-import createBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
 import { withContentCollections } from "@content-collections/next";
 import path from "node:path";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeCitation from "rehype-citation";
-import rehypePrismPlus from "rehype-prism-plus";
-import rehypeSlug from "rehype-slug";
-import remarkEmoji from "remark-emoji";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkGfm from "remark-gfm";
-import remarkMath from "remark-math";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import { remarkCodeTitles } from "./lib/mdx-plugins.mjs";
 
 const root = process.cwd();
-const withBundleAnalyzer = createBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
 
 const withMDX = createMDX({
   options: {
     remarkPlugins: [
-      remarkFrontmatter,
-      remarkMdxFrontmatter,
-      remarkGfm,
-      remarkCodeTitles,
-      remarkMath,
-      remarkEmoji,
+      "remark-frontmatter",
+      "remark-mdx-frontmatter",
+      "remark-gfm",
+      path.join(root, "lib/mdx-plugins.mjs"),
+      "remark-math",
+      "remark-emoji",
     ],
     rehypePlugins: [
-      rehypeSlug,
-      rehypeAutolinkHeadings,
-      [rehypeCitation, { path: path.join(root, "data") }],
-      [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
+      "rehype-slug",
+      "rehype-autolink-headings",
+      ["rehype-citation", { path: path.join(root, "data") }],
+      ["rehype-prism-plus", { defaultLanguage: "js", ignoreMissing: true }],
     ],
   },
 });
@@ -59,14 +45,6 @@ const nextConfig = {
       },
     ],
   },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-
-    return config;
-  },
 };
 
-export default withContentCollections(withBundleAnalyzer(withMDX(nextConfig)));
+export default withContentCollections(withMDX(nextConfig));
