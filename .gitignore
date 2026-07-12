@@ -14,6 +14,8 @@ public/sitemap.xml
 
 # production
 /build
+/.open-next/
+/.wrangler/
 *.xml
 
 # rss feed
@@ -41,3 +43,4 @@ pnpm-debug.log*
 
 app/tag-data.json
 .env
+.dev.vars

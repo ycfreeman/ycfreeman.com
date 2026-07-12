@@ -12,3 +12,41 @@ these days edge hosting like vercel has a very generous free tier, may as well u
 - added `remark-emoji`
   - fixes this 7+ year broken emoji issue just by adding a package
 - finish with an AI generated logo
+
+## Cloudflare deployment
+
+The site is built for Cloudflare Workers with
+[`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare/) and deployed
+with Wrangler.
+
+Run a local Workers preview with:
+
+```bash
+pnpm cf:preview
+```
+
+For a manual deployment, authenticate Wrangler and run:
+
+```bash
+pnpm wrangler login
+pnpm cf:deploy
+```
+
+The OpenNext incremental cache uses the `ycfreeman-com-cache` R2 bucket. Create
+that bucket once before the first deployment:
+
+```bash
+pnpm wrangler r2 bucket create ycfreeman-com-cache
+```
+
+Pushes to `main` deploy through
+[`deploy-cloudflare.yml`](.github/workflows/deploy-cloudflare.yml). Configure
+these secrets in the repository's `production` environment:
+
+- `CLOUDFLARE_ACCOUNT_ID`
+- `CLOUDFLARE_API_TOKEN`, scoped to the target account with Workers Scripts
+  Write and Workers R2 Storage Write
+
+The initial deployment uses a `workers.dev` URL. Verify it before attaching
+`ycfreeman.com` as a Worker Custom Domain. Do not commit Cloudflare credentials
+or local `.dev.vars` files.
