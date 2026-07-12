@@ -1,8 +1,8 @@
 import { slug } from "github-slugger";
-import { allCoreContent, sortPosts } from "pliny/utils/contentlayer";
+import { allCoreContent, sortPosts } from "@/lib/content";
 import siteMetadata from "@/data/siteMetadata";
 import ListLayout from "@/layouts/ListLayoutWithTags";
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "content-collections";
 import { genPageMetadata } from "app/seo";
 import { Metadata } from "next";
 import { tagData } from "app/tag-data";

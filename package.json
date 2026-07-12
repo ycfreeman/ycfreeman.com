@@ -21,13 +21,11 @@
     "@tailwindcss/postcss": "^4.1.14",
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
-    "contentlayer2": "^0.5.8",
     "esbuild": "~0.25.10",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "image-size": "2.0.2",
     "next": "16.0.0-beta.0",
-    "next-contentlayer2": "^0.5.8",
     "next-themes": "^0.4.6",
     "pliny": "0.4.1",
     "postcss": "^8.5.6",
@@ -48,7 +46,12 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@content-collections/core": "^0.15.2",
+    "@content-collections/next": "^0.2.11",
     "@eslint/eslintrc": "^3.3.1",
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "16.0.0-beta.0",
     "@opennextjs/cloudflare": "^1.20.1",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -68,8 +71,11 @@
     "lint-staged": "^16.2.3",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx-frontmatter": "^5.2.0",
     "typescript": "^5.9.3",
-    "wrangler": "^4.110.0"
+    "wrangler": "^4.110.0",
+    "zod": "^4.4.3"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [

@@ -17,7 +17,8 @@ these days edge hosting like vercel has a very generous free tier, may as well u
 
 The site is built for Cloudflare Workers with
 [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare/) and deployed
-with Wrangler.
+with Wrangler. Content Collections generates static MDX imports at build time,
+so the Worker does not require an incremental cache or R2 binding.
 
 Run a local Workers preview with:
 
@@ -32,20 +33,12 @@ pnpm wrangler login
 pnpm cf:deploy
 ```
 
-The OpenNext incremental cache uses the `ycfreeman-com-cache` R2 bucket. Create
-that bucket once before the first deployment:
-
-```bash
-pnpm wrangler r2 bucket create ycfreeman-com-cache
-```
-
 Pushes to `main` deploy through
 [`deploy-cloudflare.yml`](.github/workflows/deploy-cloudflare.yml). Configure
 these secrets in the repository's `production` environment:
 
 - `CLOUDFLARE_ACCOUNT_ID`
-- `CLOUDFLARE_API_TOKEN`, scoped to the target account with Workers Scripts
-  Write and Workers R2 Storage Write
+- `CLOUDFLARE_API_TOKEN`, scoped to the target account with Workers Scripts Write
 
 The initial deployment uses a `workers.dev` URL. Verify it before attaching
 `ycfreeman.com` as a Worker Custom Domain. Do not commit Cloudflare credentials
