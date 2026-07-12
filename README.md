@@ -15,12 +15,12 @@ these days edge hosting like vercel has a very generous free tier, may as well u
 
 ## Cloudflare deployment
 
-The site is built for Cloudflare Workers with
-[`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare/) and deployed
-with Wrangler. Content Collections generates static MDX imports at build time,
-so the Worker does not require an incremental cache or R2 binding.
+The site is exported as static HTML and deployed with Cloudflare Workers Static
+Assets. Wrangler uploads the `out` directory without a Worker script, so page
+requests do not consume Worker CPU time. Content Collections generates the MDX
+content at build time.
 
-Run a local Workers preview with:
+Run a local Cloudflare static-assets preview with:
 
 ```bash
 pnpm cf:preview
