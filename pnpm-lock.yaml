@@ -99,10 +99,10 @@ importers:
     devDependencies:
       '@content-collections/core':
         specifier: ^0.15.2
-        version: 0.15.2(typescript@5.9.3)
+        version: 0.15.2(typescript@6.0.3)
       '@content-collections/next':
         specifier: ^0.2.11
-        version: 0.2.11(@content-collections/core@0.15.2(typescript@5.9.3))(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))
+        version: 0.2.11(@content-collections/core@0.15.2(typescript@6.0.3))(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))
       '@mdx-js/loader':
         specifier: ^3.1.1
         version: 3.1.1
@@ -146,8 +146,8 @@ importers:
         specifier: ^5.2.0
         version: 5.2.0
       typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
+        specifier: ^6.0.3
+        version: 6.0.3
       wrangler:
         specifier: ^4.110.0
         version: 4.110.0
@@ -2473,8 +2473,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2677,7 +2677,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260708.1':
     optional: true
 
-  '@content-collections/core@0.15.2(typescript@5.9.3)':
+  '@content-collections/core@0.15.2(typescript@6.0.3)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       camelcase: 8.0.0
@@ -2689,17 +2689,17 @@ snapshots:
       pluralize: 8.0.0
       serialize-javascript: 7.0.7
       tinyglobby: 0.2.17
-      typescript: 5.9.3
+      typescript: 6.0.3
       yaml: 2.9.0
 
-  '@content-collections/integrations@0.5.0(@content-collections/core@0.15.2(typescript@5.9.3))':
+  '@content-collections/integrations@0.5.0(@content-collections/core@0.15.2(typescript@6.0.3))':
     dependencies:
-      '@content-collections/core': 0.15.2(typescript@5.9.3)
+      '@content-collections/core': 0.15.2(typescript@6.0.3)
 
-  '@content-collections/next@0.2.11(@content-collections/core@0.15.2(typescript@5.9.3))(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))':
+  '@content-collections/next@0.2.11(@content-collections/core@0.15.2(typescript@6.0.3))(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7))':
     dependencies:
-      '@content-collections/core': 0.15.2(typescript@5.9.3)
-      '@content-collections/integrations': 0.5.0(@content-collections/core@0.15.2(typescript@5.9.3))
+      '@content-collections/core': 0.15.2(typescript@6.0.3)
+      '@content-collections/integrations': 0.5.0(@content-collections/core@0.15.2(typescript@6.0.3))
       next: 16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
 
   '@cspotcode/source-map-support@0.8.1':
@@ -5171,7 +5171,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   uglify-js@3.19.3: {}
 
