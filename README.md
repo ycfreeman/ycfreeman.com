@@ -1,6 +1,6 @@
-another round of modernisation
+# ycfreeman.com
 
-these days edge hosting like vercel has a very generous free tier, may as well utilising it and go back to server pages for more flexibilty, instead of having to resort to static site generation
+Personal blog built with Next.js and deployed as static assets on Cloudflare.
 
 # Changes from the original template
 
