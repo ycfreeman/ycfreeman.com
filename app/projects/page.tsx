@@ -16,9 +16,9 @@ export default function Projects() {
             Wordpress Plugins (unmaintained)
           </h2>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            I don't maintain these any more, but they're still available for
-            download in the wordpress plugin directory, source code are hosted
-            on GitHub.
+            I don&apos;t maintain these any more, but they&apos;re still
+            available for download in the wordpress plugin directory, source
+            code are hosted on GitHub.
           </p>
         </div>
         <div className="container py-12">
