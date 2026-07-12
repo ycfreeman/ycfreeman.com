@@ -3,7 +3,7 @@ const siteMetadata = {
   title: "Ycfreeman's",
   author: "Freeman Man",
   headerTitle: "Ycfreeman's",
-  description: `Do code for food 😄, have a wife, a kid and a cat, cook a bit and would squeeze time for tv, movies, manga and games.`,
+  description: `"Do" code for food 😄, have a wife, a kid and a cat, cook a bit and would squeeze time for tv, movies, manga and games.`,
   language: "en-AU",
   theme: "system", // system, dark or light
   siteUrl: "https://ycfreeman.com",
