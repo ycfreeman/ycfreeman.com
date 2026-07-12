@@ -32,8 +32,12 @@ pnpm wrangler login
 pnpm cf:deploy
 ```
 
-The OpenNext incremental cache uses the `ycfreeman-com-cache` R2 bucket. Create
-that bucket once before the first deployment:
+The OpenNext incremental cache uses the `ycfreeman-com-cache` R2 bucket. Although
+the content is generated at build time, OpenNext stores the prerendered MDX HTML
+in this cache. Without it, Cloudflare must render MDX at runtime, which Workers
+rejects because the current MDX renderer generates code from strings.
+
+Create the bucket once before the first deployment:
 
 ```bash
 pnpm wrangler r2 bucket create ycfreeman-com-cache
