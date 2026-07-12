@@ -7,7 +7,12 @@
     "dev": "cross-env INIT_CWD=$PWD next dev --webpack",
     "build": "cross-env INIT_CWD=$PWD next build  --webpack",
     "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@fancyapps/ui": "^6.0.34",
@@ -44,6 +49,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
+    "@opennextjs/cloudflare": "^1.20.1",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
@@ -62,7 +68,8 @@
     "lint-staged": "^16.2.3",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.110.0"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
@@ -72,5 +79,5 @@
       "prettier --write"
     ]
   },
-  "packageManager": "pnpm@11.12.0"
+  "packageManager": "pnpm@11.7.0"
 }
