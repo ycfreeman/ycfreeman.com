@@ -1,5 +1,5 @@
-import { sortPosts, allCoreContent } from "pliny/utils/contentlayer";
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "content-collections";
+import { allCoreContent, sortPosts } from "@/lib/content";
 import Main from "./Main";
 
 export default async function Page() {

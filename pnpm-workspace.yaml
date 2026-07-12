@@ -11,6 +11,7 @@ overrides:
   "@types/react": 19.2.2
 
 allowBuilds:
+  # Pliny still depends on Contentlayer internally; the app does not import it.
   contentlayer2: true
   esbuild: true
   protobufjs: true

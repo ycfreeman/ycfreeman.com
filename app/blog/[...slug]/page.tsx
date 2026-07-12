@@ -2,14 +2,9 @@ import "css/prism.css";
 import "katex/dist/katex.css";
 
 import { components } from "@/components/MDXComponents";
-import { MDXLayoutRenderer } from "pliny/mdx-components";
-import {
-  sortPosts,
-  coreContent,
-  allCoreContent,
-} from "pliny/utils/contentlayer";
-import { allBlogs, allAuthors } from "contentlayer/generated";
-import type { Authors, Blog } from "contentlayer/generated";
+import { allCoreContent, coreContent, sortPosts } from "@/lib/content";
+import { allAuthors, allBlogs } from "content-collections";
+import type { Author, Blog } from "content-collections";
 import PostSimple from "@/layouts/PostSimple";
 import PostLayout from "@/layouts/PostLayout";
 import PostBanner from "@/layouts/PostBanner";
@@ -33,14 +28,14 @@ export async function generateMetadata({
 }: Props): Promise<Metadata | undefined> {
   const slug = decodeURI((await params).slug.join("/"));
   const post = allBlogs.find((p) => p.slug === slug);
-  const authorList = post?.authors || ["default"];
-  const authorDetails = authorList.map((author) => {
-    const authorResults = allAuthors.find((p) => p.slug === author);
-    return coreContent(authorResults as Authors);
-  });
   if (!post) {
     return;
   }
+  const authorList = post?.authors || ["default"];
+  const authorDetails = authorList.map((author) => {
+    const authorResults = allAuthors.find((p) => p.slug === author);
+    return coreContent(authorResults as Author);
+  });
 
   const publishedAt = new Date(post.date).toISOString();
   const modifiedAt = new Date(post.lastmod || post.date).toISOString();
@@ -100,10 +95,10 @@ export default async function Page({ params }: Props) {
   const authorList = post?.authors || ["default"];
   const authorDetails = authorList.map((author) => {
     const authorResults = allAuthors.find((p) => p.slug === author);
-    return coreContent(authorResults as Authors);
+    return coreContent(authorResults as Author);
   });
   const mainContent = coreContent(post);
-  const jsonLd = post.structuredData;
+  const jsonLd: Record<string, unknown> = { ...post.structuredData };
   jsonLd["author"] = authorDetails.map((author) => {
     return {
       "@type": "Person",
@@ -112,6 +107,7 @@ export default async function Page({ params }: Props) {
   });
 
   const Layout = layouts[post.layout || defaultLayout];
+  const MdxContent = post.mdxContent;
 
   return (
     <>
@@ -125,11 +121,7 @@ export default async function Page({ params }: Props) {
         next={next}
         prev={prev}
       >
-        <MDXLayoutRenderer
-          code={post.body.code}
-          components={components}
-          toc={post.toc}
-        />
+        <MdxContent components={components} toc={post.toc} />
       </Layout>
     </>
   );

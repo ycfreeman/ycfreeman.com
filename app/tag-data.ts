@@ -1,4 +1,4 @@
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "content-collections";
 import GithubSlugger from "github-slugger";
 
 const isProduction = process.env.NODE_ENV === "production";

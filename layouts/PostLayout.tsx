@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { CoreContent } from "pliny/utils/contentlayer";
-import type { Blog, Authors } from "contentlayer/generated";
+import type { CoreContent } from "@/lib/content";
+import type { Author, Blog } from "content-collections";
 import Comments from "@/components/Comments";
 import Link from "@/components/Link";
 import PageTitle from "@/components/PageTitle";
@@ -26,7 +26,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 
 interface LayoutProps {
   content: CoreContent<Blog>;
-  authorDetails: CoreContent<Authors>[];
+  authorDetails: CoreContent<Author>[];
   next?: { path: string; title: string };
   prev?: { path: string; title: string };
   children: ReactNode;

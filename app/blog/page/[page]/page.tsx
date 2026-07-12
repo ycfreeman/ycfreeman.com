@@ -1,6 +1,6 @@
 import ListLayout from "@/layouts/ListLayoutWithTags";
-import { allCoreContent, sortPosts } from "pliny/utils/contentlayer";
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "content-collections";
+import { allCoreContent, sortPosts } from "@/lib/content";
 import { tagData } from "app/tag-data";
 
 const POSTS_PER_PAGE = 5;

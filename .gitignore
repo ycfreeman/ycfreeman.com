@@ -38,7 +38,8 @@ pnpm-debug.log*
 .env.test.local
 .env.production.local
 
-# Contentlayer
+# Content Collections
+.content-collections
 .contentlayer
 
 app/tag-data.json
