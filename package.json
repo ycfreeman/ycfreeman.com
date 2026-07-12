@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.0.34",
+    "@giscus/react": "^3.1.0",
     "@next/bundle-analyzer": "16.0.0-beta.0",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.14",
@@ -24,10 +25,8 @@
     "esbuild": "~0.25.10",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
-    "image-size": "2.0.2",
     "next": "16.0.0-beta.0",
     "next-themes": "^0.4.6",
-    "pliny": "0.4.1",
     "postcss": "^8.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",

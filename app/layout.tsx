@@ -1,9 +1,8 @@
 import "css/tailwind.css";
-import "pliny/search/algolia.css";
 
 import { Space_Grotesk } from "next/font/google";
-import { Analytics, AnalyticsConfig } from "pliny/analytics";
-import { SearchProvider, SearchConfig } from "pliny/search";
+import Analytics from "@/components/Analytics";
+import SearchProvider from "@/components/SearchProvider";
 import Header from "@/components/Header";
 import SectionContainer from "@/components/SectionContainer";
 import Footer from "@/components/Footer";
@@ -100,12 +99,14 @@ export default function RootLayout({
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics
-            analyticsConfig={siteMetadata.analytics as AnalyticsConfig}
+            id={siteMetadata.analytics?.googleAnalytics?.googleAnalyticsId}
           />
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider
-                searchConfig={siteMetadata.search as SearchConfig}
+                documentsPath={
+                  siteMetadata.search?.kbarConfig.searchDocumentsPath
+                }
               >
                 <Header />
                 <main className="mb-auto">{children}</main>
