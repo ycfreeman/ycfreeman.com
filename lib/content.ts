@@ -13,7 +13,11 @@ export function sortPosts<T extends DatedContent>(posts: T[]): T[] {
 }
 
 export function coreContent<T extends object>(content: T): CoreContent<T> {
-  const { _meta, mdxContent, ...core } = content as T & {
+  const {
+    _meta: _meta,
+    mdxContent: _mdxContent,
+    ...core
+  } = content as T & {
     _meta?: unknown;
     mdxContent?: unknown;
   };

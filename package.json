@@ -11,6 +11,10 @@
     "build": "cross-env INIT_CWD=$PWD next build",
     "serve": "next start",
     "analyze": "next experimental-analyze",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
     "cf:build": "pnpm build",
     "cf:preview": "pnpm cf:build && wrangler dev",
     "cf:deploy": "pnpm cf:build && wrangler deploy",
@@ -54,22 +58,14 @@
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "16.2.10",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/mdx": "^2.0.14",
     "@types/node": "^26.1.1",
     "@types/react": "19.2.17",
-    "@typescript-eslint/eslint-plugin": "^8.63.0",
-    "@typescript-eslint/parser": "^8.63.0",
     "cross-env": "^10.1.0",
-    "eslint": "^9.39.5",
-    "eslint-config-next": "16.2.10",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.5.6",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
-    "prettier": "^3.9.5",
-    "prettier-plugin-tailwindcss": "^0.8.0",
+    "oxfmt": "0.58.0",
+    "oxlint": "1.73.0",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx-frontmatter": "^5.2.0",
     "typescript": "^5.9.3",
@@ -77,12 +73,11 @@
     "zod": "^4.4.3"
   },
   "lint-staged": {
-    "*.+(js|jsx|ts|tsx)": [
-      "eslint --fix"
+    "*.{js,jsx,ts,tsx}": [
+      "oxlint --fix",
+      "oxfmt --write"
     ],
-    "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
-      "prettier --write"
-    ]
+    "*.{json,css,md,mdx}": "oxfmt --write"
   },
   "packageManager": "pnpm@11.7.0"
 }
