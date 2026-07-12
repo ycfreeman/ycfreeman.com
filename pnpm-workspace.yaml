@@ -1,0 +1,18 @@
+autoInstallPeers: false
+
+overrides:
+  "@opentelemetry/api": 1.4.1
+  "@opentelemetry/core": 1.13.0
+  "@opentelemetry/exporter-trace-otlp-grpc": 0.39.1
+  "@opentelemetry/resources": 1.13.0
+  "@opentelemetry/sdk-trace-base": 1.13.0
+  "@opentelemetry/sdk-trace-node": 1.13.0
+  "@opentelemetry/semantic-conventions": 1.13.0
+  "@types/react": 19.2.2
+
+allowBuilds:
+  contentlayer2: true
+  esbuild: true
+  protobufjs: true
+  sharp: true
+  unrs-resolver: true
