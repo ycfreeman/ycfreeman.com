@@ -6,7 +6,6 @@ import {
 import type { MDXContent } from "mdx/types";
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import { z } from "zod";
@@ -62,10 +61,11 @@ function createSearchIndex<T extends object>(documents: T[]) {
       return !isProduction || blog.draft !== true;
     })
     .map((document) => {
-      const { _meta, mdxContent, ...blog } = document as Record<
-        string,
-        unknown
-      >;
+      const {
+        _meta: _meta,
+        mdxContent: _mdxContent,
+        ...blog
+      } = document as Record<string, unknown>;
       return blog;
     })
     .sort((a, b) => String(b.date).localeCompare(String(a.date)));

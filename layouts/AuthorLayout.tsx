@@ -15,7 +15,6 @@ export default function AuthorLayout({ children, content }: Props) {
     avatar,
     occupation,
     company,
-    email,
     twitter,
     linkedin,
     github,
