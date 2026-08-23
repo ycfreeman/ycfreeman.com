@@ -52,7 +52,7 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 4. Port the document shell and every route to Astro while retaining framework-neutral React components.
 5. Preserve the current route derivation, draft filtering, metadata, table of contents, reading time, navigation, search, comments, structured data, and image behavior.
 6. Keep `public/_redirects`, legacy media, and other public assets unchanged.
-7. Replace the build and deployment commands with Astro.
+7. Replace the build and deployment commands with Astro. Preserve every existing CI responsibility, but change the workflows, jobs, commands, environment variables, and artifact paths however best fits Astro.
 8. Remove the Next.js App Router, configuration, generated-content integration, and Next-only dependencies.
 9. Build the complete Astro site and fix every difference from the recorded URL manifest.
 10. Crawl the output for broken internal links and legacy media, then verify slash variants, rewrites, Giscus pathnames, sitemap entries, canonical URLs, and 404 responses through Wrangler.
@@ -66,4 +66,5 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 - The three legacy rewrites behave exactly as before.
 - Existing Giscus discussions remain attached to the same post pathnames.
 - No legacy media or internal links are broken.
+- CI continues to provide every existing build and deployment outcome using workflows suited to Astro.
 - Next.js and all migration-only code have been removed in the same change.
