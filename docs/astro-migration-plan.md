@@ -49,7 +49,7 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 
 1. Configure Astro for static output with the official React and MDX integrations.
 2. Define Astro content collections over the existing blog and author MDX files without moving or rewriting them.
-3. Keep the existing remark and rehype behavior for math, citations, syntax highlighting, heading links, and other MDX features.
+3. Preserve every existing MDX plugin or replace it with an Astro-compatible equivalent that produces the same behavior. This includes frontmatter, MDX frontmatter, GFM, code titles, math, emoji, heading slugs and links, citations, syntax highlighting, and table-of-contents extraction, including the current plugin options.
 4. Port the document shell and every route to Astro while retaining framework-neutral React components.
 5. Preserve the current route derivation, draft filtering, SEO metadata and structured data, table of contents, reading time, navigation, search, comments, and rendered image content.
 6. Keep `public/_redirects` and non-image public assets unchanged. Move images beside related content when that is the clearer structure and update all references.
@@ -68,6 +68,7 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 - The three legacy rewrites behave exactly as before.
 - Existing Giscus discussions remain attached to the same post pathnames.
 - SEO values and crawler-facing output are preserved.
+- Every existing MDX plugin behavior and option is preserved, whether implemented by the same plugin or an Astro-compatible equivalent.
 - No internal links or rendered images are broken.
 - The documented local development command starts Astro and supports the normal edit-and-reload workflow.
 - CI continues to provide every existing build and deployment outcome using workflows suited to Astro.
