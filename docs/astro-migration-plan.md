@@ -53,12 +53,13 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 4. Port the document shell and every route to Astro while retaining framework-neutral React components.
 5. Preserve the current route derivation, draft filtering, metadata, table of contents, reading time, navigation, search, comments, structured data, and rendered image content.
 6. Keep `public/_redirects` and non-image public assets unchanged. Move images beside related content when that is the clearer structure and update all references.
-7. Replace the build and deployment commands with Astro. Preserve every existing CI responsibility, but change the workflows, jobs, commands, environment variables, and artifact paths however best fits Astro.
-8. Remove the Next.js App Router, configuration, generated-content integration, and Next-only dependencies.
-9. Build the complete Astro site and fix every difference from the recorded URL manifest.
-10. Crawl the output for broken internal links and images, then verify slash variants, rewrites, Giscus pathnames, sitemap entries, canonical URLs, and 404 responses through Wrangler.
-11. Merge and deploy the complete migration once.
-12. Run the URL comparison against production and fix forward immediately if any mismatch remains.
+7. Make `pnpm dev`, or a clearly documented equivalent, start the Astro development server with the normal local edit-and-reload workflow.
+8. Replace the build and deployment commands with Astro. Preserve every existing CI responsibility, but change the workflows, jobs, commands, environment variables, and artifact paths however best fits Astro.
+9. Remove the Next.js App Router, configuration, generated-content integration, and Next-only dependencies.
+10. Build the complete Astro site and fix every difference from the recorded URL manifest.
+11. Crawl the output for broken internal links and images, then verify slash variants, rewrites, Giscus pathnames, sitemap entries, canonical URLs, and 404 responses through Wrangler.
+12. Merge and deploy the complete migration once.
+13. Run the URL comparison against production and fix forward immediately if any mismatch remains.
 
 ## Definition of done
 
@@ -67,5 +68,6 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 - The three legacy rewrites behave exactly as before.
 - Existing Giscus discussions remain attached to the same post pathnames.
 - No internal links or rendered images are broken.
+- The documented local development command starts Astro and supports the normal edit-and-reload workflow.
 - CI continues to provide every existing build and deployment outcome using workflows suited to Astro.
 - Next.js and all migration-only code have been removed in the same change.
