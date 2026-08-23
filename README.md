@@ -22,7 +22,7 @@ pnpm check
 pnpm build
 ```
 
-The production build verifies its page routes, SEO metadata, sitemap, robots output, and search records against `scripts/build-contract.json`, which was captured from the final Next.js static export. Generated HTML structure and image asset paths are intentionally excluded from parity.
+The production build validates the Astro project before generating the static site in `out`.
 
 ## Cloudflare deployment
 

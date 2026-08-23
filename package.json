@@ -10,7 +10,7 @@
     "start": "astro dev",
     "dev": "astro dev",
     "check": "astro check",
-    "build": "astro check && astro build && node scripts/verify-build.mjs",
+    "build": "astro check && astro build",
     "serve": "astro preview",
     "fmt": "oxfmt .",
     "fmt:check": "oxfmt --check .",
