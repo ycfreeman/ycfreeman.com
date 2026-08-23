@@ -9,7 +9,6 @@ import rehypeCitation from "rehype-citation";
 import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import remarkEmoji from "remark-emoji";
-import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import remarkCodeTitles from "./src/lib/mdx-plugins.mjs";
 
@@ -25,9 +24,9 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: false,
     processor: unified({
-      gfm: false,
+      gfm: true,
       smartypants: false,
-      remarkPlugins: [remarkGfm, remarkCodeTitles, remarkMath, remarkEmoji],
+      remarkPlugins: [remarkCodeTitles, remarkMath, remarkEmoji],
       rehypePlugins: [
         rehypeSlug,
         rehypeAutolinkHeadings,
