@@ -5,23 +5,14 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# Astro
+/.astro/
 /out/
-/next-env.d.ts
 
 # production and deployment
-/build
-/.open-next/
 /.wrangler/
-/.vercel/
 /cloudflare-env.d.ts
 /.dev.vars*
-!/.dev.vars.example
-
-# generated content
-/.content-collections/
-/public/search.json
 
 # misc
 .DS_Store

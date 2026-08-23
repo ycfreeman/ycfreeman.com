@@ -1,0 +1,11 @@
+---
+import Home from "@/components/Home";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getBlogs, sortPosts } from "@/lib/content";
+
+const posts = sortPosts(await getBlogs());
+---
+
+<BaseLayout>
+  <Home posts={posts} />
+</BaseLayout>

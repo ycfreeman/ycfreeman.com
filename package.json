@@ -1,16 +1,17 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "ycfreeman.com",
   "version": "2.0.2",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=26 <27"
   },
   "scripts": {
-    "start": "next dev",
-    "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "cross-env INIT_CWD=$PWD next build",
-    "serve": "next start",
-    "analyze": "next experimental-analyze",
+    "start": "astro dev",
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro check && astro build",
+    "serve": "astro preview",
     "fmt": "oxfmt .",
     "fmt:check": "oxfmt --check .",
     "lint": "oxlint .",
@@ -22,57 +23,50 @@
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "7.2.4",
+    "@astrojs/mdx": "7.0.7",
+    "@astrojs/react": "6.0.4",
     "@fancyapps/ui": "^6.1.14",
+    "@fontsource-variable/space-grotesk": "5.3.0",
     "@giscus/react": "^3.1.0",
     "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/postcss": "^4.3.2",
     "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "4.3.2",
+    "astro": "7.2.4",
     "github-slugger": "^2.0.0",
-    "gray-matter": "^4.0.3",
     "katex": "^0.17.0",
-    "next": "16.2.10",
-    "next-themes": "^0.4.6",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-citation": "^2.3.2",
-    "rehype-katex": "^7.0.1",
     "rehype-prism-plus": "^2.0.2",
     "rehype-slug": "^6.0.0",
     "remark": "^15.0.1",
     "remark-emoji": "^5.0.2",
-    "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "tailwindcss": "^4.3.2",
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "@content-collections/core": "^0.15.2",
-    "@content-collections/next": "^0.2.11",
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "16.2.10",
-    "@types/mdx": "^2.0.14",
+    "@astrojs/check": "0.9.10",
     "@types/node": "^26.1.1",
     "@types/react": "19.2.17",
-    "cross-env": "^10.1.0",
+    "@types/react-dom": "19.2.4",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "oxfmt": "0.58.0",
     "oxlint": "1.73.0",
-    "remark-frontmatter": "^5.0.0",
-    "remark-mdx-frontmatter": "^5.2.0",
     "typescript": "^6.0.3",
-    "wrangler": "^4.110.0",
-    "zod": "^4.4.3"
+    "wrangler": "^4.110.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "oxlint --fix",
       "oxfmt --write"
     ],
-    "*.{json,css,md,mdx}": "oxfmt --write"
+    "*.{json,css,md,mdx}": "oxfmt --write",
+    "*.astro": "oxfmt --write"
   },
   "packageManager": "pnpm@11.7.0"
 }

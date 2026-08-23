@@ -1,26 +1,32 @@
 # ycfreeman.com
 
-Personal blog built with Next.js and deployed as static assets on Cloudflare.
+Personal blog built with Astro, React, MDX, and Tailwind CSS, then deployed as static assets on Cloudflare.
 
-# Changes from the original template
+## Development
 
-- added a Gallery component using fancyapp / fancybox
-- `tag-data` now uses generated allBlogs code directly as opposed to needing to generate a `tag-data.json` file, so it updates properly on hot reload
-  - I will open a PR for this and contribute back to the original repo
-- use pnpm as opposed to yarn
-  - just because
-- added `remark-emoji`
-  - fixes this 7+ year broken emoji issue just by adding a package
-- finish with an AI generated logo
+Install the pinned pnpm version and dependencies, then start Astro:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Copy `.env.example` to `.env` to enable Giscus and Google Analytics locally. Content lives in `src/data` and is validated through Astro content collections.
+
+## Verification
+
+```bash
+pnpm fmt:check
+pnpm lint
+pnpm check
+pnpm build
+```
+
+The production build validates the Astro project before generating the static site in `out`.
 
 ## Cloudflare deployment
 
-The site is exported as static HTML and deployed with Cloudflare Workers Static
-Assets. Wrangler uploads the `out` directory without a Worker script, so page
-requests do not consume Worker CPU time. Content Collections generates the MDX
-content at build time.
-
-Run a local Cloudflare static-assets preview with:
+The site builds to `out` and deploys with Cloudflare Workers Static Assets. Run a local Cloudflare preview with:
 
 ```bash
 pnpm cf:preview
@@ -33,13 +39,12 @@ pnpm wrangler login
 pnpm cf:deploy
 ```
 
-Pushes to `main` deploy through
-[`deploy-cloudflare.yml`](.github/workflows/deploy-cloudflare.yml). Configure
-these secrets in the repository's `production` environment:
+Pushes to `main` deploy through [`deploy-cloudflare.yml`](.github/workflows/deploy-cloudflare.yml). Configure these secrets in the repository's `production` environment:
 
 - `CLOUDFLARE_ACCOUNT_ID`
 - `CLOUDFLARE_API_TOKEN`, scoped to the target account with Workers Scripts Write
-
-The initial deployment uses a `workers.dev` URL. Verify it before attaching
-`ycfreeman.com` as a Worker Custom Domain. Do not commit Cloudflare credentials
-or local `.dev.vars` files.
+- `NEXT_PUBLIC_GISCUS_REPO`
+- `NEXT_PUBLIC_GISCUS_REPOSITORY_ID`
+- `NEXT_PUBLIC_GISCUS_CATEGORY`
+- `NEXT_PUBLIC_GISCUS_CATEGORY_ID`
+- `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID`

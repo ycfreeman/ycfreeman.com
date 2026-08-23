@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import {
   createContext,
   useCallback,
@@ -10,6 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import Link from "./Link";
 
 type SearchDocument = {
   title: string;

@@ -1,0 +1,54 @@
+---
+import Card from "@/components/Card";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const projects = [
+  {
+    title: "WOW Recruit Widget",
+    description:
+      "A widget that helps to display recruitment message of a World of Warcraft guild.",
+    imgSrc: "/static/images/screenshot-1.jpg",
+    href: "https://github.com/ycfreeman/wow-recruit-widget",
+  },
+  {
+    title: "WOW Server Status Widget",
+    description:
+      "Easily add WOW Server Status 4.1 badge to your wordpress site by just a few clicks.",
+    imgSrc: "/static/images/screenshot-wow-status.jpg",
+    href: "https://github.com/ycfreeman/wow-server-status-widget",
+  },
+  {
+    title: "JPlayer Podcast Widget",
+    description: "Wordpress widget that use jPlayer to play Podcast RSS playlists.",
+    imgSrc: "/static/images/screenshot-jplayer.png",
+    href: "https://github.com/ycfreeman/jplayer-podcast-wordpress-widget",
+  },
+];
+---
+
+<BaseLayout pageTitle="Projects">
+  <div class="divide-y divide-gray-200 dark:divide-gray-700">
+    <div class="space-y-2 pt-6 pb-8 md:space-y-5">
+      <h1
+        class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100"
+      >
+        Projects
+      </h1>
+      <h2
+        class="text-2xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14 dark:text-gray-100"
+      >
+        Wordpress Plugins (unmaintained)
+      </h2>
+      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+        I don&apos;t maintain these any more, but they&apos;re still available for
+        download in the wordpress plugin directory, source code are hosted on
+        GitHub.
+      </p>
+    </div>
+    <div class="container py-12">
+      <div class="-m-4 flex flex-wrap">
+        {projects.map((project) => <Card {...project} />)}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

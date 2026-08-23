@@ -4,9 +4,10 @@ import Link from "./Link";
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
 import SearchButton from "./SearchButton";
-import Image from "next/image";
+import Image from "./Image";
+import SearchProvider from "./SearchProvider";
 
-const Header = () => {
+const HeaderContent = () => {
   return (
     <header className="flex items-center justify-between py-10">
       <div>
@@ -50,5 +51,13 @@ const Header = () => {
     </header>
   );
 };
+
+const Header = () => (
+  <SearchProvider
+    documentsPath={siteMetadata.search.kbarConfig.searchDocumentsPath}
+  >
+    <HeaderContent />
+  </SearchProvider>
+);
 
 export default Header;

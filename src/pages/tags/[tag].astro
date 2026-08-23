@@ -1,0 +1,30 @@
+---
+import { slug } from "github-slugger";
+import siteMetadata from "@/data/siteMetadata";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ListLayout from "@/layouts/ListLayoutWithTags.astro";
+import { getBlogs, getTagData, sortPosts } from "@/lib/content";
+
+export async function getStaticPaths() {
+  const tagData = getTagData(await getBlogs());
+  return Object.keys(tagData).map((tag) => ({ params: { tag } }));
+}
+
+const tag = decodeURI(Astro.params.tag || "");
+const posts = await getBlogs();
+const filteredPosts = sortPosts(
+  posts.filter((post) => post.tags.some((value) => slug(value) === tag)),
+);
+const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
+---
+
+<BaseLayout
+  pageTitle={tag}
+  socialDescription={`${siteMetadata.title} ${tag} tagged content`}
+>
+  <ListLayout
+    posts={filteredPosts}
+    title={title}
+    tagData={getTagData(posts)}
+  />
+</BaseLayout>
