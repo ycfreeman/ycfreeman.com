@@ -12,7 +12,7 @@ Migrate ycfreeman.com from the Next.js static export to Astro in one change and 
 
 Use Astro's static output, React integration, MDX integration, and content collections. Reuse the existing React components, MDX content, Tailwind classes, and public assets where possible. Do not redesign the site as part of the migration.
 
-Keep the rendered content, metadata, styling, and behavior as close to the current site as practical. The generated HTML does not need to be byte-for-byte or structurally identical. Image files may move beside their related content, and their generated URLs may change.
+Keep the rendered content, styling, and behavior as close to the current site as practical. Preserve SEO values and semantics, including titles, descriptions, canonical URLs, Open Graph and Twitter metadata, JSON-LD, sitemap, robots, and feed discovery. The generated HTML does not need to be byte-for-byte or structurally identical. Image files may move beside their related content, and their generated URLs may change.
 
 There is no framework spike, fallback path, feature gate, dual-generator period, staged rollout, or separate cleanup change. The migration replaces and removes Next.js in the same change.
 
@@ -51,7 +51,7 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 2. Define Astro content collections over the existing blog and author MDX files without moving or rewriting them.
 3. Keep the existing remark and rehype behavior for math, citations, syntax highlighting, heading links, and other MDX features.
 4. Port the document shell and every route to Astro while retaining framework-neutral React components.
-5. Preserve the current route derivation, draft filtering, metadata, table of contents, reading time, navigation, search, comments, structured data, and rendered image content.
+5. Preserve the current route derivation, draft filtering, SEO metadata and structured data, table of contents, reading time, navigation, search, comments, and rendered image content.
 6. Keep `public/_redirects` and non-image public assets unchanged. Move images beside related content when that is the clearer structure and update all references.
 7. Make `pnpm dev`, or a clearly documented equivalent, start the Astro development server with the normal local edit-and-reload workflow.
 8. Replace the build and deployment commands with Astro. Preserve every existing CI responsibility, but change the workflows, jobs, commands, environment variables, and artifact paths however best fits Astro.
@@ -67,6 +67,7 @@ Capture hosting behavior through Wrangler as well as the generated files. Then, 
 - Every existing public page URL has the same pathname, status, trailing-slash or extension behavior, and content target.
 - The three legacy rewrites behave exactly as before.
 - Existing Giscus discussions remain attached to the same post pathnames.
+- SEO values and crawler-facing output are preserved.
 - No internal links or rendered images are broken.
 - The documented local development command starts Astro and supports the normal edit-and-reload workflow.
 - CI continues to provide every existing build and deployment outcome using workflows suited to Astro.
