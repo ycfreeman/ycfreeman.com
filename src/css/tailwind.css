@@ -7,7 +7,7 @@
 @theme {
   /* Font families */
   --font-sans:
-    var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif,
+    "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   /* Colors */

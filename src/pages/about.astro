@@ -1,0 +1,14 @@
+---
+import { render } from "astro:content";
+import AuthorLayout from "@/layouts/AuthorLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getAuthors } from "@/lib/content";
+
+const author = (await getAuthors()).find(({ slug }) => slug === "default");
+if (!author) throw new Error("Missing default author");
+const { Content } = await render(author.entry);
+---
+
+<BaseLayout pageTitle="About">
+  <AuthorLayout content={author}><Content /></AuthorLayout>
+</BaseLayout>

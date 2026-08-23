@@ -2,7 +2,7 @@
 
 Date: 2026-08-23
 
-Status: approved.
+Status: implemented on the `new-framework` branch.
 
 Related research: [SSG framework research](./ssg-framework-research.md)
 

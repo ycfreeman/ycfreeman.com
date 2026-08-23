@@ -1,0 +1,70 @@
+---
+import "@/css/prism.css";
+import "katex/dist/katex.css";
+import { render } from "astro:content";
+import MDXImage from "@/components/MDXImage.astro";
+import MDXLink from "@/components/MDXLink.astro";
+import MDXPre from "@/components/MDXPre.astro";
+import TOCInline from "@/components/TOCInline";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PostLayout from "@/layouts/PostLayout.astro";
+import { getAuthors, getBlogs, sortPosts } from "@/lib/content";
+
+export async function getStaticPaths() {
+  return (await getBlogs()).map((post) => ({ params: { slug: post.slug } }));
+}
+
+const slug = decodeURI(Astro.params.slug || "");
+const posts = sortPosts(await getBlogs());
+const postIndex = posts.findIndex((post) => post.slug === slug);
+const post = posts[postIndex];
+if (!post) throw new Error(`Missing post: ${slug}`);
+const authors = await getAuthors();
+const authorDetails = (post.authors || ["default"]).map((author) => {
+  const detail = authors.find(({ slug }) => slug === author);
+  if (!detail) throw new Error(`Missing author: ${author}`);
+  return detail;
+});
+const { Content } = await render(post.entry);
+const images = post.images
+  ? typeof post.images === "string"
+    ? [post.images]
+    : post.images
+  : undefined;
+const jsonLd = {
+  ...post.structuredData,
+  author: authorDetails.map((author) => ({
+    "@type": "Person",
+    name: author.name,
+  })),
+};
+const components = {
+  Image: MDXImage,
+  TOCInline,
+  a: MDXLink,
+  pre: MDXPre,
+};
+---
+
+<BaseLayout
+  pageTitle={post.title}
+  description={post.summary || null}
+  socialTitle={post.title}
+  socialDescription={post.summary || null}
+  images={images}
+  type="article"
+  publishedTime={new Date(post.date).toISOString()}
+  modifiedTime={new Date(post.lastmod || post.date).toISOString()}
+  authors={authorDetails.map((author) => author.name)}
+  pathname={`/${post.path}`}
+  jsonLd={jsonLd}
+>
+  <PostLayout
+    content={post}
+    authorDetails={authorDetails}
+    prev={posts[postIndex + 1]}
+    next={posts[postIndex - 1]}
+  >
+    <Content components={components} />
+  </PostLayout>
+</BaseLayout>

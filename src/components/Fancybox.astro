@@ -1,0 +1,14 @@
+---
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+---
+
+<div data-fancybox-container><slot /></div>
+
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+
+  const container = document.querySelector<HTMLElement>(
+    "[data-fancybox-container]",
+  );
+  if (container) Fancybox.bind(container, "[data-fancybox]", {});
+</script>

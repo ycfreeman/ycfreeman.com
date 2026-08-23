@@ -1,0 +1,15 @@
+---
+const attributes = Astro.props;
+---
+
+<div class="group relative">
+  <button
+    type="button"
+    aria-label="Copy code"
+    data-copy-code
+    class="absolute top-2 right-2 hidden h-8 rounded border-2 border-gray-300 bg-gray-700 px-2 text-xs text-gray-200 group-hover:block"
+  >
+    Copy
+  </button>
+  <pre {...attributes}><slot /></pre>
+</div>

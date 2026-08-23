@@ -1,0 +1,12 @@
+---
+import NotFound from "@/components/NotFound.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return [{ params: { legacy: "_not-found" } }];
+}
+---
+
+<BaseLayout noindex pathname="/_not-found">
+  <NotFound />
+</BaseLayout>
