@@ -7,7 +7,7 @@
   "env": {
     "builtin": true
   },
-  "ignorePatterns": ["out/**", "build/**", ".wrangler/**", "node_modules/**"],
+  "ignorePatterns": ["out/**", "build/**", ".sst/**", "node_modules/**"],
   "rules": {
     "no-array-constructor": "error",
     "no-unused-expressions": "warn",
