@@ -5,7 +5,7 @@ import siteMetadata from "@/data/siteMetadata";
 
 const SearchButton = () => {
   const openSearch = useSearch();
-  if (siteMetadata.search?.provider === "kbar") {
+  if (siteMetadata.search?.provider === "pagefind") {
     return (
       <button type="button" aria-label="Search" onClick={openSearch}>
         <svg

@@ -53,9 +53,7 @@ const HeaderContent = () => {
 };
 
 const Header = () => (
-  <SearchProvider
-    documentsPath={siteMetadata.search.kbarConfig.searchDocumentsPath}
-  >
+  <SearchProvider>
     <HeaderContent />
   </SearchProvider>
 );

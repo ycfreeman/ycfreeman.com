@@ -39,10 +39,7 @@ const siteMetadata = {
     },
   },
   search: {
-    provider: "kbar",
-    kbarConfig: {
-      searchDocumentsPath: "search.json",
-    },
+    provider: "pagefind",
   },
 };
 

@@ -43,7 +43,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
               <dd
                 class="text-base leading-6 font-medium text-gray-500 dark:text-gray-400"
               >
-                <time datetime={date}>
+                <time datetime={date} data-pagefind-sort="date[datetime]">
                   {new Date(date).toLocaleDateString(
                     siteMetadata.locale,
                     postDateTemplate,
@@ -52,7 +52,9 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
               </dd>
             </div>
           </dl>
-          <div><PageTitle>{title}</PageTitle></div>
+          <div data-pagefind-meta="title[data-title]" data-title={title}>
+            <PageTitle>{title}</PageTitle>
+          </div>
         </div>
       </header>
       <div
@@ -102,7 +104,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
         <div
           class="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700"
         >
-          <div class="prose dark:prose-invert max-w-none pt-10 pb-8">
+          <div class="prose dark:prose-invert max-w-none pt-10 pb-8" data-pagefind-body>
             <Fancybox><slot /></Fancybox>
           </div>
           <div class="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">

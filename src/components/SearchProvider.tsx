@@ -3,18 +3,32 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useMemo,
   useState,
   type ReactNode,
 } from "react";
 import Link from "./Link";
 
-type SearchDocument = {
-  title: string;
-  summary?: string;
-  tags?: string[];
-  path: string;
+type SearchResult = {
+  url: string;
+  excerpt: string;
+  meta: { title: string };
 };
+
+type PagefindSearch = {
+  results: { data: () => Promise<SearchResult> }[];
+};
+
+type Pagefind = {
+  search: (
+    query: null,
+    options: { sort: Record<string, "asc" | "desc"> },
+  ) => Promise<PagefindSearch>;
+  debouncedSearch: (query: string) => Promise<PagefindSearch | null>;
+};
+
+// A variable path keeps Vite from bundling the file `pagefind --site out` writes after the build.
+const pagefindUrl = "/pagefind/pagefind.js";
+let pagefind: Promise<Pagefind> | undefined;
 
 const SearchContext = createContext<(() => void) | null>(null);
 
@@ -26,16 +40,10 @@ export function useSearch() {
   return openSearch;
 }
 
-export default function SearchProvider({
-  children,
-  documentsPath = "search.json",
-}: {
-  children: ReactNode;
-  documentsPath?: string;
-}) {
+export default function SearchProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [documents, setDocuments] = useState<SearchDocument[]>([]);
+  const [results, setResults] = useState<SearchResult[]>([]);
 
   const openSearch = useCallback(() => setOpen(true), []);
 
@@ -61,26 +69,31 @@ export default function SearchProvider({
   }, []);
 
   useEffect(() => {
-    if (!open || documents.length) return;
-    fetch(`/${documentsPath}`)
-      .then((response) => (response.ok ? response.json() : []))
-      .then((data) => setDocuments(Array.isArray(data) ? data : []))
-      .catch(() => setDocuments([]));
-  }, [documents.length, documentsPath, open]);
-
-  const results = useMemo(() => {
-    const value = query.trim().toLowerCase();
-    const candidates = value
-      ? documents.filter((document) =>
-          [document.title, document.summary, ...(document.tags || [])]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase()
-            .includes(value),
-        )
-      : documents;
-    return candidates.slice(0, 10);
-  }, [documents, query]);
+    if (!open) return;
+    const value = query.trim();
+    let cancelled = false;
+    pagefind ??= import(/* @vite-ignore */ pagefindUrl);
+    pagefind
+      .then((api) =>
+        value
+          ? api.debouncedSearch(value)
+          : api.search(null, { sort: { date: "desc" } }),
+      )
+      .then((search) =>
+        search
+          ? Promise.all(search.results.slice(0, 10).map((r) => r.data()))
+          : null,
+      )
+      .then((data) => {
+        if (data && !cancelled) setResults(data);
+      })
+      .catch(() => {
+        if (!cancelled) setResults([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [open, query]);
 
   return (
     <SearchContext.Provider value={openSearch}>
@@ -106,10 +119,10 @@ export default function SearchProvider({
               />
             </div>
             <ul className="max-h-[50vh] overflow-y-auto p-2">
-              {results.map((document) => (
-                <li key={document.path}>
+              {results.map((result) => (
+                <li key={result.url}>
                   <Link
-                    href={`/${document.path}`}
+                    href={result.url.replace(/\.html$/, "")}
                     onClick={() => {
                       setOpen(false);
                       setQuery("");
@@ -117,17 +130,16 @@ export default function SearchProvider({
                     className="block rounded px-3 py-3 hover:bg-gray-100 dark:hover:bg-gray-800"
                   >
                     <div className="font-semibold text-gray-900 dark:text-gray-100">
-                      {document.title}
+                      {result.meta.title}
                     </div>
-                    {document.summary && (
-                      <div className="mt-1 line-clamp-2 text-sm text-gray-500 dark:text-gray-400">
-                        {document.summary}
-                      </div>
-                    )}
+                    <div
+                      className="mt-1 line-clamp-2 text-sm text-gray-500 dark:text-gray-400"
+                      dangerouslySetInnerHTML={{ __html: result.excerpt }}
+                    />
                   </Link>
                 </li>
               ))}
-              {!results.length && (
+              {query.trim() !== "" && !results.length && (
                 <li className="px-3 py-6 text-center text-gray-500">
                   No articles found.
                 </li>

@@ -10,6 +10,7 @@ import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import remarkEmoji from "remark-emoji";
 import remarkCodeTitles from "./src/lib/mdx-plugins.mjs";
+import pagefindDevServer from "./src/lib/pagefind-dev.mjs";
 
 const root = process.cwd();
 
@@ -19,7 +20,7 @@ export default defineConfig({
   outDir: "./out",
   build: { format: "file" },
   integrations: [react(), mdx()],
-  vite: { plugins: [tailwindcss()] },
+  vite: { plugins: [tailwindcss(), pagefindDevServer()] },
   markdown: {
     syntaxHighlight: false,
     processor: unified({
