@@ -15,7 +15,7 @@ import remarkCodeTitles from "./src/lib/mdx-plugins.mjs";
 const root = process.cwd();
 
 export default defineConfig({
-  site: "https://ycfreeman.com",
+  site: "https://www.ycfreeman.com",
   output: "static",
   outDir: "./out",
   build: { format: "file" },
