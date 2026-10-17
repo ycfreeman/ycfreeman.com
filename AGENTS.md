@@ -2,7 +2,8 @@
 
 ## Dependency updates
 
-- Keep pnpm pinned exactly to `11.7.0` because the GitHub Actions deployment depends on that version.
+- Keep pnpm pinned exactly to `12.14.0` because the GitHub Actions deployment depends on that version. pnpm 12 needs `pnpm/action-setup@v6.1.0` or later; the floating `v6` tag points at an older release. The pin lives in both `package.json` `packageManager` and `mise.toml`; change them together.
+- The Node major is pinned in `.nvmrc` (read by CI through `setup-node`), `mise.toml` (local) and `package.json` `engines`; change all 3 together.
 - Keep TypeScript on the latest stable `6.x` release. `astro check` runs through `@astrojs/check`, which supports TypeScript 5 and 6 only. Upgrade to TypeScript 7 once `@astrojs/check` supports it.
 
 ## Monthly package audit

@@ -4,9 +4,10 @@ Personal blog built with Astro, React, MDX, and Tailwind CSS, then deployed as s
 
 ## Development
 
-Install the pinned pnpm version and dependencies, then start Astro:
+Install the Node and pnpm versions pinned in [`mise.toml`](mise.toml) and the dependencies, then start Astro:
 
 ```bash
+mise install
 pnpm install
 pnpm dev
 ```
