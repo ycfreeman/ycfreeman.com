@@ -23,7 +23,7 @@ pnpm check
 pnpm build
 ```
 
-The production build validates the Astro project before generating the static site in `out`.
+The production build validates the Astro project, generates the static site in `out`, then indexes the blog posts with [Pagefind](https://pagefind.app) into `out/pagefind`. `pnpm dev` serves search from the last build's index and builds once if none exists.
 
 ## Cloudflare deployment
 
