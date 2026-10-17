@@ -5,7 +5,7 @@ const siteMetadata = {
   description: `"Do" code for food 😄, have a wife, a kid and a cat, cook a bit and would squeeze time for tv, movies, manga and games.`,
   language: "en-AU",
   theme: "system",
-  siteUrl: "https://ycfreeman.com",
+  siteUrl: "https://www.ycfreeman.com",
   siteRepo: "https://github.com/ycfreeman/ycfreeman.com",
   siteLogo: "/static/images/logo.png",
   socialBanner: "/static/images/twitter-card.jpeg",
