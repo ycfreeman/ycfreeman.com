@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import ListLayout from "@/layouts/ListLayoutWithTags.astro";
+import ListLayout from "@/layouts/ListLayoutWithTags";
 import { getBlogs, getTagData, sortPosts } from "@/lib/content";
 
 const POSTS_PER_PAGE = 5;
@@ -34,5 +34,6 @@ const displayPosts = posts.slice(
     pagination={pagination}
     title="All Posts"
     tagData={getTagData(allPosts)}
+    pathname={Astro.url.pathname}
   />
 </BaseLayout>

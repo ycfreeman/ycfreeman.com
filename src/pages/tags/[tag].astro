@@ -2,7 +2,7 @@
 import { slug } from "github-slugger";
 import siteMetadata from "@/data/siteMetadata";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import ListLayout from "@/layouts/ListLayoutWithTags.astro";
+import ListLayout from "@/layouts/ListLayoutWithTags";
 import { getBlogs, getTagData, sortPosts } from "@/lib/content";
 
 export async function getStaticPaths() {
@@ -26,5 +26,6 @@ const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
     posts={filteredPosts}
     title={title}
     tagData={getTagData(posts)}
+    pathname={Astro.url.pathname}
   />
 </BaseLayout>
