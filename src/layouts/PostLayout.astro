@@ -43,7 +43,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
               <dd
                 class="text-base leading-6 font-medium text-gray-500 dark:text-gray-400"
               >
-                <time datetime={date}>
+                <time datetime={date} data-pagefind-sort="date[datetime]">
                   {new Date(date).toLocaleDateString(
                     siteMetadata.locale,
                     postDateTemplate,

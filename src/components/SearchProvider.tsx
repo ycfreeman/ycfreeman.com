@@ -14,10 +14,16 @@ type SearchResult = {
   meta: { title: string };
 };
 
+type PagefindSearch = {
+  results: { data: () => Promise<SearchResult> }[];
+};
+
 type Pagefind = {
-  debouncedSearch: (query: string) => Promise<{
-    results: { data: () => Promise<SearchResult> }[];
-  } | null>;
+  search: (
+    query: null,
+    options: { sort: Record<string, "asc" | "desc"> },
+  ) => Promise<PagefindSearch>;
+  debouncedSearch: (query: string) => Promise<PagefindSearch | null>;
 };
 
 // A variable path keeps Vite from bundling the file `pagefind --site out` writes after the build.
@@ -63,15 +69,16 @@ export default function SearchProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
+    if (!open) return;
     const value = query.trim();
-    if (!open || !value) {
-      setResults([]);
-      return;
-    }
     let cancelled = false;
     pagefind ??= import(/* @vite-ignore */ pagefindUrl);
     pagefind
-      .then((api) => api.debouncedSearch(value))
+      .then((api) =>
+        value
+          ? api.debouncedSearch(value)
+          : api.search(null, { sort: { date: "desc" } }),
+      )
       .then((search) =>
         search
           ? Promise.all(search.results.slice(0, 10).map((r) => r.data()))
