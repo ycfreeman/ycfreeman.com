@@ -9,10 +9,10 @@
 /.astro/
 /out/
 
-# production and deployment
+# sst
+/.sst/
 /.wrangler/
-/cloudflare-env.d.ts
-/.dev.vars*
+/sst-env.d.ts
 
 # misc
 .DS_Store

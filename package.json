@@ -16,11 +16,7 @@
     "fmt:check": "oxfmt --check .",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
-    "cf:build": "pnpm build",
-    "cf:preview": "pnpm cf:build && wrangler dev",
-    "cf:deploy": "pnpm cf:build && wrangler deploy",
-    "cf:upload": "pnpm cf:build && wrangler versions upload",
-    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf:deploy": "sst deploy --stage production"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.2.4",
@@ -57,8 +53,8 @@
     "lint-staged": "^17.3.0",
     "oxfmt": "0.64.0",
     "oxlint": "1.79.0",
-    "typescript": "^6.0.3",
-    "wrangler": "^4.125.0"
+    "sst": "4.17.2",
+    "typescript": "^6.0.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
