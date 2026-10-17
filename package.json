@@ -31,7 +31,6 @@
     "@tailwindcss/vite": "4.3.3",
     "astro": "7.4.0",
     "github-slugger": "^2.0.0",
-    "katex": "^0.19.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "reading-time": "1.5.0",
@@ -41,13 +40,11 @@
     "rehype-slug": "^6.0.0",
     "remark": "^15.0.1",
     "remark-emoji": "^5.0.2",
-    "remark-math": "^6.0.0",
     "tailwindcss": "^4.3.3",
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
-    "@types/node": "^26.6.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "husky": "^9.1.7",
@@ -62,8 +59,7 @@
       "oxlint --fix",
       "oxfmt --write"
     ],
-    "*.{json,css,md,mdx}": "oxfmt --write",
-    "*.astro": "oxfmt --write"
+    "*.{json,css,md,mdx}": "oxfmt --write"
   },
   "packageManager": "pnpm@12.14.0"
 }

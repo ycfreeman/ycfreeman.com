@@ -9,7 +9,6 @@ import rehypeCitation from "rehype-citation";
 import rehypePrismPlus from "rehype-prism-plus";
 import rehypeSlug from "rehype-slug";
 import remarkEmoji from "remark-emoji";
-import remarkMath from "remark-math";
 import remarkCodeTitles from "./src/lib/mdx-plugins.mjs";
 
 const root = process.cwd();
@@ -26,7 +25,7 @@ export default defineConfig({
     processor: unified({
       gfm: true,
       smartypants: false,
-      remarkPlugins: [remarkCodeTitles, remarkMath, remarkEmoji],
+      remarkPlugins: [remarkCodeTitles, remarkEmoji],
       rehypePlugins: [
         rehypeSlug,
         rehypeAutolinkHeadings,
